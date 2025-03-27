@@ -102,7 +102,7 @@ body {
       top: 12px;
       width: 158px;
       height: 48px;
-      background-color: #00b401;
+      background-color: #0A6EF7;
       border-radius: 12px;
       display: flex;
       align-items: center;
@@ -115,7 +115,7 @@ body {
     }
     
     .request-btn:hover {
-      background-color: #009a00;
+      background-color: #0A6EF7;
     }
     
     .menu-btn {
@@ -494,7 +494,7 @@ body {
     width: 100%;
     margin: 0 auto;
     padding: 120px 20px 180px;
-    color: #ffffff;
+    color: #000000;
 }
 
 .geo-hero__title {
@@ -538,13 +538,13 @@ body {
 }
 
 .geo-hero__btn--primary {
-    background-color: #00b401;
+    background-color: #0A6EF7;
     color: #ffffff;
-    box-shadow: 0 4px 12px rgba(0,180,1,0.3);
+    box-shadow: 0 4px 12px rgb(0 135 228 / 30%);
 }
 
 .geo-hero__btn--primary:hover {
-    background-color: #009a01;
+    background-color: #0A6EF7;
     transform: translateY(-2px);
     box-shadow: 0 6px 16px rgba(0,180,1,0.4);
 }
@@ -599,7 +599,7 @@ body {
     width: 0;
     height: 0;
     border-top: 8px solid transparent;
-    border-left: 12px solid #00b401;
+    border-left: 12px solid #0A6EF7;
     border-bottom: 8px solid transparent;
     margin-left: 2px;
     transition: all 0.3s ease;
@@ -613,6 +613,7 @@ body {
 .geo-hero__video-text {
     font-size: 16px;
     font-weight: 500;
+    color: black;
 }
 
 .geo-hero__features {
@@ -1038,7 +1039,7 @@ body {
 .geo-form__submit-btn {
     width: 100%;
     padding: 16px;
-    background: #00b401;
+    background: #0A6EF7;
     color: #fff;
     border: none;
     border-radius: 12px;
@@ -1223,7 +1224,7 @@ body {
             left: 0;
             width: 60px;
             height: 3px;
-            background: #00b401;
+            background: #0A6EF7;
         }
         
         /* Filter Tabs */
@@ -1253,7 +1254,7 @@ body {
             display: inline-block;
             width: 4px;
             height: 16px;
-            background: #00b401;
+            background: #0A6EF7;
             margin-right: 8px;
             border-radius: 2px;
         }
@@ -1279,21 +1280,21 @@ body {
         }
         
         .geo-filter__tab--active {
-            background: #00b401;
+            background: #0A6EF7;
             color: #fff;
-            border-color: #00b401;
-            box-shadow: 0 4px 12px rgba(0,180,1,0.2);
+            border-color: #0A6EF7;
+            box-shadow: 0 4px 12px #0A6EF7;
         }
         
         .geo-filter__tab--active:hover {
-            background: #009a01;
-            border-color: #009a01;
+            background: #0A6EF7;
+            border-color: #0A6EF7;
         }
         
         /* Notice */
         .geo-filter__notice {
             background: #f8f8f8;
-            border-left: 4px solid #00b401;
+            border-left: 4px solid #0A6EF7;
             padding: 15px;
             border-radius: 0 8px 8px 0;
             font-size: 14px;
@@ -2282,4 +2283,1125 @@ body {
   .video-popup-button {
     font-size: 16px;
   }
+}
+
+ /* карусель */
+.awards-section {
+  padding: 80px 0;
+  background-color: #fff;
+  position: relative;
+  background-image: url(https://static.tildacdn.com/tild3862-6264-4034-a537-646138343166/GeoSM___1_2.svg);
+  background-size: 40% 40%;
+  background-repeat: no-repeat;
+  background-position: calc(-30%) calc(100% + 30px);
+}
+
+.awards-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  position: relative;
+}
+
+.awards-title {
+  font-size: 36px;
+  line-height: 1.3;
+  margin-bottom: 50px;
+  color: #333;
+  text-align: center;
+  font-weight: 700;
+}
+
+.awards-carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.awards-carousel {
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 30px;
+  transition: transform 0.5s ease;
+  padding: 20px 10px;
+}
+
+.award-item {
+  flex: 0 0 280px;
+  height: 400px;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid #eee;
+}
+
+.award-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.award-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: #f9f9f9;
+}
+
+.carousel-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+  z-index: 2;
+}
+
+.prev-btn {
+    transform: scaleX(-1)
+}
+
+.carousel-btn:hover {
+  transform: scale(1.1);
+}
+
+.carousel-btn img {
+  width: 48px;
+  height: 48px;
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+  .awards-container {
+    padding: 0 30px;
+  }
+  
+  .award-item {
+    flex: 0 0 240px;
+    height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .awards-section {
+    padding: 60px 0;
+  }
+  
+  .awards-title {
+    font-size: 30px;
+    margin-bottom: 40px;
+  }
+  
+  .awards-carousel-wrapper {
+    gap: 15px;
+  }
+  
+  .carousel-track {
+    gap: 20px;
+  }
+  
+  .award-item {
+    flex: 0 0 200px;
+    height: 140px;
+  }
+  
+  .carousel-btn img {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .awards-container {
+    padding: 0 20px;
+  }
+  
+  .awards-title {
+    font-size: 26px;
+  }
+  
+  .award-item {
+    flex: 0 0 268px;
+    height: 400px;
+  }
+}
+
+/*награды 2*/
+
+.awards-section2 {
+  padding: 80px 0;
+  background-color: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.award-icon {
+  width: 42px;
+  height: 42px;
+  margin-bottom: 20px;
+}
+
+.section-title {
+  font-size: 36px;
+  line-height: 1.3;
+  color: #333;
+  font-weight: 700;
+  margin: 0;
+}
+
+.awards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px 30px;
+}
+
+.award-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 30px 20px;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.award-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.award-logo {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.award-logo img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.award-description p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+  .awards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 30px;
+  }
+  
+  .awards-grid {
+    gap: 30px 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .awards-section2 {
+    padding: 60px 0;
+  }
+  
+  .section-header {
+    margin-bottom: 40px;
+  }
+  
+  .awards-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .award-item {
+    padding: 25px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 26px;
+  }
+}
+
+/*дипломы*/
+
+.diplomas-section {
+  padding: 5rem 0;
+  background-color: #f8fafc;
+}
+
+.diplomas-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.diplomas-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.diplomas-header__icon {
+  width: 3rem;
+  height: 3rem;
+  margin-bottom: 1.25rem;
+}
+
+.diplomas-header__title {
+  font-size: 2.25rem;
+  line-height: 1.2;
+  color: #1e293b;
+  font-weight: 700;
+  margin: 0;
+}
+
+.diplomas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.diploma-card {
+  background: white;
+  border-radius: 0.75rem;
+  padding: 2rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.diploma-card:hover {
+  transform: translateY(-0.5rem);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.diploma-card__logo {
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.diploma-card__logo img {
+  max-height: 100%;
+  max-width: 100%;
+  height: auto;
+  width: auto;
+  object-fit: contain;
+}
+
+.diploma-card__description {
+  margin-top: auto;
+}
+
+.diploma-card__description p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #334155;
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+  .diplomas-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .diplomas-section {
+    padding: 3rem 0;
+  }
+  
+  .diplomas-header {
+    margin-bottom: 2.5rem;
+  }
+  
+  .diplomas-header__title {
+    font-size: 1.75rem;
+  }
+  
+  .diplomas-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .diploma-card {
+    padding: 1.5rem;
+  }
+}
+
+
+/* отзыв */
+.geo-sm-video-reviews-section {
+  padding: 60px 0;
+  background-color: #f8f9fa;
+  position: relative;
+}
+
+.geo-sm-reviews-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.geo-sm-reviews-main-title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #333;
+  font-weight: 700;
+}
+
+.geo-sm-reviews-nav-controls {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.geo-sm-review-prev-btn,
+.geo-sm-review-next-btn {
+  background: none;
+  border: 2px solid #333;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #333;
+}
+
+.geo-sm-review-prev-btn:hover,
+.geo-sm-review-next-btn:hover {
+  background-color: #333;
+  color: white;
+}
+
+.geo-sm-reviews-carousel-wrapper {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 20px;
+  scrollbar-width: none;
+}
+
+.geo-sm-reviews-carousel-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.geo-sm-review-card {
+  flex: 0 0 calc(25% - 15px);
+  height: 300px;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  scroll-snap-align: start;
+  overflow: hidden;
+  min-width: 280px;
+}
+
+.geo-sm-review-card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background: linear-gradient(transparent, rgba(0,0,0,0.7));
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.geo-sm-review-company-name {
+  margin: 0 0 15px 0;
+  font-size: 18px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.geo-sm-review-play-btn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  padding: 0;
+}
+
+.geo-sm-review-play-btn:hover {
+  transform: scale(1.1);
+  color: #00b401;
+}
+
+.geo-sm-review-play-btn svg {
+  width: 48px;
+  height: 48px;
+}
+
+/* Видео попап */
+.geo-sm-video-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.geo-sm-video-popup-content {
+  position: relative;
+  width: 80%;
+  max-width: 900px;
+  background: #000;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.geo-sm-close-popup-btn {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.geo-sm-video-iframe-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+
+.geo-sm-video-iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Адаптивность */
+@media (max-width: 1200px) {
+  .geo-sm-review-card {
+    flex: 0 0 calc(33.333% - 14px);
+  }
+}
+
+@media (max-width: 992px) {
+  .geo-sm-review-card {
+    flex: 0 0 calc(50% - 10px);
+  }
+}
+
+@media (max-width: 768px) {
+  .geo-sm-reviews-main-title {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+  
+  .geo-sm-review-card {
+    flex: 0 0 100%;
+    min-width: 250px;
+  }
+  
+  .geo-sm-video-popup-content {
+    width: 95%;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .geo-sm-reviews-main-title {
+    font-size: 24px;
+  }
+  
+  .geo-sm-review-prev-btn,
+  .geo-sm-review-next-btn {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .geo-sm-review-card {
+    height: 250px;
+  }
+}
+
+.geo-sm-projects-section {
+  padding: 60px 0;
+  background-color: #fff;
+  position: relative;
+}
+
+.geo-sm-projects-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.geo-sm-projects-main-title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #333;
+  font-weight: 700;
+}
+
+.geo-sm-projects-nav-controls {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.geo-sm-projects-prev-btn,
+.geo-sm-projects-next-btn {
+  background: none;
+  border: 2px solid #333;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #333;
+}
+
+.geo-sm-projects-prev-btn:hover,
+.geo-sm-projects-next-btn:hover {
+  background-color: #333;
+  color: white;
+}
+
+.geo-sm-projects-carousel-wrapper {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 20px;
+  scrollbar-width: none;
+}
+
+.geo-sm-projects-carousel-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.geo-sm-project-card {
+  flex: 0 0 calc(25% - 15px);
+  border-radius: 10px;
+  overflow: hidden;
+  scroll-snap-align: start;
+  min-width: 280px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.geo-sm-project-card:hover {
+  transform: translateY(-5px);
+}
+
+.geo-sm-project-image {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+}
+
+.geo-sm-project-details {
+  padding: 20px;
+  background: #fff;
+}
+
+.geo-sm-project-company {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+  color: #333;
+  font-weight: 600;
+}
+
+.geo-sm-project-location {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.geo-sm-project-product {
+  margin: 0;
+  font-size: 14px;
+  color: #00b401;
+  font-weight: 500;
+}
+
+/* Адаптивность */
+@media (max-width: 1200px) {
+  .geo-sm-project-card {
+    flex: 0 0 calc(33.333% - 14px);
+  }
+}
+
+@media (max-width: 992px) {
+  .geo-sm-project-card {
+    flex: 0 0 calc(50% - 10px);
+  }
+}
+
+@media (max-width: 768px) {
+  .geo-sm-projects-main-title {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+  
+  .geo-sm-project-card {
+    flex: 0 0 100%;
+    min-width: 250px;
+  }
+}
+
+@media (max-width: 576px) {
+  .geo-sm-projects-main-title {
+    font-size: 24px;
+  }
+  
+  .geo-sm-projects-prev-btn,
+  .geo-sm-projects-next-btn {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .geo-sm-project-image {
+    height: 180px;
+  }
+}
+
+
+
+/* галерея видео */
+.video-gallery-section {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+
+.video-gallery-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.video-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.video-gallery-item {
+    position: relative;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.video-gallery-item:hover {
+    transform: scale(1.03);
+}
+
+.video-gallery-item-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.video-gallery-item-title {
+    margin: 0 0 15px 0;
+    font-size: 18px;
+    text-align: center;
+}
+
+.video-gallery-play-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    width: 60px;
+    height: 60px;
+    transition: transform 0.2s;
+}
+
+.video-gallery-play-btn:hover {
+    transform: scale(1.1);
+}
+
+.video-gallery-play-btn img {
+    width: 100%;
+    height: auto;
+}
+
+.video-gallery-footer {
+    text-align: center;
+}
+
+.video-gallery-channel-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff0000; /* Красный цвет YouTube */
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.video-gallery-channel-btn:hover {
+    background-color: #cc0000;
+}
+
+/* Стили для попапа */
+.video-gallery-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+
+.video-gallery-popup-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.video-gallery-popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 900px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.video-gallery-popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+.video-gallery-popup-iframe-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 соотношение */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-gallery-popup-iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 768px) {
+    .video-gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .video-gallery-popup-content {
+        width: 95%;
+        padding: 10px;
+    }
+}
+
+
+/* Новости*/
+.news-section {
+    padding: 60px 0;
+    background-color: #fff;
+}
+
+.news-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.news-header {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.news-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #333;
+    font-weight: 700
+}
+
+
+
+
+/* Сетка новостей */
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* Карточка новости */
+.news-item {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.news-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.news-item-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+.news-item-content {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.news-item-title {
+    margin: 0 0 15px 0;
+    font-size: 20px;
+    color: #222;
+}
+
+.news-item-excerpt {
+    margin: 0 0 20px 0;
+    color: #555;
+    line-height: 1.5;
+    flex-grow: 1;
+}
+
+.news-read-more {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    align-self: flex-start;
+}
+
+.news-read-more:hover {
+    background-color: #0056b3;
+}
+
+/* Стили попапа */
+.news-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+
+.news-popup-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.news-popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 900px;
+    max-height: 90vh;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    overflow-y: auto;
+}
+
+.news-popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+    z-index: 2;
+}
+
+/* Стили для текстового контента */
+.news-popup-image-wrapper {
+    margin-bottom: 20px;
+}
+
+.news-popup-image {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.news-popup-title {
+    margin-top: 0;
+    color: #222;
+    font-size: 24px;
+}
+
+.news-popup-date {
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.news-popup-text {
+    line-height: 1.6;
+    color: #444;
+}
+
+/* Стили для видео */
+.news-popup-video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.news-popup-video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.news-popup-video-title {
+    margin-top: 0;
+    color: #222;
+    font-size: 24px;
+}
+
+/* Стили для PDF */
+.news-popup-pdf-wrapper {
+    width: 100%;
+    height: 600px;
+    margin-bottom: 20px;
+}
+
+.news-popup-pdf-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ddd;
+}
+
+.news-popup-pdf-title {
+    margin-top: 0;
+    color: #222;
+    font-size: 24px;
+}
+
+@media (max-width: 768px) {
+    .news-header-decoration {
+        width: 100%;
+    }
+    
+    .news-popup-content {
+        width: 95%;
+        padding: 20px;
+    }
+    
+    .news-popup-pdf-wrapper {
+        height: 400px;
+    }
 }

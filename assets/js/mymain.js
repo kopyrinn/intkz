@@ -366,3 +366,271 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
+
+ //карусель
+document.addEventListener('DOMContentLoaded', function() {
+  const track = document.querySelector('.carousel-track');
+  const prevBtn = document.querySelector('.prev-btn');
+  const nextBtn = document.querySelector('.next-btn');
+  
+  // Массив с изображениями наград (замените на свои)
+  const awards = [
+    'https://optim.tildacdn.com/tild6566-3165-4134-a162-613330653432/-/resize/600x/-/format/webp/Priemnaya_2407202414.jpg',
+    'https://optim.tildacdn.com/tild6566-3165-4134-a162-613330653432/-/resize/600x/-/format/webp/Priemnaya_2407202414.jpg',
+    'https://optim.tildacdn.com/tild6566-3165-4134-a162-613330653432/-/resize/600x/-/format/webp/Priemnaya_2407202414.jpg',
+    'https://optim.tildacdn.com/tild6566-3165-4134-a162-613330653432/-/resize/600x/-/format/webp/Priemnaya_2407202414.jpg',
+    'https://optim.tildacdn.com/tild6566-3165-4134-a162-613330653432/-/resize/600x/-/format/webp/Priemnaya_2407202414.jpg',
+    'https://optim.tildacdn.com/tild6566-3165-4134-a162-613330653432/-/resize/600x/-/format/webp/Priemnaya_2407202414.jpg',
+    'https://optim.tildacdn.com/tild6566-3165-4134-a162-613330653432/-/resize/600x/-/format/webp/Priemnaya_2407202414.jpg',
+    'https://optim.tildacdn.com/tild6566-3165-4134-a162-613330653432/-/resize/600x/-/format/webp/Priemnaya_2407202414.jpg',
+  ];
+  
+  // Создаем элементы карусели
+  awards.forEach(award => {
+    const awardItem = document.createElement('div');
+    awardItem.className = 'award-item';
+    awardItem.innerHTML = `
+      <img src="${award}" alt="Благодарственное письмо" class="award-image">
+    `;
+    track.appendChild(awardItem);
+  });
+  
+  const items = document.querySelectorAll('.award-item');
+  const itemWidth = items[0].offsetWidth + parseInt(window.getComputedStyle(track).gap);
+  let currentPosition = 0;
+  const visibleItems = Math.min(3, Math.floor(track.offsetWidth / itemWidth));
+  
+  // Функция для обновления позиции
+  function updatePosition() {
+    track.style.transform = `translateX(${currentPosition}px)`;
+  }
+  
+  // Обработчики кнопок
+  nextBtn.addEventListener('click', function() {
+    const maxPosition = -(items.length - visibleItems) * itemWidth;
+    currentPosition = Math.max(currentPosition - itemWidth * visibleItems, maxPosition);
+    updatePosition();
+  });
+  
+  prevBtn.addEventListener('click', function() {
+    currentPosition = Math.min(currentPosition + itemWidth * visibleItems, 0);
+    updatePosition();
+  });
+  
+  // Адаптация при ресайзе
+  window.addEventListener('resize', function() {
+    const newVisibleItems = Math.min(3, Math.floor(track.offsetWidth / itemWidth));
+    if (newVisibleItems !== visibleItems) {
+      currentPosition = 0;
+      updatePosition();
+    }
+  });
+});
+
+  //отзыв
+document.addEventListener('DOMContentLoaded', function() {
+  // Элементы карусели
+  const geoSmCarousel = document.querySelector('.geo-sm-reviews-carousel-wrapper');
+  const geoSmPrevBtn = document.querySelector('.geo-sm-review-prev-btn');
+  const geoSmNextBtn = document.querySelector('.geo-sm-review-next-btn');
+  
+  // Элементы попапа
+  const geoSmVideoPopup = document.querySelector('.geo-sm-video-popup');
+  const geoSmClosePopup = document.querySelector('.geo-sm-close-popup-btn');
+  const geoSmVideoIframe = document.querySelector('.geo-sm-video-iframe-container iframe');
+  const geoSmPlayButtons = document.querySelectorAll('.geo-sm-review-play-btn');
+  
+  // Навигация карусели
+  geoSmPrevBtn.addEventListener('click', function() {
+    geoSmCarousel.scrollBy({ left: -geoSmCarousel.offsetWidth * 0.8, behavior: 'smooth' });
+  });
+  
+  geoSmNextBtn.addEventListener('click', function() {
+    geoSmCarousel.scrollBy({ left: geoSmCarousel.offsetWidth * 0.8, behavior: 'smooth' });
+  });
+  
+  // Открытие видео
+  geoSmPlayButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      const videoId = this.getAttribute('data-geo-video-id');
+      geoSmVideoIframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+      geoSmVideoPopup.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    });
+  });
+  
+  // Закрытие попапа
+  geoSmClosePopup.addEventListener('click', function() {
+    geoSmVideoPopup.style.display = 'none';
+    geoSmVideoIframe.src = '';
+    document.body.style.overflow = '';
+  });
+  
+  // Закрытие по клику вне попапа
+  geoSmVideoPopup.addEventListener('click', function(e) {
+    if (e.target === this) {
+      geoSmVideoPopup.style.display = 'none';
+      geoSmVideoIframe.src = '';
+      document.body.style.overflow = '';
+    }
+  });
+  
+  // Закрытие по ESC
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && geoSmVideoPopup.style.display === 'flex') {
+      geoSmVideoPopup.style.display = 'none';
+      geoSmVideoIframe.src = '';
+      document.body.style.overflow = '';
+    }
+  });
+});
+
+  // карусель проекты
+document.addEventListener('DOMContentLoaded', function() {
+  // Элементы карусели проектов
+  const geoSmProjectsCarousel = document.querySelector('.geo-sm-projects-carousel-wrapper');
+  const geoSmProjectsPrevBtn = document.querySelector('.geo-sm-projects-prev-btn');
+  const geoSmProjectsNextBtn = document.querySelector('.geo-sm-projects-next-btn');
+  
+  // Навигация карусели
+  geoSmProjectsPrevBtn.addEventListener('click', function() {
+    geoSmProjectsCarousel.scrollBy({ left: -geoSmProjectsCarousel.offsetWidth * 0.8, behavior: 'smooth' });
+  });
+  
+  geoSmProjectsNextBtn.addEventListener('click', function() {
+    geoSmProjectsCarousel.scrollBy({ left: geoSmProjectsCarousel.offsetWidth * 0.8, behavior: 'smooth' });
+  });
+});
+
+ // видео галерия
+document.addEventListener('DOMContentLoaded', function() {
+    const playButtons = document.querySelectorAll('.video-gallery-play-btn');
+    const videoPopup = document.querySelector('.video-gallery-popup');
+    const popupClose = document.querySelector('.video-gallery-popup-close');
+    const popupIframe = videoPopup.querySelector('iframe');
+    
+    playButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const videoId = this.getAttribute('data-video-id');
+            popupIframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+            videoPopup.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        });
+    });
+    
+    popupClose.addEventListener('click', function() {
+        popupIframe.src = '';
+        videoPopup.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    });
+    
+    videoPopup.querySelector('.video-gallery-popup-overlay').addEventListener('click', function() {
+        popupIframe.src = '';
+        videoPopup.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    });
+});
+
+
+ // новости
+document.addEventListener('DOMContentLoaded', function() {
+    const readMoreButtons = document.querySelectorAll('.news-read-more');
+    const newsPopup = document.querySelector('.news-popup');
+    const popupClose = document.querySelector('.news-popup-close');
+    
+    // Элементы для разных типов контента
+    const textContent = document.querySelector('.news-popup-text-content');
+    const videoContent = document.querySelector('.news-popup-video-content');
+    const pdfContent = document.querySelector('.news-popup-pdf-content');
+    
+    // Текстовый контент
+    const popupTitle = document.querySelector('.news-popup-title');
+    const popupImage = document.querySelector('.news-popup-image');
+    const popupDate = document.querySelector('.news-popup-date span');
+    const popupText = document.querySelector('.news-popup-text');
+    
+    // Видео контент
+    const videoTitle = document.querySelector('.news-popup-video-title');
+    const videoIframe = document.querySelector('.news-popup-video-wrapper iframe');
+    
+    // PDF контент
+    const pdfTitle = document.querySelector('.news-popup-pdf-title');
+    const pdfIframe = document.querySelector('.news-popup-pdf-wrapper iframe');
+    
+    // Данные новостей
+    const newsData = {
+        1: {
+            title: "Компания ИНТАГО Казахстан на выставке KazBuild2024",
+            date: "07.11.2024",
+            content: "<p>Мы рады сообщить о завершении строительства и запуске нового производственного цеха площадью 2500 кв.м.</p><p>Новый цех оснащен современным оборудованием и позволит нам увеличить объем производства на 40%.</p>",
+            image: "images/news1-full.jpg"
+        },
+        2: {
+            title: "Экскурсия по производству",
+            videoId: "dQw4w9WgXcQ"
+        },
+        3: {
+            title: "Каталог продукции 2023",
+            pdfUrl: "catalog2023.pdf"
+        }
+    };
+    
+    readMoreButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const newsId = this.getAttribute('data-news-id');
+            const contentType = this.getAttribute('data-content-type');
+            const news = newsData[newsId];
+            
+            // Скрываем все контент-блоки
+            textContent.style.display = 'none';
+            videoContent.style.display = 'none';
+            pdfContent.style.display = 'none';
+            
+            // Очищаем предыдущий контент
+            videoIframe.src = '';
+            pdfIframe.src = '';
+            
+            // Показываем соответствующий контент
+            switch(contentType) {
+                case 'text':
+                    popupTitle.textContent = news.title;
+                    popupDate.textContent = news.date;
+                    popupText.innerHTML = news.content;
+                    popupImage.src = this.getAttribute('data-image');
+                    textContent.style.display = 'block';
+                    break;
+                    
+                case 'video':
+                    videoTitle.textContent = news.title;
+                    videoIframe.src = `https://www.youtube.com/embed/${news.videoId}?autoplay=1`;
+                    videoContent.style.display = 'block';
+                    break;
+                    
+                case 'pdf':
+                    pdfTitle.textContent = news.title;
+                    pdfIframe.src = news.pdfUrl;
+                    pdfContent.style.display = 'block';
+                    break;
+            }
+            
+            newsPopup.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        });
+    });
+    
+    popupClose.addEventListener('click', function() {
+        newsPopup.style.display = 'none';
+        document.body.style.overflow = 'auto';
+        
+        // Останавливаем видео при закрытии попапа
+        videoIframe.src = '';
+    });
+    
+    newsPopup.querySelector('.news-popup-overlay').addEventListener('click', function() {
+        newsPopup.style.display = 'none';
+        document.body.style.overflow = 'auto';
+        
+        // Останавливаем видео при закрытии попапа
+        videoIframe.src = '';
+    });
+});

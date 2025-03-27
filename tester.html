@@ -1,10 +1,430 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
+<section class="news-section">
+    <div class="news-container">
+        <div class="news-header">
+            <h2 class="news-title">Новости</h2>
+            <div class="news-header-decoration"></div>
+        </div>
+        
+        <div class="news-grid">
+            <!-- Новость 1 (с изображением) -->
+            <div class="news-item">
+                <div class="news-item-image" style="background-image: url('images/news1-preview.jpg');"></div>
+                <div class="news-item-content">
+                    <h3 class="news-item-title">Открытие нового цеха</h3>
+                    <p class="news-item-excerpt">Мы рады сообщить о запуске нового производственного цеха...</p>
+                    <button class="news-read-more" 
+                            data-news-id="1" 
+                            data-content-type="text" 
+                            data-image="images/news1-full.jpg">
+                        Читать полностью
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Новость 2 (с видео) -->
+            <div class="news-item">
+                <div class="news-item-image" style="background-image: url('images/video-preview.jpg');"></div>
+                <div class="news-item-content">
+                    <h3 class="news-item-title">Экскурсия по производству</h3>
+                    <p class="news-item-excerpt">Видео-тур по нашим производственным мощностям...</p>
+                    <button class="news-read-more" 
+                            data-news-id="2" 
+                            data-content-type="video" 
+                            data-video-id="dQw4w9WgXcQ">
+                        Смотреть видео
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Новость 3 (с PDF) -->
+            <div class="news-item">
+                <div class="news-item-image" style="background-image: url('images/pdf-preview.jpg');"></div>
+                <div class="news-item-content">
+                    <h3 class="news-item-title">Новый каталог продукции</h3>
+                    <p class="news-item-excerpt">Скачайте наш новый каталог с полным ассортиментом...</p>
+                    <button class="news-read-more" 
+                            data-news-id="3" 
+                            data-content-type="pdf" 
+                            data-pdf-url="catalog2023.pdf">
+                        Открыть PDF
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Попап для контента -->
+    <div class="news-popup">
+        <div class="news-popup-overlay"></div>
+        <div class="news-popup-content">
+            <button class="news-popup-close">&times;</button>
+            <div class="news-popup-body">
+                <!-- Для текстового контента -->
+                <div class="news-popup-text-content" style="display: none;">
+                    <div class="news-popup-image-wrapper">
+                        <img src="" alt="" class="news-popup-image">
+                    </div>
+                    <h3 class="news-popup-title"></h3>
+                    <div class="news-popup-date">Дата публикации: <span></span></div>
+                    <div class="news-popup-text"></div>
+                </div>
+                
+                <!-- Для видео -->
+                <div class="news-popup-video-content" style="display: none;">
+                    <div class="news-popup-video-wrapper">
+                        <iframe width="560" height="315" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <h3 class="news-popup-video-title"></h3>
+                </div>
+                
+                <!-- Для PDF -->
+                <div class="news-popup-pdf-content" style="display: none;">
+                    <div class="news-popup-pdf-wrapper">
+                        <iframe width="100%" height="600px" frameborder="0"></iframe>
+                    </div>
+                    <h3 class="news-popup-pdf-title"></h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 <style>
+/* Основные стили секции */
+.news-section {
+    padding: 60px 0;
+    background-color: #fff;
+}
 
+.news-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.news-header {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.news-title {
+    font-size: 28px;
+    color: #333;
+    margin: 0;
+    position: relative;
+    z-index: 2;
+    padding-left: 20px;
+}
+
+.news-header-decoration {
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 390px;
+    height: 40px;
+    background-color: #f0f0f0;
+    z-index: 1;
+}
+
+/* Сетка новостей */
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* Карточка новости */
+.news-item {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.news-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.news-item-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+.news-item-content {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.news-item-title {
+    margin: 0 0 15px 0;
+    font-size: 20px;
+    color: #222;
+}
+
+.news-item-excerpt {
+    margin: 0 0 20px 0;
+    color: #555;
+    line-height: 1.5;
+    flex-grow: 1;
+}
+
+.news-read-more {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    align-self: flex-start;
+}
+
+.news-read-more:hover {
+    background-color: #0056b3;
+}
+
+/* Стили попапа */
+.news-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+
+.news-popup-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.news-popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 900px;
+    max-height: 90vh;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    overflow-y: auto;
+}
+
+.news-popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+    z-index: 2;
+}
+
+/* Стили для текстового контента */
+.news-popup-image-wrapper {
+    margin-bottom: 20px;
+}
+
+.news-popup-image {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.news-popup-title {
+    margin-top: 0;
+    color: #222;
+    font-size: 24px;
+}
+
+.news-popup-date {
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.news-popup-text {
+    line-height: 1.6;
+    color: #444;
+}
+
+/* Стили для видео */
+.news-popup-video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.news-popup-video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.news-popup-video-title {
+    margin-top: 0;
+    color: #222;
+    font-size: 24px;
+}
+
+/* Стили для PDF */
+.news-popup-pdf-wrapper {
+    width: 100%;
+    height: 600px;
+    margin-bottom: 20px;
+}
+
+.news-popup-pdf-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ddd;
+}
+
+.news-popup-pdf-title {
+    margin-top: 0;
+    color: #222;
+    font-size: 24px;
+}
+
+@media (max-width: 768px) {
+    .news-header-decoration {
+        width: 100%;
+    }
+    
+    .news-popup-content {
+        width: 95%;
+        padding: 20px;
+    }
+    
+    .news-popup-pdf-wrapper {
+        height: 400px;
+    }
+}
 </style>
 
 <script>
-
+document.addEventListener('DOMContentLoaded', function() {
+    const readMoreButtons = document.querySelectorAll('.news-read-more');
+    const newsPopup = document.querySelector('.news-popup');
+    const popupClose = document.querySelector('.news-popup-close');
+    
+    // Элементы для разных типов контента
+    const textContent = document.querySelector('.news-popup-text-content');
+    const videoContent = document.querySelector('.news-popup-video-content');
+    const pdfContent = document.querySelector('.news-popup-pdf-content');
+    
+    // Текстовый контент
+    const popupTitle = document.querySelector('.news-popup-title');
+    const popupImage = document.querySelector('.news-popup-image');
+    const popupDate = document.querySelector('.news-popup-date span');
+    const popupText = document.querySelector('.news-popup-text');
+    
+    // Видео контент
+    const videoTitle = document.querySelector('.news-popup-video-title');
+    const videoIframe = document.querySelector('.news-popup-video-wrapper iframe');
+    
+    // PDF контент
+    const pdfTitle = document.querySelector('.news-popup-pdf-title');
+    const pdfIframe = document.querySelector('.news-popup-pdf-wrapper iframe');
+    
+    // Данные новостей
+    const newsData = {
+        1: {
+            title: "Компания ИНТАГО Казахстан на выставке KazBuild2024",
+            date: "07.11.2024",
+            content: "<p>Мы рады сообщить о завершении строительства и запуске нового производственного цеха площадью 2500 кв.м.</p><p>Новый цех оснащен современным оборудованием и позволит нам увеличить объем производства на 40%.</p>",
+            image: "images/news1-full.jpg"
+        },
+        2: {
+            title: "Экскурсия по производству",
+            videoId: "dQw4w9WgXcQ"
+        },
+        3: {
+            title: "Каталог продукции 2023",
+            pdfUrl: "catalog2023.pdf"
+        }
+    };
+    
+    readMoreButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const newsId = this.getAttribute('data-news-id');
+            const contentType = this.getAttribute('data-content-type');
+            const news = newsData[newsId];
+            
+            // Скрываем все контент-блоки
+            textContent.style.display = 'none';
+            videoContent.style.display = 'none';
+            pdfContent.style.display = 'none';
+            
+            // Очищаем предыдущий контент
+            videoIframe.src = '';
+            pdfIframe.src = '';
+            
+            // Показываем соответствующий контент
+            switch(contentType) {
+                case 'text':
+                    popupTitle.textContent = news.title;
+                    popupDate.textContent = news.date;
+                    popupText.innerHTML = news.content;
+                    popupImage.src = this.getAttribute('data-image');
+                    textContent.style.display = 'block';
+                    break;
+                    
+                case 'video':
+                    videoTitle.textContent = news.title;
+                    videoIframe.src = `https://www.youtube.com/embed/${news.videoId}?autoplay=1`;
+                    videoContent.style.display = 'block';
+                    break;
+                    
+                case 'pdf':
+                    pdfTitle.textContent = news.title;
+                    pdfIframe.src = news.pdfUrl;
+                    pdfContent.style.display = 'block';
+                    break;
+            }
+            
+            newsPopup.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        });
+    });
+    
+    popupClose.addEventListener('click', function() {
+        newsPopup.style.display = 'none';
+        document.body.style.overflow = 'auto';
+        
+        // Останавливаем видео при закрытии попапа
+        videoIframe.src = '';
+    });
+    
+    newsPopup.querySelector('.news-popup-overlay').addEventListener('click', function() {
+        newsPopup.style.display = 'none';
+        document.body.style.overflow = 'auto';
+        
+        // Останавливаем видео при закрытии попапа
+        videoIframe.src = '';
+    });
+});
 </script>
