@@ -1,0 +1,2285 @@
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    line-height: 1.5;
+    color: #333;
+}
+
+.header-container {
+      position: relative;
+      height: 72px;
+      background-color: #ffffff;
+      z-index: 1999;
+    }
+    
+    .header-content {
+      display: flex;
+      align-items: center;
+      height: 72px;
+      max-width: 1660px;
+      margin: 0 auto;
+      padding: 0 20px;
+      position: relative;
+    }
+    
+    .logo {
+      position: absolute;
+      left: 20px;
+      top: 11px;
+      width: 139px;
+      height: 48px;
+    }
+    
+    .logo img {
+      width: 100%;
+      height: auto;
+    }
+    
+    .divider {
+      position: absolute;
+      left: 284px;
+      top: 28px;
+      width: 2px;
+      height: 17px;
+      background-color: #000000;
+      opacity: 0;
+    }
+    
+    .company-name {
+      position: absolute;
+      left: 306px;
+      top: 28px;
+      width: 316px;
+      font-family: 'Inter', Arial, sans-serif;
+      font-size: 15px;
+      font-weight: 500;
+      color: #000000;
+      line-height: 1.15;
+    }
+    
+    .social-links {
+      position: absolute;
+      right: 348px;
+      top: 12px;
+      display: flex;
+      gap: 8px;
+    }
+    
+    .social-link {
+      width: 48px;
+      height: 48px;
+    }
+    
+    .social-link img {
+      width: 100%;
+      height: auto;
+    }
+    
+    .contacts-btn {
+      position: absolute;
+      right: 158px;
+      top: 12px;
+      width: 210px;
+      height: 48px;
+      background-color: #f5f5f5;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Inter', Arial, sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      color: #000000;
+      text-decoration: none;
+    }
+    
+    .contacts-btn:hover {
+      background-color: #e0e0e0;
+    }
+    
+    .request-btn {
+      position: absolute;
+      right: 0;
+      top: 12px;
+      width: 158px;
+      height: 48px;
+      background-color: #00b401;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Inter', Arial, sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      color: #ffffff;
+      text-decoration: none;
+    }
+    
+    .request-btn:hover {
+      background-color: #009a00;
+    }
+    
+    .menu-btn {
+      display: none;
+    }
+    
+    .shadow-line {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(0turn, rgba(255,247,5,0) 0%, rgba(0,0,0,1) 100%);
+      opacity: 0.1;
+    }
+    
+    @media (max-width: 1659px) {
+      .header-content {
+        max-width: 1200px;
+      }
+      .logo {
+        left: 20px;
+      }
+      .divider {
+        left: 179px;
+      }
+      .company-name {
+        left: 201px;
+      }
+      .social-links {
+        right: 408px;
+      }
+      .contacts-btn {
+        right: 218px;
+      }
+      .request-btn {
+        right: 60px;
+      }
+    }
+    
+    @media (max-width: 1199px) {
+      .header-content {
+        max-width: 960px;
+      }
+      .social-links {
+        right: 476px;
+        top: -133px;
+      }
+      .contacts-btn {
+        right: 286px;
+        top: -133px;
+      }
+      .request-btn {
+        right: 128px;
+        top: -133px;
+      }
+
+      .menu-btn {
+        display: block;
+        position: absolute;
+        right: 10px;
+        top: 7px;
+        width: 48px;
+        height: 48px;
+      }
+      .menu-btn img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    
+    @media (max-width: 959px) {
+      .header-content {
+        max-width: 720px;
+      }
+    }
+    
+    @media (max-width: 767px) {
+      .header-container {
+        height: 62px;
+      }
+      .header-content {
+        height: 62px;
+        max-width: 540px;
+      }
+      .logo {
+        top: 14px;
+        left: 10px;
+        width: 100px;
+        height: 35px;
+      }
+      .divider {
+        top: 22px;
+        left: 122px;
+      }
+      .company-name {
+        top: 17px;
+        left: 136px;
+        width: 182px;
+        font-size: 12px;
+      }
+      .shadow-line {
+        top: 62px;
+      }
+      .social-links,
+      .contacts-btn,
+      .request-btn {
+        display: none;
+      }
+      .menu-btn {
+        display: block;
+        position: absolute;
+        right: 10px;
+        top: 7px;
+        width: 48px;
+        height: 48px;
+      }
+      .menu-btn img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    
+    @media (max-width: 479px) {
+      .header-container {
+        height: 80px;
+      }
+      .header-content {
+        height: 80px;
+      }
+      .logo {
+        top: 34px;
+        left: 10px;
+      }
+      .divider {
+        top: 42px;
+        left: 122px;
+      }
+      .company-name {
+        top: 37px;
+        left: 136px;
+      }
+      .shadow-line {
+        top: 81px;
+      }
+      .menu-btn {
+        top: 27px;
+        left: 326px;
+      }
+    }
+
+
+/*бургер*/
+    .mobile-menu-container {
+      position: fixed;
+      top: 0;
+      right: -260px;
+      width: 260px;
+      height: 100vh;
+      background-color: #ffffff;
+      z-index: 1000;
+      transition: right 0.3s ease;
+      box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+      will-change: right;
+    }
+    
+    .mobile-menu-container.open {
+      right: 0;
+    }
+    
+    .mobile-menu-close {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      width: 30px;
+      height: 30px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      z-index: 2;
+    }
+    
+    .mobile-menu-close span {
+      display: block;
+      position: absolute;
+      height: 2px;
+      width: 100%;
+      background: #000000;
+      opacity: 1;
+      left: 0;
+      transform: rotate(0deg);
+      transition: .25s ease-in-out;
+    }
+    
+    .mobile-menu-close span:nth-child(1) {
+      top: 10px;
+      transform: rotate(135deg);
+    }
+    
+    .mobile-menu-close span:nth-child(2) {
+      top: 10px;
+      transform: rotate(-135deg);
+    }
+    
+    .mobile-menu-content {
+      padding: 20px;
+      height: 100%;
+      overflow-y: auto;
+    }
+    
+    .mobile-menu-logo {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    
+    .mobile-menu-logo img {
+      max-width: 180px;
+      height: auto;
+    }
+    
+    .mobile-menu-nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .mobile-menu-nav li {
+      padding: 5px 0;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    
+    .mobile-menu-nav li:first-child {
+      padding-top: 0;
+    }
+    
+    .mobile-menu-nav li:last-child {
+      border-bottom: none;
+    }
+    
+    .mobile-menu-nav a {
+      display: block;
+      padding: 10px 0;
+      color: #000000;
+      text-decoration: none;
+      font-family: 'Inter', Arial, sans-serif;
+      font-size: 16px;
+      transition: color 0.2s ease;
+    }
+    
+    .mobile-menu-nav a:hover {
+      color: #00b401;
+    }
+    
+    .mobile-menu-social {
+      margin-top: 30px;
+      text-align: center;
+    }
+    
+    .mobile-menu-social-links {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+    
+    .mobile-menu-social-links a {
+      display: block;
+      width: 30px;
+      height: 30px;
+      transition: transform 0.2s ease;
+    }
+    
+    .mobile-menu-social-links a:hover {
+      transform: scale(1.1);
+    }
+    
+    .mobile-menu-social-links svg {
+      width: 100%;
+      height: 100%;
+    }
+    
+    .mobile-menu-footer {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 12px;
+      color: #a2a2a2;
+    }
+    
+    .mobile-menu-footer a {
+      color: #a2a2a2;
+      text-decoration: underline;
+      transition: color 0.2s ease;
+    }
+    
+    .mobile-menu-footer a:hover {
+      color: #00b401;
+    }
+    
+    .mobile-menu-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 999;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+    
+    .mobile-menu-overlay.open {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    /* Анимация для кнопки бургера */
+    .menu-btn {
+      transition: transform 0.3s ease;
+    }
+    
+    .menu-btn.active {
+      transform: rotate(90deg);
+    }
+
+
+/*hero*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* Hero Section */
+.geo-hero {
+    position: relative;
+    min-height: 800px;
+    overflow: hidden;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.geo-hero__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.geo-hero__video-element {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.geo-hero__gradient {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0) 100%);
+    z-index: 2;
+}
+
+.geo-hero__content {
+    position: relative;
+    z-index: 3;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 120px 20px 180px;
+    color: #ffffff;
+}
+
+.geo-hero__title {
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 1.2;
+    max-width: 800px;
+    margin-bottom: 30px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.geo-hero__description {
+    font-size: 18px;
+    font-weight: 400;
+    max-width: 560px;
+    margin-bottom: 40px;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    opacity: 0.9;
+}
+
+.geo-hero__buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 60px;
+}
+
+.geo-hero__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 30px;
+    height: 56px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.geo-hero__btn--primary {
+    background-color: #00b401;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0,180,1,0.3);
+}
+
+.geo-hero__btn--primary:hover {
+    background-color: #009a01;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,180,1,0.4);
+}
+
+.geo-hero__btn-video {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #ffffff;
+    transition: transform 0.3s ease;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(5px);
+    border-radius: 12px;
+    padding: 8px 20px 8px 8px;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.geo-hero__btn-video:hover {
+    transform: translateY(-2px);
+    background: rgba(255,255,255,0.25);
+}
+
+.geo-hero__video-preview {
+    width: 80px;
+    height: 45px;
+    border-radius: 6px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    margin-right: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.geo-hero__play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 32px;
+    height: 32px;
+    background-color: rgba(255,255,255,0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.geo-hero__play-icon::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-left: 12px solid #00b401;
+    border-bottom: 8px solid transparent;
+    margin-left: 2px;
+    transition: all 0.3s ease;
+}
+
+.geo-hero__btn-video:hover .geo-hero__play-icon {
+    background-color: #fff;
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.geo-hero__video-text {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.geo-hero__features {
+    position: relative;
+    z-index: 3;
+    max-width: 1200px;
+    width: 100%;
+    margin: -80px auto 0;
+    padding: 0 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.geo-hero__feature {
+    display: flex;
+    align-items: center;
+    background-color: #004043;
+    border-radius: 12px;
+    padding: 20px;
+    color: #ffffff;
+    flex: 1;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+
+.geo-hero__feature:hover {
+    transform: translateY(-5px);
+}
+
+.geo-hero__feature-icon {
+    margin-right: 15px;
+    font-size: 24px;
+    min-width: 24px;
+}
+
+.geo-hero__feature-text {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Video Popup */
+.geo-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.geo-popup__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.geo-popup__container {
+    position: relative;
+    width: 90%;
+    max-width: 900px;
+    z-index: 2;
+    animation: scaleUp 0.3s ease;
+}
+
+@keyframes scaleUp {
+    from { transform: scale(0.95); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.geo-popup__close {
+    position: absolute;
+    top: -50px;
+    right: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    z-index: 3;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.geo-popup__close:hover {
+    opacity: 1;
+}
+
+.geo-popup__close svg {
+    width: 24px;
+    height: 24px;
+}
+
+.geo-popup__video {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.geo-popup__video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .geo-hero {
+        min-height: 700px;
+    }
+    
+    .geo-hero__content {
+        padding: 100px 20px 150px;
+    }
+    
+    .geo-hero__title {
+        font-size: 46px;
+        max-width: 700px;
+    }
+    
+    .geo-hero__features {
+        margin-top: -60px;
+    }
+}
+
+@media (max-width: 992px) {
+    .geo-hero {
+        min-height: 600px;
+    }
+    
+    .geo-hero__title {
+        font-size: 40px;
+        max-width: 600px;
+    }
+    
+    .geo-hero__description {
+        font-size: 16px;
+        max-width: 500px;
+    }
+    
+    .geo-hero__buttons {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .geo-hero__features {
+        flex-wrap: wrap;
+        margin-top: -40px;
+    }
+    
+    .geo-hero__feature {
+        min-width: calc(50% - 10px);
+    }
+}
+
+@media (max-width: 768px) {
+    .geo-hero {
+        min-height: 500px;
+    }
+    
+    .geo-hero__content {
+        padding: 80px 20px 120px;
+    }
+    
+    .geo-hero__title {
+        font-size: 34px;
+    }
+    
+    .geo-hero__btn {
+        height: 50px;
+        padding: 0 25px;
+        font-size: 15px;
+    }
+    
+    .geo-hero__video-preview {
+        width: 70px;
+        height: 40px;
+    }
+    
+    .geo-hero__play-icon {
+        width: 26px;
+        height: 26px;
+    }
+    
+    .geo-popup__container {
+        width: 95%;
+    }
+}
+
+@media (max-width: 576px) {
+    .geo-hero {
+        min-height: auto;
+        padding-bottom: 40px;
+    }
+    
+    .geo-hero__content {
+        padding: 60px 20px 100px;
+    }
+    
+    .geo-hero__title {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+    
+    .geo-hero__description {
+        font-size: 15px;
+        margin-bottom: 30px;
+    }
+    
+    .geo-hero__btn {
+        height: 46px;
+        padding: 0 20px;
+        font-size: 14px;
+        width: 100%;
+    }
+    
+    .geo-hero__btn-video {
+        width: 100%;
+        padding: 6px;
+    }
+    
+    .geo-hero__video-preview {
+        width: 60px;
+        height: 34px;
+    }
+    
+    .geo-hero__play-icon {
+        width: 22px;
+        height: 22px;
+    }
+    
+    .geo-hero__play-icon::after {
+        border-top-width: 6px;
+        border-left-width: 10px;
+        border-bottom-width: 6px;
+    }
+    
+    .geo-hero__video-text {
+        font-size: 14px;
+    }
+    
+    .geo-hero__features {
+        margin-top: 20px;
+        gap: 12px;
+    }
+    
+    .geo-hero__feature {
+        min-width: 100%;
+        padding: 15px;
+    }
+    
+    .geo-hero__feature-icon {
+        font-size: 20px;
+        margin-right: 12px;
+    }
+    
+    .geo-hero__feature-text {
+        font-size: 14px;
+    }
+}
+
+
+  /* Popup Base Styles */
+.geo-form-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.geo-form-popup__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.geo-form-popup__container {
+    position: relative;
+    width: 90%;
+    max-width: 500px;
+    background: #fff;
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    z-index: 2;
+    animation: slideUp 0.3s ease;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+@keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.geo-form-popup__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    z-index: 3;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.geo-form-popup__close:hover {
+    opacity: 1;
+}
+
+.geo-form-popup__close svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Form Styles */
+.geo-form {
+    margin-top: 20px;
+}
+
+.geo-form__title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #000;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.geo-form__description {
+    font-size: 16px;
+    color: #555;
+    text-align: center;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.geo-form__description strong {
+    color: #00b401;
+    font-weight: 600;
+}
+
+.geo-form__group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.geo-form__label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #333;
+    font-weight: 500;
+}
+
+.geo-form__input {
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 16px;
+    border: 1px solid #e4e4e4;
+    border-radius: 12px;
+    background: #fff;
+    transition: all 0.3s ease;
+    font-family: 'Inter', sans-serif;
+}
+
+.geo-form__input:focus {
+    border-color: #00b401;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0,180,1,0.1);
+}
+
+.geo-form__select {
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 16px;
+    border: 1px solid #e4e4e4;
+    border-radius: 12px;
+    background: #fff;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    background-size: 16px;
+}
+
+.geo-form__submit {
+    margin-top: 30px;
+}
+
+.geo-form__submit-btn {
+    width: 100%;
+    padding: 16px;
+    background: #00b401;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Inter', sans-serif;
+}
+
+.geo-form__submit-btn:hover {
+    background: #009a01;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,180,1,0.3);
+}
+
+.geo-form__footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #999;
+}
+
+.geo-form__footer a {
+    color: #999;
+    text-decoration: underline;
+}
+
+.geo-form__footer a:hover {
+    color: #666;
+}
+
+/* Phone Input Styles */
+.geo-form__phone-wrapper {
+    display: flex;
+    border: 1px solid #e4e4e4;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.geo-form__phone-prefix {
+    padding: 14px 12px;
+    background: #f5f5f5;
+    font-size: 16px;
+    border-right: 1px solid #e4e4e4;
+}
+
+.geo-form__phone-input {
+    flex: 1;
+    border: none;
+    padding: 14px 16px;
+    font-size: 16px;
+}
+
+/* Error Styles */
+.geo-form__error {
+    color: #e74c3c;
+    font-size: 13px;
+    margin-top: 5px;
+    display: none;
+}
+
+.geo-form__group--error .geo-form__input,
+.geo-form__group--error .geo-form__select,
+.geo-form__group--error .geo-form__phone-wrapper {
+    border-color: #e74c3c;
+}
+
+.geo-form__group--error .geo-form__error {
+    display: block;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .geo-form-popup__container {
+        padding: 30px 20px;
+        max-width: 90%;
+    }
+    
+    .geo-form__title {
+        font-size: 20px;
+    }
+    
+    .geo-form__description {
+        font-size: 15px;
+    }
+    
+    .geo-form__input,
+    .geo-form__select,
+    .geo-form__phone-input {
+        padding: 12px 14px;
+        font-size: 15px;
+    }
+    
+    .geo-form__phone-prefix {
+        padding: 12px 10px;
+        font-size: 15px;
+    }
+    
+    .geo-form__submit-btn {
+        padding: 14px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .geo-form-popup__container {
+        padding: 25px 15px;
+        max-width: 95%;
+    }
+    
+    .geo-form__title {
+        font-size: 18px;
+    }
+    
+    .geo-form__description {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+    
+    .geo-form__group {
+        margin-bottom: 15px;
+    }
+    
+    .geo-form__input,
+    .geo-form__select,
+    .geo-form__phone-input {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+    
+    .geo-form__phone-prefix {
+        padding: 10px 8px;
+        font-size: 14px;
+    }
+    
+    .geo-form__submit-btn {
+        padding: 12px;
+        font-size: 14px;
+    }
+    
+    .geo-form__footer {
+        font-size: 13px;
+    }
+}
+
+
+
+        /* фильтр */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    
+        
+        /* Filter Container */
+        .geo-filter {
+            max-width: 1200px;
+            margin: 30px auto;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            padding: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .geo-filter__title {
+            font-size: 22px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .geo-filter__title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: #00b401;
+        }
+        
+        /* Filter Tabs */
+        .geo-filter__tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+        
+        .geo-filter__tab-group {
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        
+        .geo-filter__tab-group-title {
+            font-size: 16px;
+            font-weight: 500;
+            color: #555;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .geo-filter__tab-group-title::before {
+            content: '';
+            display: inline-block;
+            width: 4px;
+            height: 16px;
+            background: #00b401;
+            margin-right: 8px;
+            border-radius: 2px;
+        }
+        
+        .geo-filter__tab {
+            padding: 12px 20px;
+            background: #f9f9f9;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: 500;
+            color: #444;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            flex: 1;
+            min-width: 100px;
+        }
+        
+        .geo-filter__tab:hover {
+            background: #f0f0f0;
+            border-color: #d0d0d0;
+        }
+        
+        .geo-filter__tab--active {
+            background: #00b401;
+            color: #fff;
+            border-color: #00b401;
+            box-shadow: 0 4px 12px rgba(0,180,1,0.2);
+        }
+        
+        .geo-filter__tab--active:hover {
+            background: #009a01;
+            border-color: #009a01;
+        }
+        
+        /* Notice */
+        .geo-filter__notice {
+            background: #f8f8f8;
+            border-left: 4px solid #00b401;
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
+            font-size: 14px;
+            color: #555;
+            margin-top: 30px;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 1024px) {
+            .geo-filter {
+                padding: 25px;
+            }
+            
+            .geo-filter__title {
+                font-size: 20px;
+            }
+            
+            .geo-filter__tab {
+                padding: 10px 15px;
+                font-size: 14px;
+                min-width: 90px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .geo-filter {
+                padding: 20px;
+                border-radius: 12px;
+            }
+            
+            .geo-filter__tabs {
+                gap: 8px;
+            }
+            
+            .geo-filter__tab {
+                padding: 8px 12px;
+                font-size: 13px;
+                min-width: 80px;
+                border-radius: 8px;
+            }
+            
+            .geo-filter__tab-group-title {
+                font-size: 15px;
+            }
+            
+            .geo-filter__notice {
+                font-size: 13px;
+                padding: 12px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .geo-filter {
+                padding: 15px;
+                margin: 15px;
+            }
+            
+            .geo-filter__title {
+                font-size: 18px;
+                margin-bottom: 20px;
+            }
+            
+            .geo-filter__tabs {
+                gap: 6px;
+            }
+            
+            .geo-filter__tab {
+                padding: 8px 10px;
+                font-size: 12px;
+                min-width: 70px;
+                border-radius: 6px;
+            }
+            
+            .geo-filter__tab-group-title {
+                font-size: 14px;
+                margin-bottom: 10px;
+            }
+            
+            .geo-filter__notice {
+                font-size: 12px;
+                padding: 10px;
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .product-card {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            padding: 30px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+        
+        .product-header {
+            grid-column: 1 / -1;
+        }
+        
+        .product-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .product-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+        
+        .product-description {
+            margin-bottom: 20px;
+        }
+        
+        .specs-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .specs-table tr {
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .specs-table td {
+            padding: 12px 0;
+            vertical-align: top;
+        }
+        
+        .spec-name {
+            font-weight: 500;
+            width: 60%;
+        }
+        
+        .spec-value {
+            color: #4f4f4f;
+        }
+        
+        .product-actions {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        
+        .btn-primary {
+            background: #00b401;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #009a01;
+        }
+        
+        .btn-secondary {
+            background: #f0f0f0;
+            color: #333;
+            border: 1px solid #ddd;
+        }
+        
+        .btn-secondary:hover {
+            background: #e0e0e0;
+        }
+        
+        .notice {
+            background: #f8f8f8;
+            border-left: 4px solid #00b401;
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
+            margin-top: 30px;
+            grid-column: 1 / -1;
+        }
+        
+        @media (max-width: 768px) {
+            .product-card {
+                grid-template-columns: 1fr;
+                padding: 20px;
+            }
+            
+            .product-actions {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
+            }
+        }
+
+  /* metric*/
+  .metrics-block {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+  
+  .metrics-block__inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    border-radius: 16px;
+
+  }
+  
+  .metrics-block__bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://static.tildacdn.com/tild6232-3236-4337-b765-383038346630/Frame_1948753329.png');
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    border-radius: 16px;
+
+  }
+  
+  .metrics-block__content {
+    position: relative;
+    z-index: 2;
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .metrics-block__title {
+    font-size: 28px;
+    line-height: 1.2;
+    margin-bottom: 50px;
+    text-align: center;
+    color: #fff;
+  }
+  
+  /* Сетка показателей */
+  .metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  
+  /* Карточка показателя */
+  .metric-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 12px;
+    padding: 30px 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .metric-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .metric-card__icon {
+    height: 60px;
+    margin: 0 auto 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  .metric-card__icon--productivity {
+    background-image: url('https://optim.tildacdn.com/tild6237-6535-4338-b331-653638346162/-/cover/91x72/center/center/-/format/webp/zavod2.png');
+  }
+  
+  .metric-card__icon--width {
+    background-image: url('https://optim.tildacdn.com/tild6131-3736-4162-b637-336162623136/-/cover/93x55/center/center/-/format/webp/shirina.png');
+  }
+  
+  .metric-card__icon--density {
+    background-image: url('https://optim.tildacdn.com/tild3139-6664-4138-b034-333335623335/-/cover/80x72/center/center/-/format/webp/plotnost.png');
+  }
+  
+  .metric-card__value {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #fff;
+  }
+  
+  .metric-card__description {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 16px;
+    line-height: 1.4;
+  }
+  
+  /* Итоговый показатель */
+  .metrics-total {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px 40px;
+    border-radius: 8px;
+    max-width: 800px;
+    width: 100%;
+  }
+  
+  .metrics-total__text {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+    margin: 0;
+  }
+  
+  /* Адаптивность */
+  @media (max-width: 1024px) {
+    .metrics-block {
+      min-height: 600px;
+    }
+    
+    .metrics-block__content {
+      padding: 40px 30px;
+    }
+    
+    .metrics-grid {
+      gap: 20px;
+    }
+    
+    .metric-card {
+      padding: 20px 15px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .metrics-grid {
+      grid-template-columns: 1fr;
+      max-width: 500px;
+      margin: 0 auto 40px;
+    }
+    
+    .metrics-block__title {
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+    
+    .metric-card {
+      padding: 25px 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .metrics-block {
+      min-height: 500px;
+    }
+    
+    .metrics-block__content {
+      padding: 30px 20px;
+    }
+    
+    .metrics-total {
+      padding: 15px 20px;
+    }
+    
+    .metrics-total__text {
+      font-size: 18px;
+    }
+  }
+
+/*счетчик*/
+.company-stats {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.stats-header {
+    position: sticky;
+    top: 20px;
+}
+
+.company-stats__title {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.stat-card {
+    padding: 20px;
+    background: rgba(255,255,255,0.9);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    height: 100%;
+}
+
+.stat-card__value {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #2c3e50;
+}
+
+.stat-card__label {
+    font-size: 16px;
+    color: #666;
+}
+
+.reviews-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 30px;
+    padding: 10px 0;
+    color: #0066cc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.reviews-link:hover {
+    color: #004499;
+}
+
+.reviews-link__icon {
+    transition: transform 0.3s;
+}
+
+.reviews-link:hover .reviews-link__icon {
+    transform: translateX(3px);
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+    .company-stats {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .stats-header {
+        position: static;
+    }
+}
+
+@media (max-width: 768px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .company-stats__title {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    
+    .stat-card {
+        padding: 15px;
+    }
+    
+    .stat-card__value {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .company-stats {
+        padding: 30px 15px;
+    }
+    
+    .stat-card__value {
+        font-size: 24px;
+    }
+    
+    .stat-card__label {
+        font-size: 14px;
+    }
+    
+    .reviews-link {
+        font-size: 14px;
+    }
+}
+
+
+/* почему мы */
+.advantages-section {
+
+
+  padding: 80px 20px;
+  background-color: #0A6EF7;
+}
+
+.advantages-title {
+  font-size: 36px;
+  line-height: 1.2;
+  margin-bottom: 50px;
+  text-align: center;
+  color: white;
+}
+
+.advantages-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.advantages-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.advantage-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.advantage-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.advantage-image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.advantage-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.advantage-card:hover .advantage-image img {
+  transform: scale(1.05);
+}
+
+.advantage-content {
+  padding: 25px;
+  color: white;
+}
+
+.advantage-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.advantage-icon i {
+  font-size: 24px;
+  color: white;
+}
+
+.advantage-content h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  line-height: 1.3;
+  font-weight: 600;
+}
+
+.advantage-content p {
+  font-size: 15px;
+  line-height: 1.5;
+  margin-bottom: 0;
+  opacity: 0.9;
+}
+
+/* Адаптивность - mobile first подход */
+@media (max-width: 480px) {
+  .advantages-section {
+    padding: 40px 15px;
+  }
+  
+  .advantages-title {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  
+  .advantages-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .advantage-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+  }
+  
+  .advantage-icon i {
+    font-size: 32px;
+  }
+  
+  .advantage-content h3,
+  .advantage-content p {
+    text-align: center;
+  }
+  
+  .advantage-card {
+    backdrop-filter: none;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .advantages-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+  
+  .advantage-image {
+    height: 180px;
+  }
+  
+  .advantages-title {
+    font-size: 28px;
+  }
+  
+  .advantage-icon {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .advantages-grid {
+    gap: 20px;
+  }
+}
+
+/* о компании*/
+.about-company {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: sans-serif;
+}
+
+/* Верхний блок */
+.top-section {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+
+.title-block {
+  flex: 0 0 30%;
+  padding-right: 20px;
+}
+
+.title-block h2 {
+  font-size: 36px;
+  line-height: 46px;
+  margin: 0;
+}
+
+.description-block {
+  flex: 0 0 70%;
+}
+
+.description-block h3 {
+  font-size: 24px;
+  line-height: 38px;
+  margin: 0;
+  font-weight: normal;
+}
+
+.highlight {
+  color: #0A6EF7;
+}
+
+.description-block a {
+  color: #0A6EF7;
+  text-decoration: none;
+}
+
+/* Нижний блок */
+.bottom-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.director-block {
+  flex: 0 0 calc(33.333% - 40px);
+  display: flex;
+  gap: 20px;
+}
+
+.director-image {
+  flex: 0 0 81px;
+}
+
+.director-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.director-info h3 {
+  font-size: 18px;
+  line-height: 22px;
+  margin: 0 0 15px 0;
+}
+
+.watch-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.watch-link img {
+  width: 20px;
+}
+
+.watch-link h3 {
+  font-size: 16px;
+  line-height: 20px;
+  margin: 0;
+}
+
+.watch-link a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.info-block {
+  flex: 0 0 calc(33.333% - 40px);
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: #000;
+  margin-bottom: 20px;
+}
+
+.info-block h3 {
+  font-size: 18px;
+  line-height: 22px;
+  margin: 0;
+  font-weight: normal;
+}
+
+/* Адаптация */
+@media (max-width: 1200px) {
+  .title-block,
+  .description-block,
+  .director-block,
+  .info-block {
+    flex: 0 0 100%;
+  }
+  
+  .title-block {
+    margin-bottom: 20px;
+  }
+  
+  .director-block {
+    margin-bottom: 30px;
+  }
+  
+  .divider {
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .top-section,
+  .bottom-section {
+    flex-direction: column;
+  }
+  
+  .director-block {
+    flex-direction: column;
+  }
+  
+  .director-image {
+    margin-bottom: 15px;
+    width: 15%;
+  }
+
+  .description-block h3{
+    font-size: 16px;
+    line-height: 25px;
+  }
+}
+
+
+.video-promo-section {
+  position: relative;
+  height: 600px;
+  overflow: hidden;
+}
+
+.video-promo-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-promo-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.dark-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.video-button-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 2;
+}
+
+.video-popup-button {
+  display: inline-flex;
+  align-items: center;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+}
+
+.video-popup-button:hover {
+  transform: scale(1.05);
+}
+
+.play-icon {
+  width: 48px;
+  height: 48px;
+  margin-left: 15px;
+  transition: transform 0.3s ease;
+}
+
+.video-popup-button:hover .play-icon {
+  transform: scale(1.1);
+}
+
+/* Стили для попапа */
+.video-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  display: none;
+}
+
+.popup-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 900px;
+  background: #000;
+}
+
+.close-popup {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Адаптивность */
+@media (max-width: 1200px) {
+  .video-promo-section {
+    height: 500px;
+  }
+}
+
+@media (max-width: 960px) {
+  .video-promo-section {
+    height: 400px;
+  }
+  
+  .video-popup-button {
+    font-size: 20px;
+  }
+  
+  .play-icon {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@media (max-width: 640px) {
+  .video-promo-section {
+    height: 250px;
+  }
+  
+  .video-popup-button {
+    flex-direction: column;
+    font-size: 18px;
+  }
+  
+  .play-icon {
+    margin-left: 0;
+    margin-top: 10px;
+    width: 30px;
+    height: 30px;
+  }
+  
+  .popup-content {
+    width: 95%;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-popup-button {
+    font-size: 16px;
+  }
+}
