@@ -1,430 +1,353 @@
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<section class="news-section">
-    <div class="news-container">
-        <div class="news-header">
-            <h2 class="news-title">Новости</h2>
-            <div class="news-header-decoration"></div>
-        </div>
-        
-        <div class="news-grid">
-            <!-- Новость 1 (с изображением) -->
-            <div class="news-item">
-                <div class="news-item-image" style="background-image: url('images/news1-preview.jpg');"></div>
-                <div class="news-item-content">
-                    <h3 class="news-item-title">Открытие нового цеха</h3>
-                    <p class="news-item-excerpt">Мы рады сообщить о запуске нового производственного цеха...</p>
-                    <button class="news-read-more" 
-                            data-news-id="1" 
-                            data-content-type="text" 
-                            data-image="images/news1-full.jpg">
-                        Читать полностью
-                    </button>
-                </div>
-            </div>
-            
-            <!-- Новость 2 (с видео) -->
-            <div class="news-item">
-                <div class="news-item-image" style="background-image: url('images/video-preview.jpg');"></div>
-                <div class="news-item-content">
-                    <h3 class="news-item-title">Экскурсия по производству</h3>
-                    <p class="news-item-excerpt">Видео-тур по нашим производственным мощностям...</p>
-                    <button class="news-read-more" 
-                            data-news-id="2" 
-                            data-content-type="video" 
-                            data-video-id="dQw4w9WgXcQ">
-                        Смотреть видео
-                    </button>
-                </div>
-            </div>
-            
-            <!-- Новость 3 (с PDF) -->
-            <div class="news-item">
-                <div class="news-item-image" style="background-image: url('images/pdf-preview.jpg');"></div>
-                <div class="news-item-content">
-                    <h3 class="news-item-title">Новый каталог продукции</h3>
-                    <p class="news-item-excerpt">Скачайте наш новый каталог с полным ассортиментом...</p>
-                    <button class="news-read-more" 
-                            data-news-id="3" 
-                            data-content-type="pdf" 
-                            data-pdf-url="catalog2023.pdf">
-                        Открыть PDF
-                    </button>
-                </div>
-            </div>
-        </div>
+<section class="awards-gallery-section">
+  <div class="awards-gallery-container">
+    <h2 class="awards-gallery-title">Благодарственные письма</h2>
+    
+    <!-- Навигация под заголовком -->
+    <div class="awards-gallery-nav">
+      <button class="awards-gallery-prev awards-gallery-nav-btn">
+        <i class="bi bi-chevron-left"></i>
+      </button>
+      <button class="awards-gallery-next awards-gallery-nav-btn">
+        <i class="bi bi-chevron-right"></i>
+      </button>
     </div>
     
-    <!-- Попап для контента -->
-    <div class="news-popup">
-        <div class="news-popup-overlay"></div>
-        <div class="news-popup-content">
-            <button class="news-popup-close">&times;</button>
-            <div class="news-popup-body">
-                <!-- Для текстового контента -->
-                <div class="news-popup-text-content" style="display: none;">
-                    <div class="news-popup-image-wrapper">
-                        <img src="" alt="" class="news-popup-image">
-                    </div>
-                    <h3 class="news-popup-title"></h3>
-                    <div class="news-popup-date">Дата публикации: <span></span></div>
-                    <div class="news-popup-text"></div>
-                </div>
-                
-                <!-- Для видео -->
-                <div class="news-popup-video-content" style="display: none;">
-                    <div class="news-popup-video-wrapper">
-                        <iframe width="560" height="315" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <h3 class="news-popup-video-title"></h3>
-                </div>
-                
-                <!-- Для PDF -->
-                <div class="news-popup-pdf-content" style="display: none;">
-                    <div class="news-popup-pdf-wrapper">
-                        <iframe width="100%" height="600px" frameborder="0"></iframe>
-                    </div>
-                    <h3 class="news-popup-pdf-title"></h3>
-                </div>
-            </div>
+    <div class="awards-gallery-carousel">
+      <div class="awards-gallery-items">
+        <!-- 6 вертикальных наград -->
+        <div class="awards-gallery-card">
+          <div class="awards-gallery-image-container">
+            <img src="https://optim.tildacdn.com/tild6566-3165-4134-a162-613330653432/-/format/webp/Priemnaya_2407202414.jpg" alt="Награда" class="awards-gallery-image">
+            <button class="awards-gallery-zoom-btn" data-img="https://optim.tildacdn.com/tild6566-3165-4134-a162-613330653432/-/format/webp/Priemnaya_2407202414.jpg">
+              <i class="bi bi-zoom-in"></i>
+            </button>
+          </div>
         </div>
+        <!--  -->
+        <div class="awards-gallery-card">
+          <div class="awards-gallery-image-container">
+            <img src="https://optim.tildacdn.com/tild6566-3165-4134-a162-613330653432/-/format/webp/Priemnaya_2407202414.jpg" alt="Награда" class="awards-gallery-image">
+            <button class="awards-gallery-zoom-btn" data-img="https://optim.tildacdn.com/tild6566-3165-4134-a162-613330653432/-/format/webp/Priemnaya_2407202414.jpg">
+              <i class="bi bi-zoom-in"></i>
+            </button>
+          </div>
+        </div>
+        <!-- ... остальные 4 карточки ... -->
+        <div class="awards-gallery-card">
+          <div class="awards-gallery-image-container">
+            <img src="https://optim.tildacdn.com/tild6566-3165-4134-a162-613330653432/-/format/webp/Priemnaya_2407202414.jpg" alt="Награда" class="awards-gallery-image">
+            <button class="awards-gallery-zoom-btn" data-img="https://optim.tildacdn.com/tild6566-3165-4134-a162-613330653432/-/format/webp/Priemnaya_2407202414.jpg">
+              <i class="bi bi-zoom-in"></i>
+            </button>
+          </div>
+        </div>
+                <div class="awards-gallery-card">
+          <div class="awards-gallery-image-container">
+            <img src="https://optim.tildacdn.com/tild6566-3165-4134-a162-613330653432/-/format/webp/Priemnaya_2407202414.jpg" alt="Награда" class="awards-gallery-image">
+            <button class="awards-gallery-zoom-btn" data-img="https://optim.tildacdn.com/tild6566-3165-4134-a162-613330653432/-/format/webp/Priemnaya_2407202414.jpg">
+              <i class="bi bi-zoom-in"></i>
+            </button>
+          </div>
+        </div>
+                <div class="awards-gallery-card">
+          <div class="awards-gallery-image-container">
+            <img src="https://optim.tildacdn.com/tild6566-3165-4134-a162-613330653432/-/format/webp/Priemnaya_2407202414.jpg" alt="Награда" class="awards-gallery-image">
+            <button class="awards-gallery-zoom-btn" data-img="https://optim.tildacdn.com/tild6566-3165-4134-a162-613330653432/-/format/webp/Priemnaya_2407202414.jpg">
+              <i class="bi bi-zoom-in"></i>
+            </button>
+          </div>
+        </div>
+                <div class="awards-gallery-card">
+          <div class="awards-gallery-image-container">
+            <img src="https://optim.tildacdn.com/tild6566-3165-4134-a162-613330653432/-/format/webp/Priemnaya_2407202414.jpg" alt="Награда" class="awards-gallery-image">
+            <button class="awards-gallery-zoom-btn" data-img="https://optim.tildacdn.com/tild6566-3165-4134-a162-613330653432/-/format/webp/Priemnaya_2407202414.jpg">
+              <i class="bi bi-zoom-in"></i>
+            </button>
+          </div>
+        </div>
+                <div class="awards-gallery-card">
+          <div class="awards-gallery-image-container">
+            <img src="https://optim.tildacdn.com/tild6566-3165-4134-a162-613330653432/-/format/webp/Priemnaya_2407202414.jpg" alt="Награда" class="awards-gallery-image">
+            <button class="awards-gallery-zoom-btn" data-img="https://optim.tildacdn.com/tild6566-3165-4134-a162-613330653432/-/format/webp/Priemnaya_2407202414.jpg">
+              <i class="bi bi-zoom-in"></i>
+            </button>
+          </div>
+        </div>
+                <div class="awards-gallery-card">
+          <div class="awards-gallery-image-container">
+            <img src="https://optim.tildacdn.com/tild6566-3165-4134-a162-613330653432/-/format/webp/Priemnaya_2407202414.jpg" alt="Награда" class="awards-gallery-image">
+            <button class="awards-gallery-zoom-btn" data-img="https://optim.tildacdn.com/tild6566-3165-4134-a162-613330653432/-/format/webp/Priemnaya_2407202414.jpg">
+              <i class="bi bi-zoom-in"></i>
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
+  
+  <!-- Попап для увеличенного изображения -->
+  <div class="awards-gallery-popup">
+    <div class="awards-gallery-popup-overlay"></div>
+    <div class="awards-gallery-popup-content">
+      <button class="awards-gallery-popup-close">
+        <i class="bi bi-x-lg"></i>
+      </button>
+      <img src="" alt="" class="awards-gallery-popup-image">
+    </div>
+  </div>
 </section>
 
+<!-- Подключаем Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+
 <style>
-/* Основные стили секции */
-.news-section {
-    padding: 60px 0;
-    background-color: #fff;
+.awards-gallery-section {
+  padding: 80px 0;
+  background-color: #f8f8f8;
 }
 
-.news-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
+.awards-gallery-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-.news-header {
-    position: relative;
-    margin-bottom: 40px;
+.awards-gallery-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 36px;
+  color: #333;
 }
 
-.news-title {
-    font-size: 28px;
-    color: #333;
-    margin: 0;
-    position: relative;
-    z-index: 2;
-    padding-left: 20px;
+.awards-gallery-nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
 }
 
-.news-header-decoration {
-    position: absolute;
-    top: -10px;
-    left: 0;
-    width: 390px;
-    height: 40px;
-    background-color: #f0f0f0;
-    z-index: 1;
+.awards-gallery-nav-btn {
+  background: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  font-size: 24px;
+  color: #333;
 }
 
-/* Сетка новостей */
-.news-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+.awards-gallery-nav-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 3px 15px rgba(0,0,0,0.2);
+  color: #007bff;
 }
 
-/* Карточка новости */
-.news-item {
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    flex-direction: column;
+.awards-gallery-carousel {
+  width: 100%;
+  overflow: hidden;
 }
 
-.news-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+.awards-gallery-items {
+  display: flex;
+  gap: 25px;
+  padding: 10px;
+  scroll-behavior: smooth;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
 }
 
-.news-item-image {
-    height: 200px;
-    background-size: cover;
-    background-position: center;
+.awards-gallery-items::-webkit-scrollbar {
+  display: none;
 }
 
-.news-item-content {
-    padding: 20px;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
+.awards-gallery-card {
+  flex: 0 0 220px; /* Уменьшил ширину для вертикальных изображений */
+  scroll-snap-align: start;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  background: white;
+  position: relative;
 }
 
-.news-item-title {
-    margin: 0 0 15px 0;
-    font-size: 20px;
-    color: #222;
+.awards-gallery-card:hover {
+  transform: translateY(-5px);
 }
 
-.news-item-excerpt {
-    margin: 0 0 20px 0;
-    color: #555;
-    line-height: 1.5;
-    flex-grow: 1;
+.awards-gallery-image-container {
+  position: relative;
+  width: 100%;
+  height: 300px; /* Фиксированная высота для вертикальных изображений */
+  overflow: hidden;
 }
 
-.news-read-more {
-    display: inline-block;
-    padding: 8px 16px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    align-self: flex-start;
+.awards-gallery-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
-.news-read-more:hover {
-    background-color: #0056b3;
+.awards-gallery-zoom-btn {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  background: rgba(0,0,0,0.7);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: white;
+  font-size: 20px;
+  transition: all 0.3s ease;
+}
+
+.awards-gallery-zoom-btn:hover {
+  background: rgba(0,123,255,0.9);
+  transform: scale(1.1);
 }
 
 /* Стили попапа */
-.news-popup {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1000;
+.awards-gallery-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
 }
 
-.news-popup-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+.awards-gallery-popup-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
-.news-popup-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 90%;
-    max-width: 900px;
-    max-height: 90vh;
-    background: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    overflow-y: auto;
+.awards-gallery-popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 90%;
+  max-height: 90vh;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
 }
 
-.news-popup-close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    color: #333;
-    z-index: 2;
+.awards-gallery-popup-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+  z-index: 2;
 }
 
-/* Стили для текстового контента */
-.news-popup-image-wrapper {
-    margin-bottom: 20px;
-}
-
-.news-popup-image {
-    width: 100%;
-    height: auto;
-    max-height: 400px;
-    object-fit: cover;
-    border-radius: 4px;
-}
-
-.news-popup-title {
-    margin-top: 0;
-    color: #222;
-    font-size: 24px;
-}
-
-.news-popup-date {
-    color: #666;
-    margin-bottom: 20px;
-    font-size: 14px;
-}
-
-.news-popup-text {
-    line-height: 1.6;
-    color: #444;
-}
-
-/* Стили для видео */
-.news-popup-video-wrapper {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 */
-    height: 0;
-    overflow: hidden;
-    margin-bottom: 20px;
-}
-
-.news-popup-video-wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.news-popup-video-title {
-    margin-top: 0;
-    color: #222;
-    font-size: 24px;
-}
-
-/* Стили для PDF */
-.news-popup-pdf-wrapper {
-    width: 100%;
-    height: 600px;
-    margin-bottom: 20px;
-}
-
-.news-popup-pdf-wrapper iframe {
-    width: 100%;
-    height: 100%;
-    border: 1px solid #ddd;
-}
-
-.news-popup-pdf-title {
-    margin-top: 0;
-    color: #222;
-    font-size: 24px;
+.awards-gallery-popup-image {
+  max-width: 100%;
+  max-height: 80vh;
+  display: block;
+  margin: 0 auto;
 }
 
 @media (max-width: 768px) {
-    .news-header-decoration {
-        width: 100%;
-    }
-    
-    .news-popup-content {
-        width: 95%;
-        padding: 20px;
-    }
-    
-    .news-popup-pdf-wrapper {
-        height: 400px;
-    }
+  .awards-gallery-title {
+    font-size: 28px;
+  }
+  
+  .awards-gallery-card {
+    flex: 0 0 180px;
+  }
+  
+  .awards-gallery-image-container {
+    height: 250px;
+  }
+  
+  .awards-gallery-nav-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
 }
 </style>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    const readMoreButtons = document.querySelectorAll('.news-read-more');
-    const newsPopup = document.querySelector('.news-popup');
-    const popupClose = document.querySelector('.news-popup-close');
+  // Карусель
+  const awardsCarousel = document.querySelector('.awards-gallery-items');
+  const prevBtn = document.querySelector('.awards-gallery-prev');
+  const nextBtn = document.querySelector('.awards-gallery-next');
+  
+  function scrollCarousel(direction) {
+    const card = document.querySelector('.awards-gallery-card');
+    const gap = 25;
+    const scrollAmount = card.offsetWidth + gap;
     
-    // Элементы для разных типов контента
-    const textContent = document.querySelector('.news-popup-text-content');
-    const videoContent = document.querySelector('.news-popup-video-content');
-    const pdfContent = document.querySelector('.news-popup-pdf-content');
-    
-    // Текстовый контент
-    const popupTitle = document.querySelector('.news-popup-title');
-    const popupImage = document.querySelector('.news-popup-image');
-    const popupDate = document.querySelector('.news-popup-date span');
-    const popupText = document.querySelector('.news-popup-text');
-    
-    // Видео контент
-    const videoTitle = document.querySelector('.news-popup-video-title');
-    const videoIframe = document.querySelector('.news-popup-video-wrapper iframe');
-    
-    // PDF контент
-    const pdfTitle = document.querySelector('.news-popup-pdf-title');
-    const pdfIframe = document.querySelector('.news-popup-pdf-wrapper iframe');
-    
-    // Данные новостей
-    const newsData = {
-        1: {
-            title: "Компания ИНТАГО Казахстан на выставке KazBuild2024",
-            date: "07.11.2024",
-            content: "<p>Мы рады сообщить о завершении строительства и запуске нового производственного цеха площадью 2500 кв.м.</p><p>Новый цех оснащен современным оборудованием и позволит нам увеличить объем производства на 40%.</p>",
-            image: "images/news1-full.jpg"
-        },
-        2: {
-            title: "Экскурсия по производству",
-            videoId: "dQw4w9WgXcQ"
-        },
-        3: {
-            title: "Каталог продукции 2023",
-            pdfUrl: "catalog2023.pdf"
-        }
-    };
-    
-    readMoreButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const newsId = this.getAttribute('data-news-id');
-            const contentType = this.getAttribute('data-content-type');
-            const news = newsData[newsId];
-            
-            // Скрываем все контент-блоки
-            textContent.style.display = 'none';
-            videoContent.style.display = 'none';
-            pdfContent.style.display = 'none';
-            
-            // Очищаем предыдущий контент
-            videoIframe.src = '';
-            pdfIframe.src = '';
-            
-            // Показываем соответствующий контент
-            switch(contentType) {
-                case 'text':
-                    popupTitle.textContent = news.title;
-                    popupDate.textContent = news.date;
-                    popupText.innerHTML = news.content;
-                    popupImage.src = this.getAttribute('data-image');
-                    textContent.style.display = 'block';
-                    break;
-                    
-                case 'video':
-                    videoTitle.textContent = news.title;
-                    videoIframe.src = `https://www.youtube.com/embed/${news.videoId}?autoplay=1`;
-                    videoContent.style.display = 'block';
-                    break;
-                    
-                case 'pdf':
-                    pdfTitle.textContent = news.title;
-                    pdfIframe.src = news.pdfUrl;
-                    pdfContent.style.display = 'block';
-                    break;
-            }
-            
-            newsPopup.style.display = 'block';
-            document.body.style.overflow = 'hidden';
-        });
+    awardsCarousel.scrollBy({
+      left: direction === 'prev' ? -scrollAmount : scrollAmount,
+      behavior: 'smooth'
     });
-    
-    popupClose.addEventListener('click', function() {
-        newsPopup.style.display = 'none';
-        document.body.style.overflow = 'auto';
-        
-        // Останавливаем видео при закрытии попапа
-        videoIframe.src = '';
+  }
+  
+  prevBtn.addEventListener('click', function() {
+    scrollCarousel('prev');
+  });
+  
+  nextBtn.addEventListener('click', function() {
+    scrollCarousel('next');
+  });
+  
+  // Попап для увеличения
+  const zoomButtons = document.querySelectorAll('.awards-gallery-zoom-btn');
+  const popup = document.querySelector('.awards-gallery-popup');
+  const popupImage = document.querySelector('.awards-gallery-popup-image');
+  const closePopup = document.querySelector('.awards-gallery-popup-close');
+  
+  zoomButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      const imgSrc = this.getAttribute('data-img');
+      popupImage.src = imgSrc;
+      popup.style.display = 'block';
+      document.body.style.overflow = 'hidden';
     });
-    
-    newsPopup.querySelector('.news-popup-overlay').addEventListener('click', function() {
-        newsPopup.style.display = 'none';
-        document.body.style.overflow = 'auto';
-        
-        // Останавливаем видео при закрытии попапа
-        videoIframe.src = '';
-    });
+  });
+  
+  closePopup.addEventListener('click', function() {
+    popup.style.display = 'none';
+    document.body.style.overflow = '';
+  });
+  
+  popup.addEventListener('click', function(e) {
+    if (e.target === this || e.target.classList.contains('awards-gallery-popup-overlay')) {
+      popup.style.display = 'none';
+      document.body.style.overflow = '';
+    }
+  });
+  
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && popup.style.display === 'block') {
+      popup.style.display = 'none';
+      document.body.style.overflow = '';
+    }
+  });
 });
 </script>

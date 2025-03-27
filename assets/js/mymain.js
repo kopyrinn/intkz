@@ -367,62 +367,63 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
- //карусель
+ //карусель наград
 document.addEventListener('DOMContentLoaded', function() {
-  const track = document.querySelector('.carousel-track');
-  const prevBtn = document.querySelector('.prev-btn');
-  const nextBtn = document.querySelector('.next-btn');
+  // Карусель
+  const awardsCarousel = document.querySelector('.awards-gallery-items');
+  const prevBtn = document.querySelector('.awards-gallery-prev');
+  const nextBtn = document.querySelector('.awards-gallery-next');
   
-  // Массив с изображениями наград (замените на свои)
-  const awards = [
-    'https://optim.tildacdn.com/tild6566-3165-4134-a162-613330653432/-/resize/600x/-/format/webp/Priemnaya_2407202414.jpg',
-    'https://optim.tildacdn.com/tild6566-3165-4134-a162-613330653432/-/resize/600x/-/format/webp/Priemnaya_2407202414.jpg',
-    'https://optim.tildacdn.com/tild6566-3165-4134-a162-613330653432/-/resize/600x/-/format/webp/Priemnaya_2407202414.jpg',
-    'https://optim.tildacdn.com/tild6566-3165-4134-a162-613330653432/-/resize/600x/-/format/webp/Priemnaya_2407202414.jpg',
-    'https://optim.tildacdn.com/tild6566-3165-4134-a162-613330653432/-/resize/600x/-/format/webp/Priemnaya_2407202414.jpg',
-    'https://optim.tildacdn.com/tild6566-3165-4134-a162-613330653432/-/resize/600x/-/format/webp/Priemnaya_2407202414.jpg',
-    'https://optim.tildacdn.com/tild6566-3165-4134-a162-613330653432/-/resize/600x/-/format/webp/Priemnaya_2407202414.jpg',
-    'https://optim.tildacdn.com/tild6566-3165-4134-a162-613330653432/-/resize/600x/-/format/webp/Priemnaya_2407202414.jpg',
-  ];
-  
-  // Создаем элементы карусели
-  awards.forEach(award => {
-    const awardItem = document.createElement('div');
-    awardItem.className = 'award-item';
-    awardItem.innerHTML = `
-      <img src="${award}" alt="Благодарственное письмо" class="award-image">
-    `;
-    track.appendChild(awardItem);
-  });
-  
-  const items = document.querySelectorAll('.award-item');
-  const itemWidth = items[0].offsetWidth + parseInt(window.getComputedStyle(track).gap);
-  let currentPosition = 0;
-  const visibleItems = Math.min(3, Math.floor(track.offsetWidth / itemWidth));
-  
-  // Функция для обновления позиции
-  function updatePosition() {
-    track.style.transform = `translateX(${currentPosition}px)`;
+  function scrollCarousel(direction) {
+    const card = document.querySelector('.awards-gallery-card');
+    const gap = 25;
+    const scrollAmount = card.offsetWidth + gap;
+    
+    awardsCarousel.scrollBy({
+      left: direction === 'prev' ? -scrollAmount : scrollAmount,
+      behavior: 'smooth'
+    });
   }
   
-  // Обработчики кнопок
-  nextBtn.addEventListener('click', function() {
-    const maxPosition = -(items.length - visibleItems) * itemWidth;
-    currentPosition = Math.max(currentPosition - itemWidth * visibleItems, maxPosition);
-    updatePosition();
-  });
-  
   prevBtn.addEventListener('click', function() {
-    currentPosition = Math.min(currentPosition + itemWidth * visibleItems, 0);
-    updatePosition();
+    scrollCarousel('prev');
   });
   
-  // Адаптация при ресайзе
-  window.addEventListener('resize', function() {
-    const newVisibleItems = Math.min(3, Math.floor(track.offsetWidth / itemWidth));
-    if (newVisibleItems !== visibleItems) {
-      currentPosition = 0;
-      updatePosition();
+  nextBtn.addEventListener('click', function() {
+    scrollCarousel('next');
+  });
+  
+  // Попап для увеличения
+  const zoomButtons = document.querySelectorAll('.awards-gallery-zoom-btn');
+  const popup = document.querySelector('.awards-gallery-popup');
+  const popupImage = document.querySelector('.awards-gallery-popup-image');
+  const closePopup = document.querySelector('.awards-gallery-popup-close');
+  
+  zoomButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      const imgSrc = this.getAttribute('data-img');
+      popupImage.src = imgSrc;
+      popup.style.display = 'block';
+      document.body.style.overflow = 'hidden';
+    });
+  });
+  
+  closePopup.addEventListener('click', function() {
+    popup.style.display = 'none';
+    document.body.style.overflow = '';
+  });
+  
+  popup.addEventListener('click', function(e) {
+    if (e.target === this || e.target.classList.contains('awards-gallery-popup-overlay')) {
+      popup.style.display = 'none';
+      document.body.style.overflow = '';
+    }
+  });
+  
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && popup.style.display === 'block') {
+      popup.style.display = 'none';
+      document.body.style.overflow = '';
     }
   });
 });
