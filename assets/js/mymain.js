@@ -635,3 +635,29 @@ document.addEventListener('DOMContentLoaded', function() {
         videoIframe.src = '';
     });
 });
+
+
+// faq
+  document.querySelectorAll('.faq-question').forEach(button => {
+  button.addEventListener('click', () => {
+    const faqItem = button.parentNode;
+    faqItem.classList.toggle('active');
+    
+    // Закрытие других открытых вопросов
+    document.querySelectorAll('.faq-item').forEach(item => {
+      if (item !== faqItem && item.classList.contains('active')) {
+        item.classList.remove('active');
+      }
+    });
+  });
+});
+
+
+// форма contacts
+document.getElementById('feedback-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  // Здесь можно добавить AJAX отправку формы
+  alert('Форма отправлена! Мы свяжемся с вами в ближайшее время.');
+  this.reset();
+});

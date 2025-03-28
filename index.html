@@ -19,37 +19,30 @@
     <div class="col-12 col-md-8 mx-auto" >
       <div class="header-content row">
         <!-- Логотип -->
-        <div class="col-4 col-xl-2 col-md-4 pt-2">
+        <div class="col-4 col-xl-2 col-md-4 pt-2 px-3">
             <a href="index.html" class="logo">
-              <img src="assets/img/logo 2.png" alt="intago kazakstan" class="w-100">
+              <img src="assets/img/logo 2.png" alt="intago kazakstan" class="logoimg">
             </a>        
         </div>
-        <div class="col-8 col-xl-3 col-md-8 py-2 ps-2 comp-name">
-            Производство геосинтетики <br>ИНТАГО КАЗАХСТАН
-        </div>
-        
-        <!-- Социальные кнопки -->
-        <div class="col-3 col-md-3 text-end py-2 social-box">
-          <a href="https://wa.clck.bar/74993221498" target="_blank" class="social-link">
-            <img src="https://static.tildacdn.com/tild6637-3538-4238-a337-363166393361/Button-L.svg" alt="WhatsApp">
-          </a>
-          <a href="viber://pa?chatURI=geosm" target="_blank" class="social-link">
-            <img src="https://static.tildacdn.com/tild3061-3564-4233-b239-313464356530/Button-L_1.svg" alt="Viber">
-          </a>
-          <a href="https://t.me/geosmchat_bot" target="_blank" class="social-link">
-            <img src="https://static.tildacdn.com/tild3962-6366-4330-a532-393232353261/Button-L_2.svg" alt="Telegram">
-          </a>
-        </div>
-        <div class="col-4 col-md-4 text-end py-3 contacts-box">
+        <div class="col-8 col-xl-3 col-md-8 py-2 px-4 comp-name ">
+            Геосинтетика, сделанная <br>в Казахстане
+        </div>       
+        <div class="col-7 col-md-7 text-end py-3 contacts-box ">
+            <!-- Социальные кнопки -->
+            <a href="https://wa.me/77789303999" target="_blank" class="social-link">
+                <img src="assets/img/wa.png" alt="WhatsApp">
+            </a>
+            <a href="mailto:Office@intagokazakhstan.kz" target="_blank" class="social-link">
+                <img src="assets/img/email.png" alt="email">
+            </a>
         <!-- Кнопка контактов -->
-            <a href="" class="contacts-btn me-2">
-              Контакты
-              <img src="https://static.tildacdn.com/tild6561-3766-4163-a532-623364663636/CaretLeft_1.svg" alt="" style="margin-left: 8px; width: 20px;">
+            <a href="" style="text-decoration: none;">   
+              <button class="contacts-btn me-2">Контакты</button>
             </a>    
             <!-- Кнопка запроса -->
-            <a href="#popup:myform" class="request-btn">
-              Получить КП
-              <img src="https://static.tildacdn.com/tild6634-6533-4433-b537-386237653863/CaretLeft_2.svg" alt="" style="margin-left: 8px; width: 20px;">
+
+            <a href="#popup:myform" style="text-decoration: none;">
+                <button class="request-btn">Получить КП</button>
             </a>
         </div>
         <!-- Кнопка меню (мобильная) -->
@@ -63,6 +56,7 @@
     </div>
 </div>
 
+<!-- меню мобилка -->
 <div class="mobile-menu-container" id="mobileMenu">
   <button class="mobile-menu-close" aria-label="Закрыть меню">
     <span></span>
@@ -73,7 +67,7 @@
     <!-- Остальное содержимое меню без изменений -->
     <div class="mobile-menu-logo">
       <a href="index.html">
-        <img src="https://static.tildacdn.com/tild6263-6366-4661-b366-306663333131/_GeoSM_Rus_Eng_2024-.png" alt="GeoSM">
+        <img src="assets/img/logo 2.png" alt="intago kazakstan" class="w-100">
       </a>
     </div>
 
@@ -96,14 +90,11 @@
 
     <div class="mobile-menu-social">
       <div class="mobile-menu-social-links">
-        <a href="https://wa.clck.bar/74993221498" target="_blank" rel="nofollow noopener" aria-label="WhatsApp">
+        <a href="https://wa.me/77789303999" target="_blank" rel="nofollow noopener" aria-label="WhatsApp">
             <i class="bi bi-whatsapp"></i>
         </a>
-        <a href="https://t.me/geosmchat_bot" target="_blank" rel="nofollow" aria-label="Viber">
-            <i class="bi bi-telegram"></i>
-        </a>
-        <a href="" target="_blank" rel="nofollow noopener" aria-label="Telegram">
-            <i class="bi bi-telephone"></i>
+        <a href="mailto:Office@intagokazakhstan.kz" target="_blank" rel="nofollow noopener" aria-label="Telegram">
+            <i class="bi bi-envelope-at"></i>
         </a>
       </div>
       
@@ -114,6 +105,7 @@
     </div>
   </div>
 </div>
+
 <div id="geo-hero" class="geo-hero">
         <!-- Видео фон -->
         <div class="geo-hero__video">
@@ -217,31 +209,13 @@
                     </div>
                     
                     <div class="geo-form__group">
-                        <label class="geo-form__label" for="geo-density">Плотность</label>
-                        <select id="geo-density" class="geo-form__select" required>
-                            <option value="">Выберите плотность:</option>
-                            <option value="ПЭ 150">ПЭ 150</option>
-                            <option value="ПЭ 200">ПЭ 200</option>
-                            <option value="ПЭ 250">ПЭ 250</option>
-                            <option value="ПЭ 300">ПЭ 300</option>
-                            <option value="ПЭ 350">ПЭ 350</option>
-                            <option value="ПЭ 400">ПЭ 400</option>
-                            <option value="ПЭ 450">ПЭ 450</option>
-                            <option value="ПЭ 500">ПЭ 500</option>
-                            <option value="ПЭ 550">ПЭ 550</option>
-                            <option value="ПЭ 600">ПЭ 600</option>
-                            <option value="ПП 150">ПП 150</option>
-                            <option value="ПП 200">ПП 200</option>
-                            <option value="ПП 250">ПП 250</option>
-                            <option value="ПП 300">ПП 300</option>
-                            <option value="ПП 350">ПП 350</option>
-                            <option value="ПП 400">ПП 400</option>
-                            <option value="ПП 450">ПП 450</option>
-                            <option value="ПП 500">ПП 500</option>
-                            <option value="ПП 550">ПП 550</option>
-                            <option value="ПП 600">ПП 600</option>
+                        <label class="geo-form__label" for="geo-density">Что вас интересует?</label>
+                        <select id="geo-density" class="geo-form__select" required>                       
+                            <option value="">Выберите материал</option>
+                            <option value="Геотекстиль">Геотекстиль</option>
+                            <option value="Мембрана">Мембрана</option>
                         </select>
-                        <div class="geo-form__error">Пожалуйста, выберите плотность</div>
+                        <div class="geo-form__error">Пожалуйста, выберите материал</div>
                     </div>
                     
                     <div class="geo-form__submit">
@@ -256,6 +230,7 @@
         </div>
     </div>
 
+<!--товары -->
 <div class="geo-filter">
         <h2 class="geo-filter__title" id="products">Выберите нужный вариант:</h2>
         
@@ -1502,6 +1477,7 @@
     </div>                          
 </div>
 
+<!--метрики -->
 <div class="metrics-block">
   <div class="metrics-block__inner">
     <!-- Фоновое изображение -->
@@ -1601,7 +1577,7 @@
     
     <div class="row">
       <!-- Блок 1 - Производственные показатели -->
-      <div class="advantage-card col-12 col-md-6 col-xl-6">
+      <div class="advantage-card col-12 col-md-6 col-xl-6 mt-2">
         <div class="advantage-image">
           <img src="https://static.tildacdn.com/tild3331-3733-4566-a333-333532366433/Frame_469285_2_1.png" alt="Высокие производственные показатели">
         </div>
@@ -1615,7 +1591,7 @@
       </div>
       
       <!-- Блок 2 - Международные выставки -->
-      <div class="advantage-card col-12 col-md-6 col-xl-3">
+      <div class="advantage-card col-12 col-md-6 col-xl-3 mt-2">
         <div class="advantage-content">
           <div class="advantage-icon">
             <i class="bi bi-award"></i>
@@ -1626,13 +1602,13 @@
       </div>
       
       <!-- Блок 3 - Опыт работы -->
-      <div class="advantage-card col-12 col-md-6 col-xl-3">
+      <div class="advantage-card col-12 col-md-6 col-xl-3 mt-2">
         <div class="advantage-content">
           <div class="advantage-icon">
             <i class="bi bi-clock-history"></i>
           </div>
           <h3>Работаем на рынке более 5 лет</h3>
-          <p>ГК GeoSM c 2019 года производит и продает геосинтетические строительные материалы высочайшего класса.</p>
+          <p>Интаго Казахстан c 2019 года производит и продает геосинтетические строительные материалы высочайшего класса.</p>
         </div>
       </div>
       
@@ -1651,7 +1627,7 @@
       <div class="advantage-card col-12 mt-2 col-md-6 col-xl-3">
         <div class="advantage-content">
           <div class="advantage-icon">
-            <i class="bi bi-building"></i>
+            <i class="bi bi-gear-fill"></i>
           </div>
           <h3>Собственное производство в Казахстане</h3>
           <p>3 линии по производству геотекстиля.<br>2 линии по производству геомембраны.<br>1 линия по производству объемной георешетки.</p>
@@ -1676,7 +1652,7 @@
 </section>
 
  <!-- О Компании -->
-<section class="about-company">
+<section class="about-company" id="about-us">
   <!-- Верхний блок: заголовок и описание -->
   <div class="top-section">
     <div class="title-block">
@@ -1748,7 +1724,7 @@
 </section>
 
 
-<section class="awards-gallery-section">
+<section class="awards-gallery-section" id="certificates">
   <div class="awards-gallery-container">
     <h2 class="awards-gallery-title">Благодарственные письма</h2>
     
@@ -1764,7 +1740,7 @@
     
     <div class="awards-gallery-carousel">
       <div class="awards-gallery-items">
-        <!-- 6 вертикальных наград -->
+        <!-- наградs -->
         <div class="awards-gallery-card">
           <div class="awards-gallery-image-container">
             <img src="https://optim.tildacdn.com/tild6566-3165-4134-a162-613330653432/-/format/webp/Priemnaya_2407202414.jpg" alt="Награда" class="awards-gallery-image">
@@ -1848,7 +1824,7 @@
 </section>
 
 
-<section class="diplomas-section">
+<section class="diplomas-section" id="awards">
   <div class="diplomas-container">
     <div class="diplomas-header">
       <img src="https://static.tildacdn.com/tild3030-6236-4832-a366-383164346530/Certificate.svg" 
@@ -1940,7 +1916,7 @@
   </div>
 </section>
 
-<section class="geo-sm-video-reviews-section">
+<section class="geo-sm-video-reviews-section" id="reviews"> 
   <div class="geo-sm-reviews-container">
     <h2 class="geo-sm-reviews-main-title">Видео-отзывы наших клиентов</h2>
     
@@ -2023,7 +1999,7 @@
   </div>
 </section>
 
-<section class="geo-sm-projects-section">
+<section class="geo-sm-projects-section" id="projects">
   <div class="geo-sm-projects-container">
     <h2 class="geo-sm-projects-main-title">Крупные проекты с нашим участием</h2>
     
@@ -2094,7 +2070,7 @@
   </div>
 </section>
 
-<section class="video-gallery-section">
+<section class="video-gallery-section" id="gallery">
     <div class="video-gallery-container">
         <h2 class="video-gallery-title">Видео-галерея</h2>
         
@@ -2157,7 +2133,7 @@
     </div>
 </section>
 
-<section class="news-section">
+<section class="news-section" id="news">
     <div class="news-container">
         <div class="news-header">
             <h2 class="news-title">Новости</h2>
@@ -2167,7 +2143,7 @@
         <div class="news-grid">
             <!-- Новость 1 (с изображением) -->
             <div class="news-item">
-                <div class="news-item-image" style="background-image: url('images/news1-preview.jpg');"></div>
+                <div class="news-item-image" style="background-image: url('assets/img/1.jpeg');"></div>
                 <div class="news-item-content">
                     <h3 class="news-item-title">Открытие нового цеха</h3>
                     <p class="news-item-excerpt">Мы рады сообщить о запуске нового производственного цеха...</p>
@@ -2182,7 +2158,7 @@
             
             <!-- Новость 2 (с видео) -->
             <div class="news-item">
-                <div class="news-item-image" style="background-image: url('images/video-preview.jpg');"></div>
+                <div class="news-item-image" style="background-image: url('assets/img/1.jpeg');"></div>
                 <div class="news-item-content">
                     <h3 class="news-item-title">Экскурсия по производству</h3>
                     <p class="news-item-excerpt">Видео-тур по нашим производственным мощностям...</p>
@@ -2197,7 +2173,7 @@
             
             <!-- Новость 3 (с PDF) -->
             <div class="news-item">
-                <div class="news-item-image" style="background-image: url('images/pdf-preview.jpg');"></div>
+                <div class="news-item-image" style="background-image: url('assets/img/1.jpeg');"></div>
                 <div class="news-item-content">
                     <h3 class="news-item-title">Новый каталог продукции</h3>
                     <p class="news-item-excerpt">Скачайте наш новый каталог с полным ассортиментом...</p>
@@ -2246,6 +2222,144 @@
             </div>
         </div>
     </div>
+</section>
+
+<div class="supply-countries">
+  <div class="supply-countries__container">
+    <h2 class="supply-countries__title">Международная дистрибуция</h2>
+    
+    <div class="supply-countries__content">
+      <div class="supply-countries__map">
+        <img src="assets/img/map.png" alt="Карта стран поставок" class="supply-countries__map-image">
+      </div>
+      
+      <div class="supply-countries__list">
+        <div class="supply-countries__item">
+          <img src="https://static.tildacdn.com/tild3065-6636-4235-a136-323562333561/MapPin_1.svg" alt="Иконка геопозиции" class="supply-countries__pin">
+          <a href="#popup:infoblock2" class="supply-countries__link">Россия</a>
+        </div>
+        
+        <div class="supply-countries__item">
+          <img src="https://static.tildacdn.com/tild3065-6636-4235-a136-323562333561/MapPin_1.svg" alt="Иконка геопозиции" class="supply-countries__pin">
+          <a href="#popup:infoblock7" class="supply-countries__link">Армения</a>
+        </div>
+        
+        <div class="supply-countries__item">
+          <img src="https://static.tildacdn.com/tild3065-6636-4235-a136-323562333561/MapPin_1.svg" alt="Иконка геопозиции" class="supply-countries__pin">
+          <a href="#popup:infoblock9" class="supply-countries__link">Казахстан</a>
+        </div>
+        
+        <div class="supply-countries__item">
+          <img src="https://static.tildacdn.com/tild3065-6636-4235-a136-323562333561/MapPin_1.svg" alt="Иконка геопозиции" class="supply-countries__pin">
+          <a href="#popup:infoblock10" class="supply-countries__link">Узбекистан</a>
+        </div>
+        
+        <div class="supply-countries__item">
+          <img src="https://static.tildacdn.com/tild3065-6636-4235-a136-323562333561/MapPin_1.svg" alt="Иконка геопозиции" class="supply-countries__pin">
+          <a href="#popup:infoblock11" class="supply-countries__link">Кыргызстан</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="faq-section" id="faq">
+  <div class="faq-container">
+    <h2 class="faq-title">Часто задаваемые вопросы</h2>
+    
+    <div class="faq-accordion">
+      <!-- Вопрос 1 -->
+      <div class="faq-item">
+        <button class="faq-question">
+          Какой срок поставки продукции?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Стандартный срок поставки составляет от 3 до 7 рабочих дней в зависимости от региона. Для точной информации по вашему заказу свяжитесь с нашим менеджером.</p>
+        </div>
+      </div>
+      
+      <!-- Вопрос 2 -->
+      <div class="faq-item">
+        <button class="faq-question">
+          Какие способы оплаты вы принимаете?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Мы принимаем банковские переводы, оплату по счету, онлайн-платежи через платежные системы, а также наличные при самовывозе.</p>
+        </div>
+      </div>
+      
+      <!-- Вопрос 3 -->
+      <div class="faq-item">
+        <button class="faq-question">
+          Есть ли у вас доставка в регионы?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Да, мы осуществляем доставку во все регионы России и страны СНГ. Стоимость и сроки доставки зависят от удаленности региона.</p>
+        </div>
+      </div>
+      
+      <!-- Вопрос 4 -->
+      <div class="faq-item">
+        <button class="faq-question">
+          Какие гарантии вы предоставляете?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>На всю продукцию предоставляется гарантия от 1 года. Подробные условия гарантии указаны в договоре поставки.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact-form-section" id="contacts">
+  <div class="contact-form-container">
+    <div class="contact-form-content">
+      <div class="contact-form-text">
+        <h2 class="contact-form-title">Остались вопросы? Свяжитесь с нами!</h2>
+        <p class="contact-form-subtitle">Пожалуйста, заполните форму обратной связи, выберите необходимый материал и мы отправим вам коммерческое предложение.</p>
+      </div>
+
+      <form class="contact-form" id="feedback-form">
+        <div class="form-row">
+          <div class="form-group">
+            <input type="text" name="name" placeholder="Имя" required class="form-input">
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" placeholder="E-mail" required class="form-input">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <input type="tel" name="phone" placeholder="Телефон" required class="form-input">
+          </div>
+          <div class="form-group">
+            <select name="density" class="form-select" required>
+              <option value="">Выберите материал</option>
+              <option value="Геотекстиль">Геотекстиль</option>
+              <option value="Мембрана">Мембрана</option>
+            </select>
+          </div>
+        </div>
+
+        <button type="submit" class="submit-btn">Рассчитать стоимость</button>
+
+        <div class="form-footer">
+          <p class="privacy-text">
+            Нажимая кнопку, вы даете <a href="/police" class="privacy-link">согласие на обработку персональных данных</a>
+          </p>
+        </div>
+      </form>
+    </div>
+
+    <div class="contact-form-image">
+      <img src="https://static.tildacdn.com/tild3633-3535-4562-b831-356131636363/19__1.png" alt="Консультант" class="form-image">
+    </div>
+  </div>
 </section>
 <script src="assets/js/mymain.js"></script>
 </div>
