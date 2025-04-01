@@ -1,53 +1,63 @@
-  document.addEventListener('DOMContentLoaded', function() {
-    // Получаем элементы
-    const menuButton = document.querySelector('.menu-btn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    const closeButton = document.querySelector('.mobile-menu-close');
-    const overlay = document.getElementById('mobileMenuOverlay');
+document.addEventListener('DOMContentLoaded', function() {
+  // Получаем элементы
+  const menuButton = document.querySelector('.menu-btn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const closeButton = document.querySelector('.mobile-menu-close');
+  const overlay = document.getElementById('mobileMenuOverlay');
+  
+  // Функция для переключения меню
+  function toggleMenu() {
+    mobileMenu.classList.toggle('open');
+    overlay.classList.toggle('open');
+    document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
     
-    // Функция для переключения меню
-    function toggleMenu() {
-      mobileMenu.classList.toggle('open');
-      overlay.classList.toggle('open');
-      document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
-      
-      // Добавляем/убираем класс active для кнопки бургера
-      if (menuButton) {
-        menuButton.classList.toggle('active');
-      }
-    }
-    
-    // Обработчик для кнопки бургера
+    // Добавляем/убираем класс active для кнопки бургера
     if (menuButton) {
-      menuButton.addEventListener('click', function(e) {
-        e.preventDefault();
-        toggleMenu();
-      });
+      menuButton.classList.toggle('active');
     }
-    
-    // Обработчик для кнопки закрытия
-    if (closeButton) {
-      closeButton.addEventListener('click', toggleMenu);
-    }
-    
-    // Обработчик для оверлея
-    if (overlay) {
-      overlay.addEventListener('click', toggleMenu);
-    }
-    
-    // Закрытие при клике на ссылки меню
-    const menuLinks = document.querySelectorAll('.mobile-menu-nav a');
-    menuLinks.forEach(link => {
-      link.addEventListener('click', toggleMenu);
+  }
+  
+  // Обработчик для кнопки бургера
+  if (menuButton) {
+    menuButton.addEventListener('click', function(e) {
+      e.preventDefault();
+      toggleMenu();
     });
-    
-    // Закрытие при нажатии ESC
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
-        toggleMenu();
-      }
-    });
+  }
+  
+  // Обработчик для кнопки закрытия
+  if (closeButton) {
+    closeButton.addEventListener('click', toggleMenu);
+  }
+  
+  // Обработчик для оверлея
+  if (overlay) {
+    overlay.addEventListener('click', toggleMenu);
+  }
+  
+  // Закрытие при клике на ссылки меню
+  const menuLinks = document.querySelectorAll('.mobile-menu-nav a');
+  menuLinks.forEach(link => {
+    link.addEventListener('click', toggleMenu);
   });
+  
+  // Закрытие при нажатии ESC
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
+      toggleMenu();
+    }
+  });
+  
+  // Закрытие при клике вне меню
+  document.addEventListener('click', function(e) {
+    // Проверяем, что клик был не по кнопке меню и не по самому меню
+    if (mobileMenu.classList.contains('open') && 
+        !e.target.closest('#mobileMenu') && 
+        !e.target.closest('.menu-btn')) {
+      toggleMenu();
+    }
+  });
+});
 
 
     // Video Popup Logic
