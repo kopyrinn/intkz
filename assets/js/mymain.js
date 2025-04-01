@@ -345,7 +345,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Вставляем iframe с видео (замените YOUR_VIDEO_ID на реальный ID)
     videoContainer.innerHTML = `
       <iframe 
-        src="https://www.youtube.com/embed/YOUR_VIDEO_ID?autoplay=1" 
+        src="https://www.youtube.com/embed/pGuLvuKiVik?si=tSVveewtJHEdDmMQ" 
         frameborder="0" 
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
         allowfullscreen>
