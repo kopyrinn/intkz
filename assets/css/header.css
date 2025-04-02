@@ -340,10 +340,12 @@ body {
     position: relative;
     min-height: 800px;
     overflow: hidden;
-    background-color: #ffffff;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-image: url(../img/products/bg.png);
+    background-size: cover;
 }
 
 .geo-hero__video {
@@ -782,6 +784,62 @@ body {
 }
 
 
+        /* Стили попапа */
+        .custom-popup-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 1050;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+        }
+        
+        .custom-popup-container {
+            position: relative;
+            max-width: 90%;
+            max-height: 90vh;
+            width: auto;
+            animation: popup-fade 0.3s;
+        }
+        
+        .custom-popup-content {
+            position: relative;
+            background: #fff;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        
+        .custom-popup-img-container {
+            max-height: 80vh;
+            overflow: auto;
+        }
+        
+        .custom-popup-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 30px;
+            height: 30px;
+            background-color: rgba(0,0,0,0.7);
+            border-radius: 50%;
+            color: white;
+            border: none;
+            font-size: 18px;
+            line-height: 30px;
+            text-align: center;
+            cursor: pointer;
+            z-index: 10;
+        }
+        
+        @keyframes popup-fade {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
   /* Popup Base Styles */
 .geo-form-popup {
     position: fixed;
@@ -1149,18 +1207,18 @@ body {
         }
         
         .geo-filter__tab {
-            padding: 12px 20px;
+            padding: 5px 5px;
             background: #f9f9f9;
             border: 1px solid #e0e0e0;
             border-radius: 10px;
-            font-size: 15px;
+            font-size: 14px;
             font-weight: 500;
             color: #444;
             cursor: pointer;
             transition: all 0.3s ease;
             text-align: center;
             flex: 1;
-            min-width: 100px;
+            min-width: 20px;
         }
         
         .geo-filter__tab:hover {
@@ -1251,9 +1309,9 @@ body {
             }
             
             .geo-filter__tab {
-                padding: 8px 10px;
+                padding: 5px 5px;
                 font-size: 12px;
-                min-width: 70px;
+                min-width: 60px;
                 border-radius: 6px;
             }
             

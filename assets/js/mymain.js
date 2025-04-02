@@ -229,7 +229,48 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-
+document.addEventListener('DOMContentLoaded', function() {
+    // Находим все элементы с href="#popup:table1"
+    const popupTriggers = document.querySelectorAll('a[href="#popup:table1"]');
+    const popup = document.getElementById('custom-popup');
+    const closeBtn = popup.querySelector('.custom-popup-close');
+    
+    // Добавляем обработчик для всех найденных элементов
+    popupTriggers.forEach(trigger => {
+        trigger.addEventListener('click', function(e) {
+            e.preventDefault();
+            popup.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        });
+    });
+    
+    // Закрытие попапа
+    closeBtn.addEventListener('click', function() {
+        popup.style.display = 'none';
+        document.body.style.overflow = '';
+    });
+    
+    // Закрытие при клике вне контента
+    popup.addEventListener('click', function(e) {
+        if (e.target === popup) {
+            popup.style.display = 'none';
+            document.body.style.overflow = '';
+        }
+    });
+    
+    // Закрытие по ESC
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && popup.style.display === 'flex') {
+            popup.style.display = 'none';
+            document.body.style.overflow = '';
+        }
+    });
+    
+    // Предотвращаем закрытие при клике на контент
+    document.querySelector('.custom-popup-container').addEventListener('click', function(e) {
+        e.stopPropagation();
+    });
+});
 //фильтр
 document.addEventListener('DOMContentLoaded', function() {
     const tabs = document.querySelectorAll('.geo-filter__tab');

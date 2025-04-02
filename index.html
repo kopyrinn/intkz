@@ -119,11 +119,11 @@
 <!-- главная -->
 <div id="geo-hero" class="geo-hero">
     <!-- Видео фон -->
-    <div class="geo-hero__video">
+<!--     <div class="geo-hero__video">
         <video class="geo-hero__video-element" autoplay loop muted playsinline>
             <source src="https://geo-sm.ru/Геотекстиль.mp4" type="video/mp4">
         </video>
-    </div>
+    </div> -->
 
     <!-- Градиентная подложка -->
     <div class="geo-hero__gradient"></div>
@@ -247,41 +247,56 @@
 <div class="geo-filter">
         <h2 class="geo-filter__title" id="products">Выберите нужный вариант:</h2>
         
-        <div class="geo-filter__tab-group">
-            <div class="geo-filter__tab-group-title">Интатекс</div>
+        <div class="geo-filter__tab-group">     
             <div class="geo-filter__tabs">
                 <div class="geo-filter__tab geo-filter__tab--active" data-density="pe150">ПЭ 150</div>
                 <div class="geo-filter__tab" data-density="pe200">ПЭ 200</div>
                 <div class="geo-filter__tab" data-density="pe250">ПЭ 250</div>
                 <div class="geo-filter__tab" data-density="pe300">ПЭ 300</div>
                 <div class="geo-filter__tab" data-density="pe350">ПЭ 350</div>
+                <div class="geo-filter__tab" data-density="pe375">ПЭ 375</div>
                 <div class="geo-filter__tab" data-density="pe400">ПЭ 400</div>
                 <div class="geo-filter__tab" data-density="pe450">ПЭ 450</div>
                 <div class="geo-filter__tab" data-density="pe500">ПЭ 500</div>
                 <div class="geo-filter__tab" data-density="pe550">ПЭ 550</div>
                 <div class="geo-filter__tab" data-density="pe600">ПЭ 600</div>
-            </div>
-        </div>
-        
-        <div class="geo-filter__tab-group">
-            <div class="geo-filter__tab-group-title">Интатекс ПП</div>
+                <div class="geo-filter__tab" data-density="pe650">ПЭ 650</div>
+                <div class="geo-filter__tab" data-density="pe700">ПЭ 700</div>
+                <div class="geo-filter__tab" data-density="pe750">ПЭ 750</div>
+                <div class="geo-filter__tab" data-density="pe800">ПЭ 800</div>
+            </div>     
             <div class="geo-filter__tabs">
                 <div class="geo-filter__tab" data-density="pp150">ПП 150</div>
                 <div class="geo-filter__tab" data-density="pp200">ПП 200</div>
                 <div class="geo-filter__tab" data-density="pp250">ПП 250</div>
                 <div class="geo-filter__tab" data-density="pp300">ПП 300</div>
                 <div class="geo-filter__tab" data-density="pp350">ПП 350</div>
+                <div class="geo-filter__tab" data-density="pp375">ПП 375</div>
                 <div class="geo-filter__tab" data-density="pp400">ПП 400</div>
                 <div class="geo-filter__tab" data-density="pp450">ПП 450</div>
                 <div class="geo-filter__tab" data-density="pp500">ПП 500</div>
                 <div class="geo-filter__tab" data-density="pp550">ПП 550</div>
                 <div class="geo-filter__tab" data-density="pp600">ПП 600</div>
+                <div class="geo-filter__tab" data-density="pp700">ПП 700</div>
+                <div class="geo-filter__tab" data-density="pp800">ПП 800</div>
             </div>
         </div>
         
         <div class="geo-filter__notice">
             Отгрузки с производства осуществляются только юридическим лицам
         </div>
+</div>
+
+<!-- Попап на таблица 1 -->
+<div id="custom-popup" class="custom-popup-overlay">
+    <div class="custom-popup-container">
+        <div class="custom-popup-content">
+            <button class="custom-popup-close">&times;</button>
+            <div class="custom-popup-img-container">
+                <img src="assets/img/products/table1.png" alt="Детальная таблица" class="img-fluid w-100">
+            </div>
+        </div>
+    </div>
 </div>
 
 <div class="products-grid" >
@@ -291,12 +306,12 @@
         </div>
         
         <div class="product-image-container">
-            <img src="https://static.tildacdn.com/tild6234-6163-4536-b236-336261313565/150.png" alt="Геотекстиль Интатекс 150" class="product-image">
+            <img src="assets/img/products/150.png" alt="Геотекстиль Интатекс 150" class="product-image">
         </div>
         
         <div class="product-details">
             <div class="product-description">
-                <p>Геотекстиль 150 «Интатекс» — это полимерное синтетическое полотно низкой степени плотности, применяемое как стабилизационный материал при строительных, дорожных, дренажных, сельскохозяйственных, грунтовых и садоводческих работах. Компания GeoSM предлагает купить геотекстиль 150 г/м₂ от производителя, изготовленный из 100% полимерных волокон.</p>
+                <p>Геотекстиль 150 «Интатекс» —  это высококачественное синтетическое полотно от казахстанского бренда «Интаго Казахстан», изготовленное из 100% полимерных волокон. Обладая оптимальной плотностью, он эффективно применяется в строительстве, дорожных работах, дренажных системах, сельском хозяйстве и ландшафтном дизайне. Надёжность, доступность и соответствие международным стандартам делают его идеальным решением для любых задач!</p>
             </div>
             
             <h3 class="specs-title">Физико-механические характеристики</h3>
@@ -316,8 +331,8 @@
                 <tr>
                     <td class="spec-name">Удлинение при разрыве, %</td>
                     <td class="spec-value">
-                        <div>по длине: 50</div>
-                        <div>по ширине: 80</div>
+                        <div>по длине: 120</div>
+                        <div>по ширине: 130</div>
                     </td>
                 </tr>
                 <tr>
@@ -326,7 +341,15 @@
                 </tr>
                 <tr>
                     <td class="spec-name">Толщина при давлении 2,0 кПа, мм</td>
-                    <td class="spec-value">1,5</td>
+                    <td class="spec-value">1,1</td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Ширина рулона, м</td>
+                    <td class="spec-value">1-6</td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Длина рулона, м</td>
+                    <td class="spec-value">50-100</td>
                 </tr>
             </table>
             
@@ -343,12 +366,12 @@
         </div>
         
         <div class="product-image-container">
-            <img src="https://static.tildacdn.com/tild3063-6133-4735-b639-326234353435/200.png" alt="Геотекстиль Интатекс 200" class="product-image">
+            <img src="assets/img/products/200.png" alt="Геотекстиль Интатекс 200" class="product-image">
         </div>
         
         <div class="product-details">
             <div class="product-description">
-                <p>Геотекстиль 200 «Интатекс» — это полимерное синтетическое полотно низкой степени плотности, применяемое как стабилизационный материал при строительных, дорожных, дренажных, сельскохозяйственных, грунтовых и садоводческих работах. Компания GeoSM предлагает купить геотекстиль 200 г/м₂ от производителя, изготовленный из 100% полимерных волокон.</p>
+                <p>Геотекстиль 200 «Интатекс» — это высококачественное синтетическое полотно от казахстанского бренда «Интаго Казахстан», изготовленное из 100% полимерных волокон. Обладая оптимальной плотностью, он эффективно применяется в строительстве, дорожных работах, дренажных системах, сельском хозяйстве и ландшафтном дизайне. Надёжность, доступность и соответствие международным стандартам делают его идеальным решением для любых задач!</p>
             </div>
             
             <h3 class="specs-title">Физико-механические характеристики</h3>
@@ -361,15 +384,15 @@
                 <tr>
                     <td class="spec-name">Разрывная нагрузка, KH/M</td>
                     <td class="spec-value">
-                        <div>по длине: 4,5</div>
-                        <div>по ширине: 4,5</div>
+                        <div>по длине: 5,5</div>
+                        <div>по ширине: 5,5</div>
                     </td>
                 </tr>
                 <tr>
                     <td class="spec-name">Удлинение при разрыве, %</td>
                     <td class="spec-value">
-                        <div>по длине: 50</div>
-                        <div>по ширине: 80</div>
+                        <div>по длине: 120</div>
+                        <div>по ширине: 130</div>
                     </td>
                 </tr>
                 <tr>
@@ -378,7 +401,15 @@
                 </tr>
                 <tr>
                     <td class="spec-name">Толщина при давлении 2,0 кПа, мм</td>
-                    <td class="spec-value">1,7</td>
+                    <td class="spec-value">1,4</td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Ширина рулона, м</td>
+                    <td class="spec-value">1-6</td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Длина рулона, м</td>
+                    <td class="spec-value">50-100</td>
                 </tr>
             </table>
             
@@ -395,12 +426,12 @@
         </div>
         
         <div class="product-image-container">
-            <img src="https://static.tildacdn.com/tild6539-3939-4339-a362-626632363765/250.png" alt="Геотекстиль Интатекс 250" class="product-image">
+            <img src="assets/img/products/250.png" alt="Геотекстиль Интатекс 250" class="product-image">
         </div>
         
         <div class="product-details">
             <div class="product-description">
-                <p>Геотекстиль 250 «Интатекс» — это полимерное синтетическое полотно средней степени плотности, применяемое при дорожно-строительных, дренажных, сельскохозяйственных, ландшафтных, грунтовых и садоводческих работах в качестве стабилизационного материала. Компания Intago предлагает купить геотекстиль 250 г/м₂ собственного производства, изготовленный из полимерных волокон..</p>
+                <p>Геотекстиль 250 «Интатекс» — это высококачественное синтетическое полотно от казахстанского бренда «Интаго Казахстан», изготовленное из 100% полимерных волокон. Обладая оптимальной плотностью, он эффективно применяется в строительстве, дорожных работах, дренажных системах, сельском хозяйстве и ландшафтном дизайне. Надёжность, доступность и соответствие международным стандартам делают его идеальным решением для любых задач!</p>
             </div>
             
             <h3 class="specs-title">Физико-механические характеристики</h3>
@@ -413,15 +444,15 @@
                 <tr>
                     <td class="spec-name">Разрывная нагрузка, KH/M</td>
                     <td class="spec-value">
-                        <div>по длине: 6,0</div>
-                        <div>по ширине: 6,0</div>
+                        <div>по длине: 6,6</div>
+                        <div>по ширине: 6,6</div>
                     </td>
                 </tr>
                 <tr>
                     <td class="spec-name">Удлинение при разрыве, %</td>
                     <td class="spec-value">
-                        <div>по длине: 50</div>
-                        <div>по ширине: 80</div>
+                        <div>по длине: 120</div>
+                        <div>по ширине: 130</div>
                     </td>
                 </tr>
                 <tr>
@@ -430,7 +461,15 @@
                 </tr>
                 <tr>
                     <td class="spec-name">Толщина при давлении 2,0 кПа, мм</td>
-                    <td class="spec-value">2,2</td>
+                    <td class="spec-value">1,5</td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Ширина рулона, м</td>
+                    <td class="spec-value">1-6</td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Длина рулона, м</td>
+                    <td class="spec-value">50-100</td>
                 </tr>
             </table>
             
@@ -447,12 +486,12 @@
         </div>
         
         <div class="product-image-container">
-            <img src="https://static.tildacdn.com/tild3034-3764-4631-a564-653431303665/300.png" alt="Геотекстиль Интатекс 300" class="product-image">
+            <img src="assets/img/products/300.png" alt="Геотекстиль Интатекс 300" class="product-image">
         </div>
         
         <div class="product-details">
             <div class="product-description">
-                <p>Геотекстиль 300 «Интатекс» — это синтетическое полимерное полотно средней степени плотности, используемое в качестве стабилизационного материала при проведении строительных, дорожно-укладочных, дренажных, ландшафтных и садоводческих работ. Компания GeoSM предлагает к продаже качественный геотекстиль 300 г/м₂ из 100% полимерных волокон в широком размерном ассортименте.</p>
+                <p>Геотекстиль 300 «Интатекс» — это высококачественное синтетическое полотно от казахстанского бренда «Интаго Казахстан», изготовленное из 100% полимерных волокон. Обладая оптимальной плотностью, он эффективно применяется в строительстве, дорожных работах, дренажных системах, сельском хозяйстве и ландшафтном дизайне. Надёжность, доступность и соответствие международным стандартам делают его идеальным решением для любых задач!</p>
             </div>
             
             <h3 class="specs-title">Физико-механические характеристики</h3>
@@ -465,15 +504,15 @@
                 <tr>
                     <td class="spec-name">Разрывная нагрузка, KH/M</td>
                     <td class="spec-value">
-                        <div>по длине: 8,0</div>
-                        <div>по ширине: 8,0</div>
+                        <div>по длине: 8,8</div>
+                        <div>по ширине: 8,8</div>
                     </td>
                 </tr>
                 <tr>
                     <td class="spec-name">Удлинение при разрыве, %</td>
                     <td class="spec-value">
-                        <div>по длине: 50</div>
-                        <div>по ширине: 80</div>
+                        <div>по длине: 120</div>
+                        <div>по ширине: 130</div>
                     </td>
                 </tr>
                 <tr>
@@ -482,7 +521,15 @@
                 </tr>
                 <tr>
                     <td class="spec-name">Толщина при давлении 2,0 кПа, мм</td>
-                    <td class="spec-value">2,8</td>
+                    <td class="spec-value">1,6</td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Ширина рулона, м</td>
+                    <td class="spec-value">1-6</td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Длина рулона, м</td>
+                    <td class="spec-value">50-100</td>
                 </tr>
             </table>
             
@@ -499,12 +546,12 @@
         </div>
         
         <div class="product-image-container">
-            <img src="https://static.tildacdn.com/tild3038-3738-4439-b665-613165343530/350.png" alt="Геотекстиль Интатекс 350" class="product-image">
+            <img src="assets/img/products/350.png" alt="Геотекстиль Интатекс 350" class="product-image">
         </div>
         
         <div class="product-details">
             <div class="product-description">
-                <p>Геотекстиль 350 – это рулонный нетканый геосинтетический материал средней плотности, обладающий максимальной прочностью, способной справляться с высокими нагрузками без разрывов и деформаций. Его активно применяют для строительства дорог и автостоянок для тяжелой техники. В промышленном строительстве для создания полигонов ТБО, водохранилищ и гидротехнических сооружений.</p>
+                <p>Геотекстиль 350 «Интатекс» — это высококачественное синтетическое полотно от казахстанского бренда «Интаго Казахстан», изготовленное из 100% полимерных волокон. Обладая оптимальной плотностью, он эффективно применяется в строительстве, дорожных работах, дренажных системах, сельском хозяйстве и ландшафтном дизайне. Надёжность, доступность и соответствие международным стандартам делают его идеальным решением для любых задач!</p>
             </div>
             
             <h3 class="specs-title">Физико-механические характеристики</h3>
@@ -517,15 +564,15 @@
                 <tr>
                     <td class="spec-name">Разрывная нагрузка, KH/M</td>
                     <td class="spec-value">
-                        <div>по длине: 9,0</div>
-                        <div>по ширине: 9,0</div>
+                        <div>по длине: 11,5</div>
+                        <div>по ширине: 11,5</div>
                     </td>
                 </tr>
                 <tr>
                     <td class="spec-name">Удлинение при разрыве, %</td>
                     <td class="spec-value">
-                        <div>по длине: 50</div>
-                        <div>по ширине: 80</div>
+                        <div>по длине: 120</div>
+                        <div>по ширине: 130</div>
                     </td>
                 </tr>
                 <tr>
@@ -534,7 +581,75 @@
                 </tr>
                 <tr>
                     <td class="spec-name">Толщина при давлении 2,0 кПа, мм</td>
-                    <td class="spec-value">3,3</td>
+                    <td class="spec-value">1,9</td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Ширина рулона, м</td>
+                    <td class="spec-value">1-6</td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Длина рулона, м</td>
+                    <td class="spec-value">50-100</td>
+                </tr>
+            </table>
+            
+            <div class="product-actions">
+                <a href="#popup:myform" class="btn btn-primary">Получить КП</a>
+                <a href="#popup:table1" class="btn btn-secondary">Подробная таблица</a>
+            </div>
+        </div>        
+    </div>
+
+    <div class="product-card" data-target="pe375">
+        <div class="product-header">
+            <h1 class="product-title">Геотекстиль нетканый Интатекс 375</h1>
+        </div>
+        
+        <div class="product-image-container">
+            <img src="assets/img/products/375.png" alt="Геотекстиль Интатекс 350" class="product-image">
+        </div>
+        
+        <div class="product-details">
+            <div class="product-description">
+                <p>Геотекстиль 375 «Интатекс» — это высококачественное синтетическое полотно от казахстанского бренда «Интаго Казахстан», изготовленное из 100% полимерных волокон. Обладая оптимальной плотностью, он эффективно применяется в строительстве, дорожных работах, дренажных системах, сельском хозяйстве и ландшафтном дизайне. Надёжность, доступность и соответствие международным стандартам делают его идеальным решением для любых задач!</p>
+            </div>
+            
+            <h3 class="specs-title">Физико-механические характеристики</h3>
+            
+            <table class="specs-table">
+                <tr>
+                    <td class="spec-name">Поверхностная плотность, г/м<sup>2</sup></td>
+                    <td class="spec-value">375</td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Разрывная нагрузка, KH/M</td>
+                    <td class="spec-value">
+                        <div>по длине: 12,0</div>
+                        <div>по ширине: 12,0</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Удлинение при разрыве, %</td>
+                    <td class="spec-value">
+                        <div>по длине: 120</div>
+                        <div>по ширине: 130</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Коэф. фильтрации при давлении 2,0 кПа, м/сут, не менее</td>
+                    <td class="spec-value">80</td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Толщина при давлении 2,0 кПа, мм</td>
+                    <td class="spec-value">2,0</td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Ширина рулона, м</td>
+                    <td class="spec-value">1-6</td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Длина рулона, м</td>
+                    <td class="spec-value">50-100</td>
                 </tr>
             </table>
             
@@ -551,12 +666,12 @@
         </div>
         
         <div class="product-image-container">
-            <img src="https://static.tildacdn.com/tild3762-3966-4466-b064-383063633931/400.png" alt="Геотекстиль Интатекс 400" class="product-image">
+            <img src="assets/img/products/400.png" alt="Геотекстиль Интатекс 400" class="product-image">
         </div>
         
         <div class="product-details">
             <div class="product-description">
-                <p>Геотекстиль 400 – это рулонный нетканый геосинтетический материал высокой плотности, обладающий максимальной прочностью, способной справляться с высокими нагрузками без разрывов и деформаций. Его активно применяют для строительства дорог и автомагистралей. В промышленном строительстве для создания полигонов ТБО, водохранилищ и гидротехнических сооружений.</p>
+                <p>Геотекстиль 400 «Интатекс» — это высококачественное синтетическое полотно от казахстанского бренда «Интаго Казахстан», изготовленное из 100% полимерных волокон. Обладая оптимальной плотностью, он эффективно применяется в строительстве, дорожных работах, дренажных системах, сельском хозяйстве и ландшафтном дизайне. Надёжность, доступность и соответствие международным стандартам делают его идеальным решением для любых задач!</p>
             </div>
             
             <h3 class="specs-title">Физико-механические характеристики</h3>
@@ -569,24 +684,32 @@
                 <tr>
                     <td class="spec-name">Разрывная нагрузка, KH/M</td>
                     <td class="spec-value">
-                        <div>по длине: 12,0</div>
-                        <div>по ширине: 12,0</div>
+                        <div>по длине: 13,0</div>
+                        <div>по ширине: 13,0</div>
                     </td>
                 </tr>
                 <tr>
                     <td class="spec-name">Удлинение при разрыве, %</td>
                     <td class="spec-value">
-                        <div>по длине: 50</div>
-                        <div>по ширине: 80</div>
+                        <div>по длине: 120</div>
+                        <div>по ширине: 130</div>
                     </td>
                 </tr>
                 <tr>
                     <td class="spec-name">Коэф. фильтрации при давлении 2,0 кПа, м/сут, не менее</td>
-                    <td class="spec-value">75</td>
+                    <td class="spec-value">80</td>
                 </tr>
                 <tr>
                     <td class="spec-name">Толщина при давлении 2,0 кПа, мм</td>
-                    <td class="spec-value">3,7</td>
+                    <td class="spec-value">2,1</td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Ширина рулона, м</td>
+                    <td class="spec-value">1-6</td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Длина рулона, м</td>
+                    <td class="spec-value">50-100</td>
                 </tr>
             </table>
             
@@ -603,16 +726,16 @@
         </div>
         
         <div class="product-image-container">
-            <img src="https://static.tildacdn.com/tild3336-3563-4263-b264-306565356431/450.png" alt="Геотекстиль Интатекс 450" class="product-image">
+            <img src="assets/img/products/450.png" alt="Геотекстиль Интатекс 450" class="product-image">
         </div>
         
         <div class="product-details">
             <div class="product-description">
-                <p>Геотекстиль 450 – это рулонный нетканый геосинтетический материал высокой плотности, обладающий максимальной прочностью, способной справляться с высокими нагрузками без разрывов и деформаций. Его активно применяют для строительства дорог и автомагистралей с высокой нагрузкой. В промышленном строительстве для создания полигонов ТБО, и водохранилищ.</p>
+                <p>Геотекстиль 450 «Интатекс» — это высококачественное синтетическое полотно от казахстанского бренда «Интаго Казахстан», изготовленное из 100% полимерных волокон. Обладая оптимальной плотностью, он эффективно применяется в строительстве, дорожных работах, дренажных системах, сельском хозяйстве и ландшафтном дизайне. Надёжность, доступность и соответствие международным стандартам делают его идеальным решением для любых задач!</p>
             </div>
             
             <h3 class="specs-title">Физико-механические характеристики</h3>
-            
+
             <table class="specs-table">
                 <tr>
                     <td class="spec-name">Поверхностная плотность, г/м<sup>2</sup></td>
@@ -621,15 +744,15 @@
                 <tr>
                     <td class="spec-name">Разрывная нагрузка, KH/M</td>
                     <td class="spec-value">
-                        <div>по длине: 13,5</div>
-                        <div>по ширине: 13,5</div>
+                        <div>по длине: 14,0</div>
+                        <div>по ширине: 14,0</div>
                     </td>
                 </tr>
                 <tr>
                     <td class="spec-name">Удлинение при разрыве, %</td>
                     <td class="spec-value">
-                        <div>по длине: 50</div>
-                        <div>по ширине: 80</div>
+                        <div>по длине: 120</div>
+                        <div>по ширине: 130</div>
                     </td>
                 </tr>
                 <tr>
@@ -638,7 +761,15 @@
                 </tr>
                 <tr>
                     <td class="spec-name">Толщина при давлении 2,0 кПа, мм</td>
-                    <td class="spec-value">4,0</td>
+                    <td class="spec-value">2,2</td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Ширина рулона, м</td>
+                    <td class="spec-value">1-6</td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Длина рулона, м</td>
+                    <td class="spec-value">50-100</td>
                 </tr>
             </table>
             
@@ -655,16 +786,17 @@
         </div>
         
         <div class="product-image-container">
-            <img src="https://static.tildacdn.com/tild3064-6637-4139-b265-323438633831/500.png" alt="Геотекстиль Интатекс 500" class="product-image">
+            <img src="assets/img/products/500.png" alt="Геотекстиль Интатекс 500" class="product-image">
         </div>
         
         <div class="product-details">
             <div class="product-description">
-                <p>Геотекстиль 500 – это рулонный нетканый геосинтетический материал высокой плотности, обладающий максимальной прочностью, способной справляться с высокими нагрузками без разрывов и деформаций. Его активно применяют, в строительстве автомобильных магистралей и железных дорог и в гражданском строительстве для возведения фундаментов многоэтажных зданий.</p>
+                <p>Геотекстиль 500 «Интатекс» — это высококачественное синтетическое полотно от казахстанского бренда «Интаго Казахстан», изготовленное из 100% полимерных волокон. Обладая оптимальной плотностью, он эффективно применяется в строительстве, дорожных работах, дренажных системах, сельском хозяйстве и ландшафтном дизайне. Надёжность, доступность и соответствие международным стандартам делают его идеальным решением для любых задач!</p>
             </div>
             
             <h3 class="specs-title">Физико-механические характеристики</h3>
             
+
             <table class="specs-table">
                 <tr>
                     <td class="spec-name">Поверхностная плотность, г/м<sup>2</sup></td>
@@ -680,17 +812,25 @@
                 <tr>
                     <td class="spec-name">Удлинение при разрыве, %</td>
                     <td class="spec-value">
-                        <div>по длине: 50</div>
-                        <div>по ширине: 80</div>
+                        <div>по длине: 120</div>
+                        <div>по ширине: 130</div>
                     </td>
                 </tr>
                 <tr>
                     <td class="spec-name">Коэф. фильтрации при давлении 2,0 кПа, м/сут, не менее</td>
-                    <td class="spec-value">70</td>
+                    <td class="spec-value">75</td>
                 </tr>
                 <tr>
                     <td class="spec-name">Толщина при давлении 2,0 кПа, мм</td>
-                    <td class="spec-value">4,4</td>
+                    <td class="spec-value">2,4</td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Ширина рулона, м</td>
+                    <td class="spec-value">1-6</td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Длина рулона, м</td>
+                    <td class="spec-value">50-100</td>
                 </tr>
             </table>
             
@@ -707,12 +847,12 @@
         </div>
         
         <div class="product-image-container">
-            <img src="https://static.tildacdn.com/tild3033-3765-4437-a330-656637343036/550.png" alt="Геотекстиль Интатекс 550" class="product-image">
+            <img src="assets/img/products/550.png" alt="Геотекстиль Интатекс 550" class="product-image">
         </div>
         
         <div class="product-details">
             <div class="product-description">
-                <p>Геотекстиль 550 – это рулонный нетканый геосинтетический материал высокой плотности, обладающий максимальной прочностью, способной справляться с высокими нагрузками без разрывов и деформаций. Его активно применяют, в строительстве автомобильных магистралей и железных дорог и в гражданском строительстве для возведения фундаментов многоэтажных зданий.</p>
+                <p>Геотекстиль 550 «Интатекс» — это высококачественное синтетическое полотно от казахстанского бренда «Интаго Казахстан», изготовленное из 100% полимерных волокон. Обладая оптимальной плотностью, он эффективно применяется в строительстве, дорожных работах, дренажных системах, сельском хозяйстве и ландшафтном дизайне. Надёжность, доступность и соответствие международным стандартам делают его идеальным решением для любых задач!</p>
             </div>
             
             <h3 class="specs-title">Физико-механические характеристики</h3>
@@ -732,17 +872,25 @@
                 <tr>
                     <td class="spec-name">Удлинение при разрыве, %</td>
                     <td class="spec-value">
-                        <div>по длине: 50</div>
-                        <div>по ширине: 80</div>
+                        <div>по длине: 120</div>
+                        <div>по ширине: 130</div>
                     </td>
                 </tr>
                 <tr>
                     <td class="spec-name">Коэф. фильтрации при давлении 2,0 кПа, м/сут, не менее</td>
-                    <td class="spec-value">70</td>
+                    <td class="spec-value">75</td>
                 </tr>
                 <tr>
                     <td class="spec-name">Толщина при давлении 2,0 кПа, мм</td>
-                    <td class="spec-value">4,8</td>
+                    <td class="spec-value">2,6</td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Ширина рулона, м</td>
+                    <td class="spec-value">1-6</td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Длина рулона, м</td>
+                    <td class="spec-value">50-100</td>
                 </tr>
             </table>
             
@@ -760,12 +908,12 @@
         </div>
         
         <div class="product-image-container">
-            <img src="https://static.tildacdn.com/tild3462-3464-4639-b837-616165373239/600.png" alt="Геотекстиль Интатекс 600" class="product-image">
+            <img src="assets/img/products/600.png" alt="Геотекстиль Интатекс 600" class="product-image">
         </div>
         
         <div class="product-details">
             <div class="product-description">
-                <p>Геотекстиль 600 – это рулонный нетканый геосинтетический материал высокой плотности, обладающий максимальной прочностью, способной справляться с высокими нагрузками без разрывов и деформаций. Его активно применяют, в строительстве железных дорог и взлетно-посадочных полос аэропортов, в гражданском строительстве для возведения фундаментов многоэтажных зданий.</p>
+                <p>Геотекстиль 600 «Интатекс» — это высококачественное синтетическое полотно от казахстанского бренда «Интаго Казахстан», изготовленное из 100% полимерных волокон. Обладая оптимальной плотностью, он эффективно применяется в строительстве, дорожных работах, дренажных системах, сельском хозяйстве и ландшафтном дизайне. Надёжность, доступность и соответствие международным стандартам делают его идеальным решением для любых задач!</p>
             </div>
             
             <h3 class="specs-title">Физико-механические характеристики</h3>
@@ -778,24 +926,32 @@
                 <tr>
                     <td class="spec-name">Разрывная нагрузка, KH/M</td>
                     <td class="spec-value">
-                        <div>по длине: 19,0</div>
-                        <div>по ширине: 19,0</div>
+                        <div>по длине: 17,0</div>
+                        <div>по ширине: 17,0</div>
                     </td>
                 </tr>
                 <tr>
                     <td class="spec-name">Удлинение при разрыве, %</td>
                     <td class="spec-value">
-                        <div>по длине: 50</div>
-                        <div>по ширине: 80</div>
+                        <div>по длине: 120</div>
+                        <div>по ширине: 130</div>
                     </td>
                 </tr>
                 <tr>
                     <td class="spec-name">Коэф. фильтрации при давлении 2,0 кПа, м/сут, не менее</td>
-                    <td class="spec-value">70</td>
+                    <td class="spec-value">75</td>
                 </tr>
                 <tr>
                     <td class="spec-name">Толщина при давлении 2,0 кПа, мм</td>
-                    <td class="spec-value">5,2</td>
+                    <td class="spec-value">2,8</td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Ширина рулона, м</td>
+                    <td class="spec-value">1-6</td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Длина рулона, м</td>
+                    <td class="spec-value">50-100</td>
                 </tr>
             </table>
             
@@ -807,6 +963,246 @@
 
     </div>
 
+    <div class="product-card" data-target="pe650">
+        <div class="product-header">
+            <h1 class="product-title">Геотекстиль нетканый Интатекс 650</h1>
+        </div>
+        
+        <div class="product-image-container">
+            <img src="assets/img/products/650.png" alt="Геотекстиль Интатекс 600" class="product-image">
+        </div>
+        
+        <div class="product-details">
+            <div class="product-description">
+                <p>Геотекстиль 650 «Интатекс» — это высококачественное синтетическое полотно от казахстанского бренда «Интаго Казахстан», изготовленное из 100% полимерных волокон. Обладая оптимальной плотностью, он эффективно применяется в строительстве, дорожных работах, дренажных системах, сельском хозяйстве и ландшафтном дизайне. Надёжность, доступность и соответствие международным стандартам делают его идеальным решением для любых задач!</p>
+            </div>
+            
+            <h3 class="specs-title">Физико-механические характеристики</h3>
+            
+            <table class="specs-table">
+                <tr>
+                    <td class="spec-name">Поверхностная плотность, г/м<sup>2</sup></td>
+                    <td class="spec-value">650</td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Разрывная нагрузка, KH/M</td>
+                    <td class="spec-value">
+                        <div>по длине: 18,0</div>
+                        <div>по ширине: 18,0</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Удлинение при разрыве, %</td>
+                    <td class="spec-value">
+                        <div>по длине: 120</div>
+                        <div>по ширине: 130</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Коэф. фильтрации при давлении 2,0 кПа, м/сут, не менее</td>
+                    <td class="spec-value">70</td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Толщина при давлении 2,0 кПа, мм</td>
+                    <td class="spec-value">2,9</td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Ширина рулона, м</td>
+                    <td class="spec-value">1-6</td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Длина рулона, м</td>
+                    <td class="spec-value">50-100</td>
+                </tr>
+            </table>
+            
+            <div class="product-actions">
+                <a href="#popup:myform" class="btn btn-primary">Получить КП</a>
+                <a href="#popup:table1" class="btn btn-secondary">Подробная таблица</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="product-card" data-target="pe700">
+        <div class="product-header">
+            <h1 class="product-title">Геотекстиль нетканый Интатекс 700</h1>
+        </div>
+        
+        <div class="product-image-container">
+            <img src="assets/img/products/700.png" alt="Геотекстиль Интатекс 600" class="product-image">
+        </div>
+        
+        <div class="product-details">
+            <div class="product-description">
+                <p>Геотекстиль 700 «Интатекс» — это высококачественное синтетическое полотно от казахстанского бренда «Интаго Казахстан», изготовленное из 100% полимерных волокон. Обладая оптимальной плотностью, он эффективно применяется в строительстве, дорожных работах, дренажных системах, сельском хозяйстве и ландшафтном дизайне. Надёжность, доступность и соответствие международным стандартам делают его идеальным решением для любых задач!</p>
+            </div>
+            
+            <h3 class="specs-title">Физико-механические характеристики</h3>
+            
+            <table class="specs-table">
+                <tr>
+                    <td class="spec-name">Поверхностная плотность, г/м<sup>2</sup></td>
+                    <td class="spec-value">700</td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Разрывная нагрузка, KH/M</td>
+                    <td class="spec-value">
+                        <div>по длине: 19,5</div>
+                        <div>по ширине: 19,5</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Удлинение при разрыве, %</td>
+                    <td class="spec-value">
+                        <div>по длине: 120</div>
+                        <div>по ширине: 130</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Коэф. фильтрации при давлении 2,0 кПа, м/сут, не менее</td>
+                    <td class="spec-value">70</td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Толщина при давлении 2,0 кПа, мм</td>
+                    <td class="spec-value">3,1</td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Ширина рулона, м</td>
+                    <td class="spec-value">1-6</td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Длина рулона, м</td>
+                    <td class="spec-value">50-100</td>
+                </tr>
+            </table>
+            
+            <div class="product-actions">
+                <a href="#popup:myform" class="btn btn-primary">Получить КП</a>
+                <a href="#popup:table1" class="btn btn-secondary">Подробная таблица</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card" data-target="pe750">
+        <div class="product-header">
+            <h1 class="product-title">Геотекстиль нетканый Интатекс 700</h1>
+        </div>
+        
+        <div class="product-image-container">
+            <img src="assets/img/products/750.png" alt="Геотекстиль Интатекс 600" class="product-image">
+        </div>
+        
+        <div class="product-details">
+            <div class="product-description">
+                <p>Геотекстиль 750 «Интатекс» — это высококачественное синтетическое полотно от казахстанского бренда «Интаго Казахстан», изготовленное из 100% полимерных волокон. Обладая оптимальной плотностью, он эффективно применяется в строительстве, дорожных работах, дренажных системах, сельском хозяйстве и ландшафтном дизайне. Надёжность, доступность и соответствие международным стандартам делают его идеальным решением для любых задач!</p>
+            </div>
+            
+            <h3 class="specs-title">Физико-механические характеристики</h3>
+            
+            <table class="specs-table">
+                <tr>
+                    <td class="spec-name">Поверхностная плотность, г/м<sup>2</sup></td>
+                    <td class="spec-value">750</td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Разрывная нагрузка, KH/M</td>
+                    <td class="spec-value">
+                        <div>по длине: 22,0</div>
+                        <div>по ширине: 22,0</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Удлинение при разрыве, %</td>
+                    <td class="spec-value">
+                        <div>по длине: 120</div>
+                        <div>по ширине: 130</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Коэф. фильтрации при давлении 2,0 кПа, м/сут, не менее</td>
+                    <td class="spec-value">70</td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Толщина при давлении 2,0 кПа, мм</td>
+                    <td class="spec-value">3,2</td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Ширина рулона, м</td>
+                    <td class="spec-value">1-6</td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Длина рулона, м</td>
+                    <td class="spec-value">50-100</td>
+                </tr>
+            </table>
+            
+            <div class="product-actions">
+                <a href="#popup:myform" class="btn btn-primary">Получить КП</a>
+                <a href="#popup:table1" class="btn btn-secondary">Подробная таблица</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card" data-target="pe800">
+        <div class="product-header">
+            <h1 class="product-title">Геотекстиль нетканый Интатекс 800</h1>
+        </div>
+        
+        <div class="product-image-container">
+            <img src="assets/img/products/800.png" alt="Геотекстиль Интатекс 600" class="product-image">
+        </div>
+        
+        <div class="product-details">
+            <div class="product-description">
+                <p>Геотекстиль 800 «Интатекс» — это высококачественное синтетическое полотно от казахстанского бренда «Интаго Казахстан», изготовленное из 100% полимерных волокон. Обладая оптимальной плотностью, он эффективно применяется в строительстве, дорожных работах, дренажных системах, сельском хозяйстве и ландшафтном дизайне. Надёжность, доступность и соответствие международным стандартам делают его идеальным решением для любых задач!</p>
+            </div>
+            
+            <h3 class="specs-title">Физико-механические характеристики</h3>
+            
+            <table class="specs-table">
+                <tr>
+                    <td class="spec-name">Поверхностная плотность, г/м<sup>2</sup></td>
+                    <td class="spec-value">800</td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Разрывная нагрузка, KH/M</td>
+                    <td class="spec-value">
+                        <div>по длине: 24,0</div>
+                        <div>по ширине: 24,0</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Удлинение при разрыве, %</td>
+                    <td class="spec-value">
+                        <div>по длине: 120</div>
+                        <div>по ширине: 130</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Коэф. фильтрации при давлении 2,0 кПа, м/сут, не менее</td>
+                    <td class="spec-value">70</td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Толщина при давлении 2,0 кПа, мм</td>
+                    <td class="spec-value">3,4</td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Ширина рулона, м</td>
+                    <td class="spec-value">1-6</td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Длина рулона, м</td>
+                    <td class="spec-value">50-100</td>
+                </tr>
+            </table>
+            
+            <div class="product-actions">
+                <a href="#popup:myform" class="btn btn-primary">Получить КП</a>
+                <a href="#popup:table1" class="btn btn-secondary">Подробная таблица</a>
+            </div>
+        </div>
+    </div>
     <!--Полипропилен товары-->
 
 	<div class="product-card" data-target="pp150">
