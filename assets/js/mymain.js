@@ -229,18 +229,34 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+//popup table1 table2
 document.addEventListener('DOMContentLoaded', function() {
-    // Находим все элементы с href="#popup:table1"
-    const popupTriggers = document.querySelectorAll('a[href="#popup:table1"]');
-    const popup = document.getElementById('custom-popup');
-    const closeBtn = popup.querySelector('.custom-popup-close');
+    // Находим попап и элементы управления
+    const popup = document.getElementById('universal-popup');
+    const closeBtn = popup.querySelector('.universal-popup-close');
+    const popupImage = document.getElementById('popup-image');
     
-    // Добавляем обработчик для всех найденных элементов
-    popupTriggers.forEach(trigger => {
-        trigger.addEventListener('click', function(e) {
+    // Маппинг таблиц на изображения
+    const tableImages = {
+        'table1': 'assets/img/products/table1.png',
+        'table2': 'assets/img/products/table2.png'
+    };
+    
+    // Обработчик для всех кнопок с href^="#popup:"
+    document.querySelectorAll('a[href^="#popup:"]').forEach(btn => {
+        btn.addEventListener('click', function(e) {
             e.preventDefault();
-            popup.style.display = 'flex';
-            document.body.style.overflow = 'hidden';
+            
+            // Получаем ID таблицы из href
+            const tableId = this.getAttribute('href').split(':')[1];
+            
+            // Устанавливаем соответствующее изображение
+            if(tableImages[tableId]) {
+                popupImage.src = tableImages[tableId];
+                popupImage.alt = 'Таблица ' + tableId;
+                popup.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+            }
         });
     });
     
@@ -267,7 +283,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Предотвращаем закрытие при клике на контент
-    document.querySelector('.custom-popup-container').addEventListener('click', function(e) {
+    document.querySelector('.universal-popup-container').addEventListener('click', function(e) {
         e.stopPropagation();
     });
 });

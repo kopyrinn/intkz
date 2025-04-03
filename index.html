@@ -119,7 +119,7 @@
 <!-- главная -->
 <div id="geo-hero" class="geo-hero">
     <!-- Видео фон -->
-<!--     <div class="geo-hero__video">
+    <!--     <div class="geo-hero__video">
         <video class="geo-hero__video-element" autoplay loop muted playsinline>
             <source src="https://geo-sm.ru/Геотекстиль.mp4" type="video/mp4">
         </video>
@@ -287,13 +287,13 @@
         </div>
 </div>
 
-<!-- Попап на таблица 1 -->
-<div id="custom-popup" class="custom-popup-overlay">
-    <div class="custom-popup-container">
-        <div class="custom-popup-content">
-            <button class="custom-popup-close">&times;</button>
-            <div class="custom-popup-img-container">
-                <img src="assets/img/products/table1.png" alt="Детальная таблица" class="img-fluid w-100">
+<!-- Попап на таблица 1-2 -->
+<div id="universal-popup" class="universal-popup-overlay">
+    <div class="universal-popup-container">
+        <div class="universal-popup-content">
+            <button class="universal-popup-close">&times;</button>
+            <div class="universal-popup-img-container">
+                <img id="popup-image" src="" alt="Таблица" class="img-fluid w-100">
             </div>
         </div>
     </div>
@@ -1222,53 +1222,49 @@
             <h3 class="specs-title">Физико-механические характеристики</h3>
             
             <table class="specs-table">
-            	<tr>
-                    <td class="spec-name">Страна-производитель</td>
-                    <td class="spec-value">
-                        <div>Россия</div>                   
-                    </td>
+                <tr>
+                    <td class="spec-name">Сырье</td>
+                    <td class="spec-value">Полипропилен</td>
                 </tr>
                 <tr>
                     <td class="spec-name">Поверхностная плотность, г/м<sup>2</sup></td>
                     <td class="spec-value">150</td>
                 </tr>
                 <tr>
-                    <td class="spec-name">Материал</td>
+                    <td class="spec-name">Разрывная нагрузка, KH/M</td>
                     <td class="spec-value">
-                        <div>Полипропилен (ПП)</div>                   
+                        <div>по длине: 5,6</div>
+                        <div>по ширине: 5,6</div>
                     </td>
                 </tr>
                 <tr>
-                    <td class="spec-name">Цвет</td>
+                    <td class="spec-name">Удлинение при разрыве, %</td>
                     <td class="spec-value">
-                        <div>Микс</div>                    
+                        <div>по длине: 120</div>
+                        <div>по ширине: 130</div>
                     </td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Коэф. фильтрации при давлении 2,0 кПа, м/сут, не менее</td>
+                    <td class="spec-value">90</td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Толщина при давлении 2,0 кПа, мм</td>
+                    <td class="spec-value">1,0-2,0</td>
                 </tr>
                 <tr>
                     <td class="spec-name">Ширина рулона, м</td>
-                    <td class="spec-value">
-                        <div>до 6</div>                       
-                    </td>
+                    <td class="spec-value">1-6</td>
                 </tr>
                 <tr>
                     <td class="spec-name">Длина рулона, м</td>
-                    <td class="spec-value">до 100</td>
-                </tr>
-                <tr>
-                    <td class="spec-name">Относительное удлинение при растяжении, %</td>
-                    <td class="spec-value">
-                        <div>продольно: 100</div> 
-                        <div>поперечно: 100</div>                      
-                    </td>
-                </tr>
-                <tr>
-                    <td class="spec-name">Коэф. фильтрации при давлении 2,0 кПа, м/сут</td>
-                    <td class="spec-value">60</td>
+                    <td class="spec-value">50-100</td>
                 </tr>
             </table>
             
             <div class="product-actions">
-                <a href="#popup:myform" class="btn btn-primary">Получить КП</a>          
+                <a href="#popup:myform" class="btn btn-primary">Получить КП</a>
+                <a href="#popup:table2" class="btn btn-secondary">Подробная таблица</a>
             </div>
         </div>
     </div>
@@ -1290,53 +1286,49 @@
             <h3 class="specs-title">Физико-механические характеристики</h3>
             
             <table class="specs-table">
-            	<tr>
-                    <td class="spec-name">Страна-производитель</td>
-                    <td class="spec-value">
-                        <div>Россия</div>                   
-                    </td>
+                <tr>
+                    <td class="spec-name">Сырье</td>
+                    <td class="spec-value">Полипропилен</td>
                 </tr>
                 <tr>
                     <td class="spec-name">Поверхностная плотность, г/м<sup>2</sup></td>
                     <td class="spec-value">200</td>
                 </tr>
                 <tr>
-                    <td class="spec-name">Материал</td>
+                    <td class="spec-name">Разрывная нагрузка, KH/M</td>
                     <td class="spec-value">
-                        <div>Полипропилен (ПП)</div>                   
+                        <div>по длине: 8,0</div>
+                        <div>по ширине: 6,6</div>
                     </td>
                 </tr>
                 <tr>
-                    <td class="spec-name">Цвет</td>
+                    <td class="spec-name">Удлинение при разрыве, %</td>
                     <td class="spec-value">
-                        <div>Микс</div>                    
+                        <div>по длине: 120</div>
+                        <div>по ширине: 130</div>
                     </td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Коэф. фильтрации при давлении 2,0 кПа, м/сут, не менее</td>
+                    <td class="spec-value">90</td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Толщина при давлении 2,0 кПа, мм</td>
+                    <td class="spec-value">1,2-2,4</td>
                 </tr>
                 <tr>
                     <td class="spec-name">Ширина рулона, м</td>
-                    <td class="spec-value">
-                        <div>до 6</div>                       
-                    </td>
+                    <td class="spec-value">1-6</td>
                 </tr>
                 <tr>
                     <td class="spec-name">Длина рулона, м</td>
-                    <td class="spec-value">до 100</td>
-                </tr>
-                <tr>
-                    <td class="spec-name">Относительное удлинение при растяжении, %</td>
-                    <td class="spec-value">
-                        <div>продольно: 100</div> 
-                        <div>поперечно: 100</div>                      
-                    </td>
-                </tr>
-                <tr>
-                    <td class="spec-name">Коэф. фильтрации при давлении 2,0 кПа, м/сут</td>
-                    <td class="spec-value">55</td>
+                    <td class="spec-value">50-100</td>
                 </tr>
             </table>
             
             <div class="product-actions">
-                <a href="#popup:myform" class="btn btn-primary">Получить КП</a>          
+                <a href="#popup:myform" class="btn btn-primary">Получить КП</a>
+                <a href="#popup:table2" class="btn btn-secondary">Подробная таблица</a>
             </div>
         </div>
     </div>
@@ -1358,54 +1350,50 @@
             <h3 class="specs-title">Физико-механические характеристики</h3>
             
             <table class="specs-table">
-            	<tr>
-                    <td class="spec-name">Страна-производитель</td>
-                    <td class="spec-value">
-                        <div>Россия</div>                   
-                    </td>
+                <tr>
+                    <td class="spec-name">Сырье</td>
+                    <td class="spec-value">Полипропилен</td>
                 </tr>
                 <tr>
                     <td class="spec-name">Поверхностная плотность, г/м<sup>2</sup></td>
                     <td class="spec-value">250</td>
                 </tr>
                 <tr>
-                    <td class="spec-name">Материал</td>
+                    <td class="spec-name">Разрывная нагрузка, KH/M</td>
                     <td class="spec-value">
-                        <div>Полипропилен (ПП)</div>                   
+                        <div>по длине: 10,0</div>
+                        <div>по ширине: 8,3</div>
                     </td>
                 </tr>
                 <tr>
-                    <td class="spec-name">Цвет</td>
+                    <td class="spec-name">Удлинение при разрыве, %</td>
                     <td class="spec-value">
-                        <div>Микс</div>                    
+                        <div>по длине: 120</div>
+                        <div>по ширине: 130</div>
                     </td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Коэф. фильтрации при давлении 2,0 кПа, м/сут, не менее</td>
+                    <td class="spec-value">90</td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Толщина при давлении 2,0 кПа, мм</td>
+                    <td class="spec-value">1,4-2,7</td>
                 </tr>
                 <tr>
                     <td class="spec-name">Ширина рулона, м</td>
-                    <td class="spec-value">
-                        <div>до 6</div>                       
-                    </td>
+                    <td class="spec-value">1-6</td>
                 </tr>
                 <tr>
                     <td class="spec-name">Длина рулона, м</td>
-                    <td class="spec-value">до 100</td>
-                </tr>
-                <tr>
-                    <td class="spec-name">Относительное удлинение при растяжении, %</td>
-                    <td class="spec-value">
-                        <div>продольно: 100</div> 
-                        <div>поперечно: 100</div>                      
-                    </td>
-                </tr>
-                <tr>
-                    <td class="spec-name">Коэф. фильтрации при давлении 2,0 кПа, м/сут</td>
-                    <td class="spec-value">55</td>
+                    <td class="spec-value">50-100</td>
                 </tr>
             </table>
             
             <div class="product-actions">
-                <a href="#popup:myform" class="btn btn-primary">Получить КП</a>          
-            </div>	       
+                <a href="#popup:myform" class="btn btn-primary">Получить КП</a>
+                <a href="#popup:table2" class="btn btn-secondary">Подробная таблица</a>
+            </div>      
         </div>
     </div>
 
@@ -1426,54 +1414,50 @@
             <h3 class="specs-title">Физико-механические характеристики</h3>
             
             <table class="specs-table">
-            	<tr>
-                    <td class="spec-name">Страна-производитель</td>
-                    <td class="spec-value">
-                        <div>Россия</div>                   
-                    </td>
+                <tr>
+                    <td class="spec-name">Сырье</td>
+                    <td class="spec-value">Полипропилен</td>
                 </tr>
                 <tr>
                     <td class="spec-name">Поверхностная плотность, г/м<sup>2</sup></td>
                     <td class="spec-value">300</td>
                 </tr>
                 <tr>
-                    <td class="spec-name">Материал</td>
+                    <td class="spec-name">Разрывная нагрузка, KH/M</td>
                     <td class="spec-value">
-                        <div>Полипропилен (ПП)</div>                   
+                        <div>по длине: 12,0</div>
+                        <div>по ширине: 9,9</div>
                     </td>
                 </tr>
                 <tr>
-                    <td class="spec-name">Цвет</td>
+                    <td class="spec-name">Удлинение при разрыве, %</td>
                     <td class="spec-value">
-                        <div>Микс</div>                    
+                        <div>по длине: 120</div>
+                        <div>по ширине: 130</div>
                     </td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Коэф. фильтрации при давлении 2,0 кПа, м/сут, не менее</td>
+                    <td class="spec-value">85</td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Толщина при давлении 2,0 кПа, мм</td>
+                    <td class="spec-value">1,6-3,4</td>
                 </tr>
                 <tr>
                     <td class="spec-name">Ширина рулона, м</td>
-                    <td class="spec-value">
-                        <div>до 6</div>                       
-                    </td>
+                    <td class="spec-value">1-6</td>
                 </tr>
                 <tr>
                     <td class="spec-name">Длина рулона, м</td>
-                    <td class="spec-value">до 100</td>
-                </tr>
-                <tr>
-                    <td class="spec-name">Относительное удлинение при растяжении, %</td>
-                    <td class="spec-value">
-                        <div>продольно: 100</div> 
-                        <div>поперечно: 100</div>                      
-                    </td>
-                </tr>
-                <tr>
-                    <td class="spec-name">Коэф. фильтрации при давлении 2,0 кПа, м/сут</td>
-                    <td class="spec-value">50</td>
+                    <td class="spec-value">50-100</td>
                 </tr>
             </table>
             
             <div class="product-actions">
-                <a href="#popup:myform" class="btn btn-primary">Получить КП</a>          
-            </div>	       
+                <a href="#popup:myform" class="btn btn-primary">Получить КП</a>
+                <a href="#popup:table2" class="btn btn-secondary">Подробная таблица</a>
+            </div> 	       
         </div>
     </div>  
 
@@ -1494,57 +1478,116 @@
             <h3 class="specs-title">Физико-механические характеристики</h3>
             
             <table class="specs-table">
-            	<tr>
-                    <td class="spec-name">Страна-производитель</td>
-                    <td class="spec-value">
-                        <div>Россия</div>                   
-                    </td>
+                <tr>
+                    <td class="spec-name">Сырье</td>
+                    <td class="spec-value">Полипропилен</td>
                 </tr>
                 <tr>
                     <td class="spec-name">Поверхностная плотность, г/м<sup>2</sup></td>
                     <td class="spec-value">350</td>
                 </tr>
                 <tr>
-                    <td class="spec-name">Материал</td>
+                    <td class="spec-name">Разрывная нагрузка, KH/M</td>
                     <td class="spec-value">
-                        <div>Полипропилен (ПП)</div>                   
+                        <div>по длине: 14,0</div>
+                        <div>по ширине: 11,6</div>
                     </td>
                 </tr>
                 <tr>
-                    <td class="spec-name">Цвет</td>
+                    <td class="spec-name">Удлинение при разрыве, %</td>
                     <td class="spec-value">
-                        <div>Микс</div>                    
+                        <div>по длине: 120</div>
+                        <div>по ширине: 130</div>
                     </td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Коэф. фильтрации при давлении 2,0 кПа, м/сут, не менее</td>
+                    <td class="spec-value">85</td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Толщина при давлении 2,0 кПа, мм</td>
+                    <td class="spec-value">1,8-3,6</td>
                 </tr>
                 <tr>
                     <td class="spec-name">Ширина рулона, м</td>
-                    <td class="spec-value">
-                        <div>до 6</div>                       
-                    </td>
+                    <td class="spec-value">1-6</td>
                 </tr>
                 <tr>
                     <td class="spec-name">Длина рулона, м</td>
-                    <td class="spec-value">до 100</td>
-                </tr>
-                <tr>
-                    <td class="spec-name">Относительное удлинение при растяжении, %</td>
-                    <td class="spec-value">
-                        <div>продольно: 100</div> 
-                        <div>поперечно: 100</div>                      
-                    </td>
-                </tr>
-                <tr>
-                    <td class="spec-name">Коэф. фильтрации при давлении 2,0 кПа, м/сут</td>
-                    <td class="spec-value">50</td>
+                    <td class="spec-value">50-100</td>
                 </tr>
             </table>
             
             <div class="product-actions">
-                <a href="#popup:myform" class="btn btn-primary">Получить КП</a>          
-            </div>	       
+                <a href="#popup:myform" class="btn btn-primary">Получить КП</a>
+                <a href="#popup:table2" class="btn btn-secondary">Подробная таблица</a>
+            </div>        
         </div>
     </div> 
 
+    <div class="product-card" data-target="pp375">
+        <div class="product-header">
+            <h1 class="product-title">Геотекстиль Интатекс ПП 375</h1>
+        </div>
+        
+        <div class="product-image-container">
+            <img src="https://static.tildacdn.com/tild6461-3664-4436-b735-633237346237/350.png" alt="Геотекстиль Интатекс ПП 375" class="product-image">
+        </div>
+        
+        <div class="product-details">
+            <div class="product-description">
+                <p>Геотекстиль Интатекс ПП 375 г/м2 – рулонный геосинтетический материал, изготовленный из первичного полипропилена, обладающий повышенной прочностью, отличной фильтрующей способностью и устойчивостью к химическим воздействиям. Применяется для разделения слоев и армирования в дорожных, дренажных, сельскохозяйственных, грунтовых и садоводческих работах.</p>
+            </div>
+            
+            <h3 class="specs-title">Физико-механические характеристики</h3>
+            
+            <table class="specs-table">
+                <tr>
+                    <td class="spec-name">Сырье</td>
+                    <td class="spec-value">Полипропилен</td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Поверхностная плотность, г/м<sup>2</sup></td>
+                    <td class="spec-value">375</td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Разрывная нагрузка, KH/M</td>
+                    <td class="spec-value">
+                        <div>по длине: 15,0</div>
+                        <div>по ширине: 12,9</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Удлинение при разрыве, %</td>
+                    <td class="spec-value">
+                        <div>по длине: 120</div>
+                        <div>по ширине: 130</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Коэф. фильтрации при давлении 2,0 кПа, м/сут, не менее</td>
+                    <td class="spec-value">85</td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Толщина при давлении 2,0 кПа, мм</td>
+                    <td class="spec-value">1,9-3,8</td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Ширина рулона, м</td>
+                    <td class="spec-value">1-6</td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Длина рулона, м</td>
+                    <td class="spec-value">50-100</td>
+                </tr>
+            </table>
+            
+            <div class="product-actions">
+                <a href="#popup:myform" class="btn btn-primary">Получить КП</a>
+                <a href="#popup:table2" class="btn btn-secondary">Подробная таблица</a>
+            </div>        
+        </div>
+    </div> 
     <div class="product-card" data-target="pp400">
         <div class="product-header">
             <h1 class="product-title">Геотекстиль Интатекс ПП 400</h1>
@@ -1562,54 +1605,50 @@
             <h3 class="specs-title">Физико-механические характеристики</h3>
             
             <table class="specs-table">
-            	<tr>
-                    <td class="spec-name">Страна-производитель</td>
-                    <td class="spec-value">
-                        <div>Россия</div>                   
-                    </td>
+                <tr>
+                    <td class="spec-name">Сырье</td>
+                    <td class="spec-value">Полипропилен</td>
                 </tr>
                 <tr>
                     <td class="spec-name">Поверхностная плотность, г/м<sup>2</sup></td>
                     <td class="spec-value">400</td>
                 </tr>
                 <tr>
-                    <td class="spec-name">Материал</td>
+                    <td class="spec-name">Разрывная нагрузка, KH/M</td>
                     <td class="spec-value">
-                        <div>Полипропилен (ПП)</div>                   
+                        <div>по длине: 16,2</div>
+                        <div>по ширине: 13,2</div>
                     </td>
                 </tr>
                 <tr>
-                    <td class="spec-name">Цвет</td>
+                    <td class="spec-name">Удлинение при разрыве, %</td>
                     <td class="spec-value">
-                        <div>Микс</div>                    
+                        <div>по длине: 120</div>
+                        <div>по ширине: 130</div>
                     </td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Коэф. фильтрации при давлении 2,0 кПа, м/сут, не менее</td>
+                    <td class="spec-value">80</td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Толщина при давлении 2,0 кПа, мм</td>
+                    <td class="spec-value">2,0-4,0</td>
                 </tr>
                 <tr>
                     <td class="spec-name">Ширина рулона, м</td>
-                    <td class="spec-value">
-                        <div>до 6</div>                       
-                    </td>
+                    <td class="spec-value">1-6</td>
                 </tr>
                 <tr>
                     <td class="spec-name">Длина рулона, м</td>
-                    <td class="spec-value">до 100</td>
-                </tr>
-                <tr>
-                    <td class="spec-name">Относительное удлинение при растяжении, %</td>
-                    <td class="spec-value">
-                        <div>продольно: 100</div> 
-                        <div>поперечно: 100</div>                      
-                    </td>
-                </tr>
-                <tr>
-                    <td class="spec-name">Коэф. фильтрации при давлении 2,0 кПа, м/сут</td>
-                    <td class="spec-value">45</td>
+                    <td class="spec-value">50-100</td>
                 </tr>
             </table>
             
             <div class="product-actions">
-                <a href="#popup:myform" class="btn btn-primary">Получить КП</a>          
-            </div>	       
+                <a href="#popup:myform" class="btn btn-primary">Получить КП</a>
+                <a href="#popup:table2" class="btn btn-secondary">Подробная таблица</a>
+            </div>  	       
         </div>
     </div>
 
@@ -1630,54 +1669,50 @@
             <h3 class="specs-title">Физико-механические характеристики</h3>
             
             <table class="specs-table">
-            	<tr>
-                    <td class="spec-name">Страна-производитель</td>
-                    <td class="spec-value">
-                        <div>Россия</div>                   
-                    </td>
+                <tr>
+                    <td class="spec-name">Сырье</td>
+                    <td class="spec-value">Полипропилен</td>
                 </tr>
                 <tr>
                     <td class="spec-name">Поверхностная плотность, г/м<sup>2</sup></td>
                     <td class="spec-value">450</td>
                 </tr>
                 <tr>
-                    <td class="spec-name">Материал</td>
+                    <td class="spec-name">Разрывная нагрузка, KH/M</td>
                     <td class="spec-value">
-                        <div>Полипропилен (ПП)</div>                   
+                        <div>по длине: 18,0</div>
+                        <div>по ширине: 15,0</div>
                     </td>
                 </tr>
                 <tr>
-                    <td class="spec-name">Цвет</td>
+                    <td class="spec-name">Удлинение при разрыве, %</td>
                     <td class="spec-value">
-                        <div>Микс</div>                    
+                        <div>по длине: 120</div>
+                        <div>по ширине: 130</div>
                     </td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Коэф. фильтрации при давлении 2,0 кПа, м/сут, не менее</td>
+                    <td class="spec-value">80</td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Толщина при давлении 2,0 кПа, мм</td>
+                    <td class="spec-value">2,2-4,3</td>
                 </tr>
                 <tr>
                     <td class="spec-name">Ширина рулона, м</td>
-                    <td class="spec-value">
-                        <div>до 6</div>                       
-                    </td>
+                    <td class="spec-value">1-6</td>
                 </tr>
                 <tr>
                     <td class="spec-name">Длина рулона, м</td>
-                    <td class="spec-value">до 100</td>
-                </tr>
-                <tr>
-                    <td class="spec-name">Относительное удлинение при растяжении, %</td>
-                    <td class="spec-value">
-                        <div>продольно: 100</div> 
-                        <div>поперечно: 100</div>                      
-                    </td>
-                </tr>
-                <tr>
-                    <td class="spec-name">Коэф. фильтрации при давлении 2,0 кПа, м/сут</td>
-                    <td class="spec-value">45</td>
+                    <td class="spec-value">50-100</td>
                 </tr>
             </table>
             
             <div class="product-actions">
-                <a href="#popup:myform" class="btn btn-primary">Получить КП</a>          
-            </div>	       
+                <a href="#popup:myform" class="btn btn-primary">Получить КП</a>
+                <a href="#popup:table2" class="btn btn-secondary">Подробная таблица</a>
+            </div>         
         </div>
     </div> 
 
@@ -1698,54 +1733,50 @@
             <h3 class="specs-title">Физико-механические характеристики</h3>
             
             <table class="specs-table">
-            	<tr>
-                    <td class="spec-name">Страна-производитель</td>
-                    <td class="spec-value">
-                        <div>Россия</div>                   
-                    </td>
+                <tr>
+                    <td class="spec-name">Сырье</td>
+                    <td class="spec-value">Полипропилен</td>
                 </tr>
                 <tr>
                     <td class="spec-name">Поверхностная плотность, г/м<sup>2</sup></td>
                     <td class="spec-value">500</td>
                 </tr>
                 <tr>
-                    <td class="spec-name">Материал</td>
+                    <td class="spec-name">Разрывная нагрузка, KH/M</td>
                     <td class="spec-value">
-                        <div>Полипропилен (ПП)</div>                   
+                        <div>по длине: 19,6</div>
+                        <div>по ширине: 16,6</div>
                     </td>
                 </tr>
                 <tr>
-                    <td class="spec-name">Цвет</td>
+                    <td class="spec-name">Удлинение при разрыве, %</td>
                     <td class="spec-value">
-                        <div>Микс</div>                    
+                        <div>по длине: 120</div>
+                        <div>по ширине: 130</div>
                     </td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Коэф. фильтрации при давлении 2,0 кПа, м/сут, не менее</td>
+                    <td class="spec-value">80</td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Толщина при давлении 2,0 кПа, мм</td>
+                    <td class="spec-value">2,5-4,5</td>
                 </tr>
                 <tr>
                     <td class="spec-name">Ширина рулона, м</td>
-                    <td class="spec-value">
-                        <div>до 6</div>                       
-                    </td>
+                    <td class="spec-value">1-6</td>
                 </tr>
                 <tr>
                     <td class="spec-name">Длина рулона, м</td>
-                    <td class="spec-value">до 100</td>
-                </tr>
-                <tr>
-                    <td class="spec-name">Относительное удлинение при растяжении, %</td>
-                    <td class="spec-value">
-                        <div>продольно: 100</div> 
-                        <div>поперечно: 100</div>                      
-                    </td>
-                </tr>
-                <tr>
-                    <td class="spec-name">Коэф. фильтрации при давлении 2,0 кПа, м/сут</td>
-                    <td class="spec-value">40</td>
+                    <td class="spec-value">50-100</td>
                 </tr>
             </table>
             
             <div class="product-actions">
-                <a href="#popup:myform" class="btn btn-primary">Получить КП</a>          
-            </div>	       
+                <a href="#popup:myform" class="btn btn-primary">Получить КП</a>
+                <a href="#popup:table2" class="btn btn-secondary">Подробная таблица</a>
+            </div>       
         </div>
     </div> 
 
@@ -1766,54 +1797,50 @@
             <h3 class="specs-title">Физико-механические характеристики</h3>
             
             <table class="specs-table">
-            	<tr>
-                    <td class="spec-name">Страна-производитель</td>
-                    <td class="spec-value">
-                        <div>Россия</div>                   
-                    </td>
+                <tr>
+                    <td class="spec-name">Сырье</td>
+                    <td class="spec-value">Полипропилен</td>
                 </tr>
                 <tr>
                     <td class="spec-name">Поверхностная плотность, г/м<sup>2</sup></td>
-                    <td class="spec-value">500</td>
+                    <td class="spec-value">550</td>
                 </tr>
                 <tr>
-                    <td class="spec-name">Материал</td>
+                    <td class="spec-name">Разрывная нагрузка, KH/M</td>
                     <td class="spec-value">
-                        <div>Полипропилен (ПП)</div>                   
+                        <div>по длине: 21,0</div>
+                        <div>по ширине: 18,0</div>
                     </td>
                 </tr>
                 <tr>
-                    <td class="spec-name">Цвет</td>
+                    <td class="spec-name">Удлинение при разрыве, %</td>
                     <td class="spec-value">
-                        <div>Микс</div>                    
+                        <div>по длине: 120</div>
+                        <div>по ширине: 130</div>
                     </td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Коэф. фильтрации при давлении 2,0 кПа, м/сут, не менее</td>
+                    <td class="spec-value">80</td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Толщина при давлении 2,0 кПа, мм</td>
+                    <td class="spec-value">2,7-4,5</td>
                 </tr>
                 <tr>
                     <td class="spec-name">Ширина рулона, м</td>
-                    <td class="spec-value">
-                        <div>до 6</div>                       
-                    </td>
+                    <td class="spec-value">1-6</td>
                 </tr>
                 <tr>
                     <td class="spec-name">Длина рулона, м</td>
-                    <td class="spec-value">до 100</td>
-                </tr>
-                <tr>
-                    <td class="spec-name">Относительное удлинение при растяжении, %</td>
-                    <td class="spec-value">
-                        <div>продольно: 100</div> 
-                        <div>поперечно: 100</div>                      
-                    </td>
-                </tr>
-                <tr>
-                    <td class="spec-name">Коэф. фильтрации при давлении 2,0 кПа, м/сут</td>
-                    <td class="spec-value">40</td>
+                    <td class="spec-value">50-100</td>
                 </tr>
             </table>
             
             <div class="product-actions">
-                <a href="#popup:myform" class="btn btn-primary">Получить КП</a>          
-            </div>	       
+                <a href="#popup:myform" class="btn btn-primary">Получить КП</a>
+                <a href="#popup:table2" class="btn btn-secondary">Подробная таблица</a>
+            </div>        
         </div>
     </div>
 
@@ -1834,56 +1861,180 @@
             <h3 class="specs-title">Физико-механические характеристики</h3>
             
             <table class="specs-table">
-            	<tr>
-                    <td class="spec-name">Страна-производитель</td>
-                    <td class="spec-value">
-                        <div>Россия</div>                   
-                    </td>
+                <tr>
+                    <td class="spec-name">Сырье</td>
+                    <td class="spec-value">Полипропилен</td>
                 </tr>
                 <tr>
                     <td class="spec-name">Поверхностная плотность, г/м<sup>2</sup></td>
                     <td class="spec-value">600</td>
                 </tr>
                 <tr>
-                    <td class="spec-name">Материал</td>
+                    <td class="spec-name">Разрывная нагрузка, KH/M</td>
                     <td class="spec-value">
-                        <div>Полипропилен (ПП)</div>                   
+                        <div>по длине: 22,8</div>
+                        <div>по ширине: 19,2</div>
                     </td>
                 </tr>
                 <tr>
-                    <td class="spec-name">Цвет</td>
+                    <td class="spec-name">Удлинение при разрыве, %</td>
                     <td class="spec-value">
-                        <div>Микс</div>                    
+                        <div>по длине: 120</div>
+                        <div>по ширине: 130</div>
                     </td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Коэф. фильтрации при давлении 2,0 кПа, м/сут, не менее</td>
+                    <td class="spec-value">75</td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Толщина при давлении 2,0 кПа, мм</td>
+                    <td class="spec-value">3,0-4,5</td>
                 </tr>
                 <tr>
                     <td class="spec-name">Ширина рулона, м</td>
-                    <td class="spec-value">
-                        <div>до 6</div>                       
-                    </td>
+                    <td class="spec-value">1-6</td>
                 </tr>
                 <tr>
                     <td class="spec-name">Длина рулона, м</td>
-                    <td class="spec-value">до 100</td>
-                </tr>
-                <tr>
-                    <td class="spec-name">Относительное удлинение при растяжении, %</td>
-                    <td class="spec-value">
-                        <div>продольно: 100</div> 
-                        <div>поперечно: 100</div>                      
-                    </td>
-                </tr>
-                <tr>
-                    <td class="spec-name">Коэф. фильтрации при давлении 2,0 кПа, м/сут</td>
-                    <td class="spec-value">40</td>
+                    <td class="spec-value">50-100</td>
                 </tr>
             </table>
             
             <div class="product-actions">
-                <a href="#popup:myform" class="btn btn-primary">Получить КП</a>          
-            </div>	       
+                <a href="#popup:myform" class="btn btn-primary">Получить КП</a>
+                <a href="#popup:table2" class="btn btn-secondary">Подробная таблица</a>
+            </div>         
         </div>
-    </div>                          
+    </div>     
+
+    <div class="product-card" data-target="pp700">
+        <div class="product-header">
+            <h1 class="product-title">Геотекстиль Интатекс ПП 700</h1>
+        </div>
+        
+        <div class="product-image-container">
+            <img src="https://static.tildacdn.com/tild3862-6361-4238-b263-333231336330/600.png" alt="Геотекстиль Интатекс ПП 700" class="product-image">
+        </div>
+        
+        <div class="product-details">
+            <div class="product-description">
+                <p>Геотекстиль Интатекс ПП 700 г/м2 – рулонный геосинтетический материал, изготовленный из первичного полипропилена, обладающий повышенной прочностью, отличной фильтрующей способностью и устойчивостью к химическим воздействиям. Применяется для разделения слоев и армирования в дорожных, дренажных, сельскохозяйственных, грунтовых и садоводческих работах.</p>
+            </div>
+            
+            <h3 class="specs-title">Физико-механические характеристики</h3>
+            
+            <table class="specs-table">
+                <tr>
+                    <td class="spec-name">Сырье</td>
+                    <td class="spec-value">Полипропилен</td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Поверхностная плотность, г/м<sup>2</sup></td>
+                    <td class="spec-value">700</td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Разрывная нагрузка, KH/M</td>
+                    <td class="spec-value">
+                        <div>по длине: 24,8</div>
+                        <div>по ширине: 24,6</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Удлинение при разрыве, %</td>
+                    <td class="spec-value">
+                        <div>по длине: 120</div>
+                        <div>по ширине: 130</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Коэф. фильтрации при давлении 2,0 кПа, м/сут, не менее</td>
+                    <td class="spec-value">75</td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Толщина при давлении 2,0 кПа, мм</td>
+                    <td class="spec-value">3,1-5,6</td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Ширина рулона, м</td>
+                    <td class="spec-value">1-6</td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Длина рулона, м</td>
+                    <td class="spec-value">50-100</td>
+                </tr>
+            </table>
+            
+            <div class="product-actions">
+                <a href="#popup:myform" class="btn btn-primary">Получить КП</a>
+                <a href="#popup:table2" class="btn btn-secondary">Подробная таблица</a>
+            </div>         
+        </div>
+    </div>   
+
+    <div class="product-card" data-target="pp800">
+        <div class="product-header">
+            <h1 class="product-title">Геотекстиль Интатекс ПП 800</h1>
+        </div>
+        
+        <div class="product-image-container">
+            <img src="https://static.tildacdn.com/tild3862-6361-4238-b263-333231336330/600.png" alt="Геотекстиль Интатекс ПП 800" class="product-image">
+        </div>
+        
+        <div class="product-details">
+            <div class="product-description">
+                <p>Геотекстиль Интатекс ПП 800 г/м2 – рулонный геосинтетический материал, изготовленный из первичного полипропилена, обладающий повышенной прочностью, отличной фильтрующей способностью и устойчивостью к химическим воздействиям. Применяется для разделения слоев и армирования в дорожных, дренажных, сельскохозяйственных, грунтовых и садоводческих работах.</p>
+            </div>
+            
+            <h3 class="specs-title">Физико-механические характеристики</h3>
+            
+            <table class="specs-table">
+                <tr>
+                    <td class="spec-name">Сырье</td>
+                    <td class="spec-value">Полипропилен</td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Поверхностная плотность, г/м<sup>2</sup></td>
+                    <td class="spec-value">800</td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Разрывная нагрузка, KH/M</td>
+                    <td class="spec-value">
+                        <div>по длине: 32,0</div>
+                        <div>по ширине: 30,0</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Удлинение при разрыве, %</td>
+                    <td class="spec-value">
+                        <div>по длине: 120</div>
+                        <div>по ширине: 130</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Коэф. фильтрации при давлении 2,0 кПа, м/сут, не менее</td>
+                    <td class="spec-value">75</td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Толщина при давлении 2,0 кПа, мм</td>
+                    <td class="spec-value">3,3-5,8</td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Ширина рулона, м</td>
+                    <td class="spec-value">1-6</td>
+                </tr>
+                <tr>
+                    <td class="spec-name">Длина рулона, м</td>
+                    <td class="spec-value">50-100</td>
+                </tr>
+            </table>
+            
+            <div class="product-actions">
+                <a href="#popup:myform" class="btn btn-primary">Получить КП</a>
+                <a href="#popup:table2" class="btn btn-secondary">Подробная таблица</a>
+            </div>         
+        </div>
+    </div>                            
 </div>
 
 <!--метрики -->
@@ -1900,7 +2051,7 @@
         <!-- Производительность -->
         <div class="metric-card">
           <div class="metric-card__icon metric-card__icon--productivity"></div>
-          <h3 class="metric-card__value">600 кг / час</h3>
+          <h3 class="metric-card__value">650 кг / час</h3>
           <p class="metric-card__description">Производительность линии</p>
         </div>
         
@@ -1914,13 +2065,13 @@
         <!-- Плотность -->
         <div class="metric-card">
           <div class="metric-card__icon metric-card__icon--density"></div>
-          <h3 class="metric-card__value">100 - 1000 г / м2</h3>
+          <h3 class="metric-card__value">150 - 800 г / м<sup>2</sup></h3>
           <p class="metric-card__description">Плотность полотна "Интатекс"</p>
         </div>
       </div>
       
       <div class="metrics-total">
-        <h3 class="metrics-total__text">Объем производства трех линий — 12 600 тонн в год</h3>
+        <h3 class="metrics-total__text">Объем производства трех линий — 15 000 000 м<sup>2</sup> в год</h3>
       </div>
     </div>
   </div>

@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Универсальный попап для таблиц</title>
+    <title>Попапы для таблиц</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         /* Стили попапа */
-        .custom-popup-overlay {
+        .universal-popup-overlay {
             display: none;
             position: fixed;
             top: 0;
@@ -21,7 +21,7 @@
             padding: 15px;
         }
         
-        .custom-popup-container {
+        .universal-popup-container {
             position: relative;
             max-width: 90%;
             max-height: 90vh;
@@ -29,19 +29,19 @@
             animation: popup-fade 0.3s;
         }
         
-        .custom-popup-content {
+        .universal-popup-content {
             position: relative;
             background: #fff;
             border-radius: 5px;
             overflow: hidden;
         }
         
-        .custom-popup-img-container {
+        .universal-popup-img-container {
             max-height: 80vh;
             overflow: auto;
         }
         
-        .custom-popup-close {
+        .universal-popup-close {
             position: absolute;
             top: 10px;
             right: 10px;
@@ -68,16 +68,17 @@
 
 <!-- Примеры кнопок -->
 <a href="#popup:table1" class="btn btn-secondary">Таблица 1</a>
-<a href="#popup:table1" class="btn btn-secondary">Таблица 2</a>
-<a href="#popup:table1" class="btn btn-secondary">Таблица 3</a>
+<a href="#popup:table1" class="btn btn-secondary">Таблица 1</a>
+<a href="#popup:table2" class="btn btn-secondary">Таблица 2</a>
+<a href="#popup:table2" class="btn btn-secondary">Таблица 2</a>
 
-<!-- Попап (будет один на все кнопки) -->
-<div id="custom-popup" class="custom-popup-overlay">
-    <div class="custom-popup-container">
-        <div class="custom-popup-content">
-            <button class="custom-popup-close">&times;</button>
-            <div class="custom-popup-img-container">
-                <img src="assets/img/products/table1.png" alt="Детальная таблица" class="img-fluid w-100">
+<!-- Попап (универсальный для всех таблиц) -->
+<div id="universal-popup" class="universal-popup-overlay">
+    <div class="universal-popup-container">
+        <div class="universal-popup-content">
+            <button class="universal-popup-close">&times;</button>
+            <div class="universal-popup-img-container">
+                <img id="popup-image" src="" alt="Таблица" class="img-fluid w-100">
             </div>
         </div>
     </div>
@@ -86,48 +87,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Находим все элементы с href="#popup:table1"
-    const popupTriggers = document.querySelectorAll('a[href="#popup:table1"]');
-    const popup = document.getElementById('custom-popup');
-    const closeBtn = popup.querySelector('.custom-popup-close');
-    
-    // Добавляем обработчик для всех найденных элементов
-    popupTriggers.forEach(trigger => {
-        trigger.addEventListener('click', function(e) {
-            e.preventDefault();
-            popup.style.display = 'flex';
-            document.body.style.overflow = 'hidden';
-        });
-    });
-    
-    // Закрытие попапа
-    closeBtn.addEventListener('click', function() {
-        popup.style.display = 'none';
-        document.body.style.overflow = '';
-    });
-    
-    // Закрытие при клике вне контента
-    popup.addEventListener('click', function(e) {
-        if (e.target === popup) {
-            popup.style.display = 'none';
-            document.body.style.overflow = '';
-        }
-    });
-    
-    // Закрытие по ESC
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && popup.style.display === 'flex') {
-            popup.style.display = 'none';
-            document.body.style.overflow = '';
-        }
-    });
-    
-    // Предотвращаем закрытие при клике на контент
-    document.querySelector('.custom-popup-container').addEventListener('click', function(e) {
-        e.stopPropagation();
-    });
-});
+
 </script>
 
 </body>
