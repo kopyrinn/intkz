@@ -1,3 +1,25 @@
+
+// // Сохраняем позицию скролла перед обновлением страницы
+// window.addEventListener('beforeunload', () => {
+//   sessionStorage.setItem('scrollPosition', window.scrollY);
+// });
+
+// // Восстанавливаем позицию после загрузки страницы
+// window.addEventListener('load', () => {
+//   const scrollPosition = sessionStorage.getItem('scrollPosition');
+//   if (scrollPosition) {
+//     window.scrollTo(0, parseInt(scrollPosition));
+//     sessionStorage.removeItem('scrollPosition'); // Очищаем, если не нужно сохранять дальше
+//   }
+// });
+
+// // Включить автоматическое восстановление скролла
+// if ('scrollRestoration' in history) {
+//   history.scrollRestoration = 'manual'; // или 'auto'
+// }
+
+
+
 document.addEventListener('DOMContentLoaded', function() {
   // Получаем элементы
   const menuButton = document.querySelector('.menu-btn');
@@ -387,7 +409,7 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(counter);
     });
 });
-
+//video popup video-promo-section
 document.addEventListener('DOMContentLoaded', function() {
   const videoButton = document.getElementById('open-video-popup');
   const videoPopup = document.getElementById('video-popup');
@@ -495,63 +517,160 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-  //отзыв
-document.addEventListener('DOMContentLoaded', function() {
-  // Элементы карусели
-  const geoSmCarousel = document.querySelector('.geo-sm-reviews-carousel-wrapper');
-  const geoSmPrevBtn = document.querySelector('.geo-sm-review-prev-btn');
-  const geoSmNextBtn = document.querySelector('.geo-sm-review-next-btn');
-  
-  // Элементы попапа
-  const geoSmVideoPopup = document.querySelector('.geo-sm-video-popup');
-  const geoSmClosePopup = document.querySelector('.geo-sm-close-popup-btn');
-  const geoSmVideoIframe = document.querySelector('.geo-sm-video-iframe-container iframe');
-  const geoSmPlayButtons = document.querySelectorAll('.geo-sm-review-play-btn');
-  
-  // Навигация карусели
-  geoSmPrevBtn.addEventListener('click', function() {
-    geoSmCarousel.scrollBy({ left: -geoSmCarousel.offsetWidth * 0.8, behavior: 'smooth' });
-  });
-  
-  geoSmNextBtn.addEventListener('click', function() {
-    geoSmCarousel.scrollBy({ left: geoSmCarousel.offsetWidth * 0.8, behavior: 'smooth' });
-  });
-  
-  // Открытие видео
-  geoSmPlayButtons.forEach(button => {
-    button.addEventListener('click', function() {
-      const videoId = this.getAttribute('data-geo-video-id');
-      geoSmVideoIframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
-      geoSmVideoPopup.style.display = 'flex';
-      document.body.style.overflow = 'hidden';
+  //отзывы
+ // Данные отзывов
+  const reviewsData = [
+    {
+      image: 'https://optim.tildacdn.com/tild6361-3165-4532-a232-363437373638/-/format/webp/Frame_1948753334.png',
+      company: 'ООО "Строительная Компания"',
+      text: '1Мы сотрудничаем с этой компанией уже более 3 лет. За это время было поставлено 15 единиц техники, которая показала себя с наилучшей стороны. Надежность, качество и сервисное обслуживание на высшем уровне. Рекомендуем как надежного поставщика спецтехники.'
+    },
+    {
+      image: 'https://optim.tildacdn.com/tild3133-6539-4264-a339-333866366331/-/format/webp/Frame_1948753337.png',
+      company: 'АО "Дорожные Технологии"',
+      text: 'Б2лагодарим за оперативные поставки и качественное оборудование. Особенно хочется отметить профессиональный подход менеджеров компании, которые всегда готовы помочь с выбором техники и решить любые вопросы. Техника работает без нареканий уже 2 года.'
+    },
+    {
+      image: 'https://optim.tildacdn.com/tild6530-3938-4335-a634-363634323431/-/format/webp/Frame_1948753338.png',
+      company: 'ГК "Инфраструктурные Решения"',
+      text: 'О3тличная компания с профессиональным подходом к делу. Закупали у них бульдозеры и экскаваторы для крупного строительного проекта. Все машины были поставлены в срок, прошли предпродажную подготовку. Сервисное обслуживание осуществляется оперативно. Будем продолжать сотрудничество!'
+    },
+    {
+      image: 'https://optim.tildacdn.com/tild6361-3165-4532-a232-363437373638/-/format/webp/Frame_1948753334.png',
+      company: 'ООО "ПромСтройТех"',
+      text: 'Отличное качество техники и сервиса. Всегда идут навстречу по срокам поставки. Особенно приятно работать с техническими специалистами компании - настоящие профессионалы своего дела.'
+    },
+    {
+      image: 'https://optim.tildacdn.com/tild3133-6539-4264-a339-333866366331/-/format/webp/Frame_1948753337.png',
+      company: 'ТД "СтройМашСервис"',
+      text: 'Работаем с компанией более 5 лет. Всегда получаем именно то, что заказывали, в полном соответствии с техническим заданием. Рекомендуем как надежного партнера.'
+    },
+    {
+      image: 'https://optim.tildacdn.com/tild6530-3938-4335-a634-363634323431/-/format/webp/Frame_1948753338.png',
+      company: 'ЗАО "ТехноСтройГрупп"',
+      text: 'Быстрая поставка, качественное оборудование, профессиональный сервис. Всегда на связи и готовы помочь в любых вопросах. Благодарим за многолетнее плодотворное сотрудничество!'
+    }
+    ,
+    {
+      image: 'https://optim.tildacdn.com/tild6530-3938-4335-a634-363634323431/-/format/webp/Frame_1948753338.png',
+      company: 'ЗАО "ТехноСтройГрупп"',
+      text: 'Быстрая поставка, качественное оборудование, профессиональный сервис. Всегда на связи и готовы помочь в любых вопросах. Благодарим за многолетнее плодотворное сотрудничество!'
+    }
+  ];
+
+  // Инициализация карусели
+  document.addEventListener('DOMContentLoaded', function() {
+    const carouselInner = document.querySelector('#reviewsCarousel .carousel-inner');
+    
+    // Создаем отдельный слайд для каждого отзыва в мобильной версии
+    if (window.innerWidth < 768) {
+      // Мобильный вид - 1 отзыв на слайд
+      reviewsData.forEach((review, index) => {
+        const slide = document.createElement('div');
+        slide.className = `carousel-item ${index === 0 ? 'active' : ''}`;
+        
+        const row = document.createElement('div');
+        row.className = 'row';
+        
+        const col = document.createElement('div');
+        col.className = 'col-md-4 mx-auto';
+        
+        col.innerHTML = `
+          <div class="review-card" style="background-image: url('${review.image}')">
+            <div class="review-card-overlay">
+              <h3>${review.company}</h3>
+              <button class="read-more-btn" data-review-index="${index}">Читать полностью</button>
+            </div>
+          </div>
+        `;
+        
+        row.appendChild(col);
+        slide.appendChild(row);
+        carouselInner.appendChild(slide);
+      });
+    } else {
+      // Десктоп/планшет - группируем по 3/2 отзыва на слайд
+      const itemsPerSlide = window.innerWidth >= 992 ? 3 : 2;
+      
+      for (let i = 0; i < reviewsData.length; i += itemsPerSlide) {
+        const slide = document.createElement('div');
+        slide.className = `carousel-item ${i === 0 ? 'active' : ''}`;
+        
+        const row = document.createElement('div');
+        row.className = 'row';
+        
+        // Добавляем отзывы в слайд
+        for (let j = i; j < i + itemsPerSlide && j < reviewsData.length; j++) {
+          const review = reviewsData[j];
+          const col = document.createElement('div');
+          col.className = window.innerWidth >= 992 ? 'col-md-4' : 'col-md-6';
+          
+          col.innerHTML = `
+            <div class="review-card" style="background-image: url('${review.image}')">
+              <div class="review-card-overlay">
+                <h3>${review.company}</h3>
+                <button class="read-more-btn" data-review-index="${j}">Читать полностью</button>
+              </div>
+            </div>
+          `;
+          
+          row.appendChild(col);
+        }
+        
+        slide.appendChild(row);
+        carouselInner.appendChild(slide);
+      }
+    }
+    
+    // Инициализация карусели с интервалом 5 секунд
+    const reviewsCarousel = new bootstrap.Carousel('#reviewsCarousel', {
+      interval: 5000,
+      wrap: true
     });
+    
+    // Навигационные кнопки
+    document.getElementById('prevReview').addEventListener('click', function() {
+      reviewsCarousel.prev();
+    });
+    
+    document.getElementById('nextReview').addEventListener('click', function() {
+      reviewsCarousel.next();
+    });
+    
+    // Обработчики для кнопок "Читать полностью"
+    document.addEventListener('click', function(e) {
+      if (e.target.classList.contains('read-more-btn')) {
+        const review = reviewsData[e.target.dataset.reviewIndex];
+        const modal = new bootstrap.Modal(document.getElementById('reviewModal'));
+        
+        document.getElementById('reviewModalTitle').textContent = review.company;
+        document.getElementById('reviewModalImage').style.backgroundImage = `url('${review.image}')`;
+        document.getElementById('reviewModalText').textContent = review.text;
+        
+        modal.show();
+      }
+    });
+    
+    // Пауза автопрокрутки при наведении
+    const carouselElement = document.getElementById('reviewsCarousel');
+    carouselElement.addEventListener('mouseenter', () => {
+      reviewsCarousel.pause();
+    });
+    
+    carouselElement.addEventListener('mouseleave', () => {
+      reviewsCarousel.cycle();
+    });
+    
+    // Реакция на изменение размера окна
+    window.addEventListener('resize', function() {
+      // При резком изменении размера можно перезагрузить страницу
+      if ((window.innerWidth >= 768 && this.lastWindowWidth < 768) || 
+          (window.innerWidth < 768 && this.lastWindowWidth >= 768)) {
+        location.reload();
+      }
+      this.lastWindowWidth = window.innerWidth;
+    }, { lastWindowWidth: window.innerWidth });
   });
-  
-  // Закрытие попапа
-  geoSmClosePopup.addEventListener('click', function() {
-    geoSmVideoPopup.style.display = 'none';
-    geoSmVideoIframe.src = '';
-    document.body.style.overflow = '';
-  });
-  
-  // Закрытие по клику вне попапа
-  geoSmVideoPopup.addEventListener('click', function(e) {
-    if (e.target === this) {
-      geoSmVideoPopup.style.display = 'none';
-      geoSmVideoIframe.src = '';
-      document.body.style.overflow = '';
-    }
-  });
-  
-  // Закрытие по ESC
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape' && geoSmVideoPopup.style.display === 'flex') {
-      geoSmVideoPopup.style.display = 'none';
-      geoSmVideoIframe.src = '';
-      document.body.style.overflow = '';
-    }
-  });
-});
 
   // карусель проекты
 document.addEventListener('DOMContentLoaded', function() {

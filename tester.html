@@ -1,94 +1,348 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Попапы для таблиц</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        /* Стили попапа */
-        .universal-popup-overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.9);
-            z-index: 1050;
-            align-items: center;
-            justify-content: center;
-            padding: 15px;
-        }
-        
-        .universal-popup-container {
-            position: relative;
-            max-width: 90%;
-            max-height: 90vh;
-            width: auto;
-            animation: popup-fade 0.3s;
-        }
-        
-        .universal-popup-content {
-            position: relative;
-            background: #fff;
-            border-radius: 5px;
-            overflow: hidden;
-        }
-        
-        .universal-popup-img-container {
-            max-height: 80vh;
-            overflow: auto;
-        }
-        
-        .universal-popup-close {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            width: 30px;
-            height: 30px;
-            background-color: rgba(0,0,0,0.7);
-            border-radius: 50%;
-            color: white;
-            border: none;
-            font-size: 18px;
-            line-height: 30px;
-            text-align: center;
-            cursor: pointer;
-            z-index: 10;
-        }
-        
-        @keyframes popup-fade {
-            from { opacity: 0; transform: scale(0.95); }
-            to { opacity: 1; transform: scale(1); }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Отзывы</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .reviews-section {
+      padding: 60px 0;
+      background-color: #f8f9fa;
+    }
+    
+    .review-card {
+      height: 300px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 8px;
+      overflow: hidden;
+      position: relative;
+      transition: transform 0.3s;
+      margin: 0 auto;
+      width: 100%;
+      max-width: 400px;
+    }
+    
+    .review-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .review-card-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 20px;
+      background: linear-gradient(transparent, rgba(0,0,0,0.7));
+      color: white;
+    }
+    
+    .read-more-btn {
+      background: #0d6efd;
+      color: white;
+      border: none;
+      padding: 5px 15px;
+      border-radius: 20px;
+      font-size: 14px;
+      margin-top: 10px;
+      transition: background 0.3s;
+    }
+    
+    .read-more-btn:hover {
+      background: #0b5ed7;
+    }
+    
+    .modal-review-img {
+      height: 200px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+    
+    .reviews-title-wrapper {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    
+    .reviews-nav-controls {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    
+    .review-nav-btn {
+      width: 40px;
+      height: 40px;
+      background: rgba(0,0,0,0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      color: #333;
+      transition: all 0.3s;
+    }
+    
+    .review-nav-btn:hover {
+      background: rgba(0,0,0,0.2);
+    }
+    
+    /* Десктоп: 3 отзыва в ряд */
+    @media (min-width: 992px) {
+      .carousel-inner .active .row {
+        display: flex;
+      }
+      
+      .carousel-inner .col-md-4 {
+        flex: 0 0 33.333%;
+        max-width: 33.333%;
+        padding: 0 10px;
+      }
+      
+      .review-card {
+        margin: 0;
+      }
+    }
+    
+    /* Планшет: 2 отзыва в ряд */
+    @media (min-width: 768px) and (max-width: 991px) {
+      .carousel-inner .active .row {
+        display: flex;
+      }
+      
+      .carousel-inner .col-md-4 {
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding: 0 10px;
+      }
+      
+      .review-card {
+        margin: 0;
+      }
+    }
+    
+    /* Мобильные: 1 отзыв (карусель) */
+    @media (max-width: 767px) {
+      .carousel-inner .col-md-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 0 15px;
+      }
+      
+      .carousel-inner .row {
+        display: block;
+      }
+    }
+  </style>
 </head>
 <body>
 
-<!-- Примеры кнопок -->
-<a href="#popup:table1" class="btn btn-secondary">Таблица 1</a>
-<a href="#popup:table1" class="btn btn-secondary">Таблица 1</a>
-<a href="#popup:table2" class="btn btn-secondary">Таблица 2</a>
-<a href="#popup:table2" class="btn btn-secondary">Таблица 2</a>
-
-<!-- Попап (универсальный для всех таблиц) -->
-<div id="universal-popup" class="universal-popup-overlay">
-    <div class="universal-popup-container">
-        <div class="universal-popup-content">
-            <button class="universal-popup-close">&times;</button>
-            <div class="universal-popup-img-container">
-                <img id="popup-image" src="" alt="Таблица" class="img-fluid w-100">
-            </div>
-        </div>
+<section class="reviews-section" id="reviews">
+  <div class="container">
+    <div class="reviews-title-wrapper">
+      <h2>Отзывы наших клиентов</h2>
+      <div class="reviews-nav-controls">
+        <button class="review-nav-btn" id="prevReview">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button class="review-nav-btn" id="nextReview">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
     </div>
+    
+    <div id="reviewsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+      <div class="carousel-inner">
+        <!-- Слайды будут добавлены через JS -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Модальное окно для текста отзыва -->
+<div class="modal fade" id="reviewModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="reviewModalTitle"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-review-img" id="reviewModalImage"></div>
+        <p id="reviewModalText"></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+      </div>
+    </div>
+  </div>
 </div>
 
+<!-- Bootstrap JS + Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
+  // Данные отзывов (6 отзывов)
+  const reviewsData = [
+    {
+      image: 'https://optim.tildacdn.com/tild6361-3165-4532-a232-363437373638/-/format/webp/Frame_1948753334.png',
+      company: 'ООО "Строительная Компания"',
+      text: '1Мы сотрудничаем с этой компанией уже более 3 лет. За это время было поставлено 15 единиц техники, которая показала себя с наилучшей стороны. Надежность, качество и сервисное обслуживание на высшем уровне. Рекомендуем как надежного поставщика спецтехники.'
+    },
+    {
+      image: 'https://optim.tildacdn.com/tild3133-6539-4264-a339-333866366331/-/format/webp/Frame_1948753337.png',
+      company: 'АО "Дорожные Технологии"',
+      text: 'Б2лагодарим за оперативные поставки и качественное оборудование. Особенно хочется отметить профессиональный подход менеджеров компании, которые всегда готовы помочь с выбором техники и решить любые вопросы. Техника работает без нареканий уже 2 года.'
+    },
+    {
+      image: 'https://optim.tildacdn.com/tild6530-3938-4335-a634-363634323431/-/format/webp/Frame_1948753338.png',
+      company: 'ГК "Инфраструктурные Решения"',
+      text: 'О3тличная компания с профессиональным подходом к делу. Закупали у них бульдозеры и экскаваторы для крупного строительного проекта. Все машины были поставлены в срок, прошли предпродажную подготовку. Сервисное обслуживание осуществляется оперативно. Будем продолжать сотрудничество!'
+    },
+    {
+      image: 'https://optim.tildacdn.com/tild6361-3165-4532-a232-363437373638/-/format/webp/Frame_1948753334.png',
+      company: 'ООО "ПромСтройТех"',
+      text: 'Отличное качество техники и сервиса. Всегда идут навстречу по срокам поставки. Особенно приятно работать с техническими специалистами компании - настоящие профессионалы своего дела.'
+    },
+    {
+      image: 'https://optim.tildacdn.com/tild3133-6539-4264-a339-333866366331/-/format/webp/Frame_1948753337.png',
+      company: 'ТД "СтройМашСервис"',
+      text: 'Работаем с компанией более 5 лет. Всегда получаем именно то, что заказывали, в полном соответствии с техническим заданием. Рекомендуем как надежного партнера.'
+    },
+    {
+      image: 'https://optim.tildacdn.com/tild6530-3938-4335-a634-363634323431/-/format/webp/Frame_1948753338.png',
+      company: 'ЗАО "ТехноСтройГрупп"',
+      text: 'Быстрая поставка, качественное оборудование, профессиональный сервис. Всегда на связи и готовы помочь в любых вопросах. Благодарим за многолетнее плодотворное сотрудничество!'
+    }
+    ,
+    {
+      image: 'https://optim.tildacdn.com/tild6530-3938-4335-a634-363634323431/-/format/webp/Frame_1948753338.png',
+      company: 'ЗАО "ТехноСтройГрупп"',
+      text: 'Быстрая поставка, качественное оборудование, профессиональный сервис. Всегда на связи и готовы помочь в любых вопросах. Благодарим за многолетнее плодотворное сотрудничество!'
+    }
+  ];
 
+  // Инициализация карусели
+  document.addEventListener('DOMContentLoaded', function() {
+    const carouselInner = document.querySelector('#reviewsCarousel .carousel-inner');
+    
+    // Создаем отдельный слайд для каждого отзыва в мобильной версии
+    if (window.innerWidth < 768) {
+      // Мобильный вид - 1 отзыв на слайд
+      reviewsData.forEach((review, index) => {
+        const slide = document.createElement('div');
+        slide.className = `carousel-item ${index === 0 ? 'active' : ''}`;
+        
+        const row = document.createElement('div');
+        row.className = 'row';
+        
+        const col = document.createElement('div');
+        col.className = 'col-md-4 mx-auto';
+        
+        col.innerHTML = `
+          <div class="review-card" style="background-image: url('${review.image}')">
+            <div class="review-card-overlay">
+              <h3>${review.company}</h3>
+              <button class="read-more-btn" data-review-index="${index}">Читать полностью</button>
+            </div>
+          </div>
+        `;
+        
+        row.appendChild(col);
+        slide.appendChild(row);
+        carouselInner.appendChild(slide);
+      });
+    } else {
+      // Десктоп/планшет - группируем по 3/2 отзыва на слайд
+      const itemsPerSlide = window.innerWidth >= 992 ? 3 : 2;
+      
+      for (let i = 0; i < reviewsData.length; i += itemsPerSlide) {
+        const slide = document.createElement('div');
+        slide.className = `carousel-item ${i === 0 ? 'active' : ''}`;
+        
+        const row = document.createElement('div');
+        row.className = 'row';
+        
+        // Добавляем отзывы в слайд
+        for (let j = i; j < i + itemsPerSlide && j < reviewsData.length; j++) {
+          const review = reviewsData[j];
+          const col = document.createElement('div');
+          col.className = window.innerWidth >= 992 ? 'col-md-4' : 'col-md-6';
+          
+          col.innerHTML = `
+            <div class="review-card" style="background-image: url('${review.image}')">
+              <div class="review-card-overlay">
+                <h3>${review.company}</h3>
+                <button class="read-more-btn" data-review-index="${j}">Читать полностью</button>
+              </div>
+            </div>
+          `;
+          
+          row.appendChild(col);
+        }
+        
+        slide.appendChild(row);
+        carouselInner.appendChild(slide);
+      }
+    }
+    
+    // Инициализация карусели с интервалом 5 секунд
+    const reviewsCarousel = new bootstrap.Carousel('#reviewsCarousel', {
+      interval: 5000,
+      wrap: true
+    });
+    
+    // Навигационные кнопки
+    document.getElementById('prevReview').addEventListener('click', function() {
+      reviewsCarousel.prev();
+    });
+    
+    document.getElementById('nextReview').addEventListener('click', function() {
+      reviewsCarousel.next();
+    });
+    
+    // Обработчики для кнопок "Читать полностью"
+    document.addEventListener('click', function(e) {
+      if (e.target.classList.contains('read-more-btn')) {
+        const review = reviewsData[e.target.dataset.reviewIndex];
+        const modal = new bootstrap.Modal(document.getElementById('reviewModal'));
+        
+        document.getElementById('reviewModalTitle').textContent = review.company;
+        document.getElementById('reviewModalImage').style.backgroundImage = `url('${review.image}')`;
+        document.getElementById('reviewModalText').textContent = review.text;
+        
+        modal.show();
+      }
+    });
+    
+    // Пауза автопрокрутки при наведении
+    const carouselElement = document.getElementById('reviewsCarousel');
+    carouselElement.addEventListener('mouseenter', () => {
+      reviewsCarousel.pause();
+    });
+    
+    carouselElement.addEventListener('mouseleave', () => {
+      reviewsCarousel.cycle();
+    });
+    
+    // Реакция на изменение размера окна
+    window.addEventListener('resize', function() {
+      // При резком изменении размера можно перезагрузить страницу
+      if ((window.innerWidth >= 768 && this.lastWindowWidth < 768) || 
+          (window.innerWidth < 768 && this.lastWindowWidth >= 768)) {
+        location.reload();
+      }
+      this.lastWindowWidth = window.innerWidth;
+    }, { lastWindowWidth: window.innerWidth });
+  });
 </script>
-
 </body>
 </html>
