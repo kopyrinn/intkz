@@ -1481,184 +1481,64 @@ body {
             }  
 }
 
-  /* metric*/
-  .metrics-block {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    position: relative;
-    margin-top: 25px;
-    margin-bottom: 25px;
-  }
-  
-  .metrics-block__inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-    border-radius: 16px;
-
-  }
-  
-  .metrics-block__bg {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-image: url('../img/bgstat.png');
-    background-size: cover;
-    background-position: center;
-    z-index: 1;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-    border-radius: 16px;
-
-  }
-  
-  .metrics-block__content {
-    position: relative;
-    z-index: 2;
-    padding: 60px 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .metrics-block__title {
-    font-size: 28px;
-    line-height: 1.2;
-    margin-bottom: 50px;
-    text-align: center;
-    color: #fff;
-  }
-  
-  /* Сетка показателей */
-  .metrics-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
-    width: 100%;
-    margin-bottom: 50px;
-  }
-  
-  /* Карточка показателя */
-  .metric-card {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(5px);
-    border-radius: 12px;
-    padding: 30px 20px;
-    text-align: center;
-    transition: transform 0.3s ease;
-  }
-  
-  .metric-card:hover {
-    transform: translateY(-5px);
-  }
-  
-  .metric-card__icon {
-    height: 60px;
-    margin: 0 auto 20px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-  
-  .metric-card__icon--productivity {
-    background-image: url('https://optim.tildacdn.com/tild6237-6535-4338-b331-653638346162/-/cover/91x72/center/center/-/format/webp/zavod2.png');
-  }
-  
-  .metric-card__icon--width {
-    background-image: url('https://optim.tildacdn.com/tild6131-3736-4162-b637-336162623136/-/cover/93x55/center/center/-/format/webp/shirina.png');
-  }
-  
-  .metric-card__icon--density {
-    background-image: url('https://optim.tildacdn.com/tild3139-6664-4138-b034-333335623335/-/cover/80x72/center/center/-/format/webp/plotnost.png');
-  }
-  
-  .metric-card__value {
-    font-size: 20px;
-    margin-bottom: 10px;
-    color: #fff;
-  }
-  
-  .metric-card__description {
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 16px;
-    line-height: 1.4;
-  }
-  
-  /* Итоговый показатель */
-  .metrics-total {
-    background: rgba(0, 0, 0, 0.5);
-    padding: 20px 40px;
-    border-radius: 8px;
-    max-width: 800px;
-    width: 100%;
-  }
-  
-  .metrics-total__text {
-    font-size: 20px;
-    font-weight: 700;
-    text-align: center;
-    color: #fff;
-    margin: 0;
-  }
-  
-  /* Адаптивность */
-  @media (max-width: 1024px) {
-    .metrics-block {
-      min-height: 600px;
+/*метрики*/
+    .metric-icon {
+        width: 70px;
     }
-    
-    .metrics-block__content {
-      padding: 40px 30px;
+    .metob2 {
+        display: none;
     }
-    
-    .metrics-grid {
-      gap: 20px;
+    .bgmetric {
+        background-image: url(../img/bgstat.png);
+        color: white;
+        border-radius: 16px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
-    
-    .metric-card {
-      padding: 20px 15px;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .metrics-grid {
-      grid-template-columns: 1fr;
-      max-width: 500px;
-      margin: 0 auto 40px;
-    }
-    
-    .metrics-block__title {
-      font-size: 24px;
-      margin-bottom: 30px;
-    }
-    
-    .metric-card {
-      padding: 20px 0px;
+    .metob {
+        color: #0A6EF7;
     }
 
-    .metric-card__icon {
-        height: 40px;
+    .metric-card__value {
+        font-size: 20px;
+        text-align: center;
     }
-  }
-  
-  @media (max-width: 480px) {
-    .metrics-block {
-      min-height: 500px;
+    .metric-card__description {
+        text-align: center;
     }
-    
-    .metrics-block__content {
-      padding: 30px 20px;
+
+    @media (max-width: 480px) {
+        .metric-icon {
+            width: 35px;
+        }        
+        .metob {
+            display: none;
+        }
+        .metob2 {
+            display: block;
+            color: #0A6EF7;
+            font-size: 15px;
+        }
+        .bgmetric {
+            background-image: url(../img/mobilemetric.png);
+            background-size: 100% 100%;
+        }
+        .metric-card__value {
+            font-size: 17px;
+            text-align: left;
+        }
+        .metric-card__description {
+            text-align: left;
+        }
     }
-    
-    .metrics-total {
-      padding: 15px 20px;
-    }
-    
-    .metrics-total__text {
-      font-size: 12px;
-    }
-  }
+
+
+    @media (max-width: 768px) {
+        .metrics-block__title {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+    } 
 
 /*счетчик*/
 .company-stats {
