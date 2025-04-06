@@ -2834,7 +2834,7 @@ body {
 .geo-sm-project-product {
   margin: 0;
   font-size: 14px;
-  color: #00b401;
+  color: #0A6EF7;
   font-weight: 500;
 }
 
@@ -3585,7 +3585,7 @@ body {
 .submit-btn {
   width: 100%;
   padding: 16px;
-  background-color: #4CAF50;
+  background-color: #0D4592;
   color: white;
   border: none;
   border-radius: 8px;
@@ -3597,7 +3597,7 @@ body {
 }
 
 .submit-btn:hover {
-  background-color: #3e8e41;
+  background-color: #0a4cb3;
 }
 
 .form-footer {

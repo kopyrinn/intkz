@@ -1,257 +1,151 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Благодарственные письма</title>
-    <style>
-        .thanks-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #ededed;
-            position: relative;
-            height: 100px;
-            overflow: hidden;
-        }
-        
-        .thanks-title {
-            position: absolute;
-            top: 80px;
-            left: 20px;
-            font-size: 42px;
-            font-weight: 600;
-            font-family: 'Inter', sans-serif;
-            color: #000;
-            width: 427px;
-            z-index: 5;
-        }
-        
-        .thanks-carousel {
-            display: flex;
-            transition: transform 0.5s ease;
-            height: 100%;
-        }
-        
-        .thanks-slide {
-            min-width: 100%;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-        }
-        
-        .letter-preview {
-            width: 200px;
-            height: 150px;
-            background-color: #fff;
-            border: 1px solid #ddd;
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-        }
-        
-        .letter-preview img {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain;
-        }
-        
-        .letter-view-btn {
-            padding: 5px 15px;
-            background-color: #00b401;
-            color: white;
-            border: none;
-            border-radius: 3px;
-            cursor: pointer;
-            margin-top: 10px;
-        }
-        
-        .letter-checkboxes {
-            display: flex;
-            gap: 10px;
-            margin: 10px 0;
-        }
-        
-        .letter-title {
-            font-weight: bold;
-            margin: 5px 0;
-            text-align: center;
-        }
-        
-        .letter-divider {
-            width: 100%;
-            border-top: 1px solid #ddd;
-            margin: 10px 0;
-        }
-        
-        .letter-company {
-            font-weight: bold;
-            text-align: center;
-        }
-        
-        .thanks-nav {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 48px;
-            height: 48px;
-            cursor: pointer;
-            z-index: 10;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .thanks-prev {
-            left: 20px;
-        }
-        
-        .thanks-next {
-            right: 20px;
-        }
-        
-        @media (max-width: 1199px) {
-            .thanks-container {
-                height: 275px;
-            }
-        }
-        
-        @media (max-width: 639px) {
-            .thanks-container {
-                height: 177px;
-            }
-            
-            .thanks-title {
-                font-size: 25px;
-                width: 343px;
-                left: 10px;
-            }
-            
-            .letter-preview {
-                width: 150px;
-                height: 100px;
-            }
-            
-            .thanks-nav {
-                width: 38px;
-                height: 38px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Карусель партнёров</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    .carousel-container {
+      overflow: hidden;
+      padding: 20px;
+    }
+
+    .carousel-track {
+      display: flex;
+      gap: 20px;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .carousel-track::-webkit-scrollbar {
+      display: none;
+    }
+
+    .carousel-item {
+      min-width: 150px;
+      flex-shrink: 0;
+    }
+
+    .carousel-item img {
+      width: 100px;
+      height: auto;
+      border-radius: 8px;
+      padding: 10px;
+      background: #f5f5f5;
+      object-fit: contain;
+    }
+
+    @media (max-width: 768px) {
+      .carousel-item {
+        min-width: 120px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="thanks-container">
-        <h1 class="thanks-title">Благодарственные письма</h1>
-        
-        <div class="thanks-carousel">
-            <!-- Слайд 1 -->
-            <div class="thanks-slide">
-                <div class="letter-preview">
-                    <img src="https://optim.tildacdn.com/tild6566-3165-4134-a162-613330653432/-/format/webp/Priemnaya_2407202414.jpg" alt="Превью письма">
-                </div>
-                <button class="letter-view-btn">Посмотреть полностью</button>
-                
-                <div class="letter-checkboxes">
-                    <input type="checkbox">
-                    <input type="checkbox">
-                </div>
-                <div class="letter-title">БЛАГОДАРСТВЕННОЕ ПИСЬМО</div>
-                <div class="letter-checkboxes">
-                    <input type="checkbox">
-                    <input type="checkbox">
-                </div>
-                <div class="letter-divider"></div>
-                <div class="letter-company">ТОО "ЮЖНПРОМСНАБ"</div>
-            </div>
-            
-            <!-- Слайд 2 -->
-            <div class="thanks-slide">
-                <div class="letter-preview">
-                    <img src="https://optim.tildacdn.com/tild6566-3165-4134-a162-613330653432/-/format/webp/Priemnaya_2407202414.jpg" alt="Превью письма">
-                </div>
-                <button class="letter-view-btn">Посмотреть полностью</button>
-                
-                <div class="letter-checkboxes">
-                    <input type="checkbox">
-                    <input type="checkbox">
-                </div>
-                <div class="letter-title">БЛАГОДАРСТВЕННОЕ ПИСЬМО</div>
-                <div class="letter-checkboxes">
-                    <input type="checkbox">
-                    <input type="checkbox">
-                </div>
-                <div class="letter-divider"></div>
-                <div class="letter-company">ТОО "GEODOR"</div>
-            </div>
-            
-            <!-- Слайд 3 -->
-            <div class="thanks-slide">
-                <div class="letter-preview">
-                    <img src="https://optim.tildacdn.com/tild6566-3165-4134-a162-613330653432/-/format/webp/Priemnaya_2407202414.jpg" alt="Превью письма">
-                </div>
-                <button class="letter-view-btn">Посмотреть полностью</button>
-                
-                <div class="letter-checkboxes">
-                    <input type="checkbox">
-                    <input type="checkbox">
-                </div>
-                <div class="letter-title">БЛАГОДАРСТВЕННОЕ ПИСЬМО</div>
-                <div class="letter-checkboxes">
-                    <input type="checkbox">
-                    <input type="checkbox">
-                </div>
-                <div class="letter-divider"></div>
-                <div class="letter-company">ТОО "O&Universal Sup"</div>
-            </div>
-        </div>
-        
-        <div class="thanks-nav thanks-prev">
-            <img src="https://static.tildacdn.com/tild3830-6338-4032-b065-373336663762/button_35.svg" alt="Previous">
-        </div>
-        <div class="thanks-nav thanks-next">
-            <img src="https://static.tildacdn.com/tild3738-3835-4133-b634-386331383635/button_35.svg" alt="Next">
-        </div>
-    </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const carousel = document.querySelector('.thanks-carousel');
-            const slides = document.querySelectorAll('.thanks-slide');
-            const prevBtn = document.querySelector('.thanks-prev');
-            const nextBtn = document.querySelector('.thanks-next');
-            const viewBtns = document.querySelectorAll('.letter-view-btn');
-            
-            let currentIndex = 0;
-            
-            function updateCarousel() {
-                carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
-            }
-            
-            prevBtn.addEventListener('click', function() {
-                currentIndex = (currentIndex > 0) ? currentIndex - 1 : slides.length - 1;
-                updateCarousel();
-            });
-            
-            nextBtn.addEventListener('click', function() {
-                currentIndex = (currentIndex < slides.length - 1) ? currentIndex + 1 : 0;
-                updateCarousel();
-            });
-            
-            viewBtns.forEach(btn => {
-                btn.addEventListener('click', function() {
-                    alert('Открыть полную версию письма');
-                    // Здесь можно реализовать открытие модального окна с полной версией
-                });
-            });
-            
-            // Адаптация при изменении размера
-            window.addEventListener('resize', updateCarousel);
-        });
-    </script>
+<div class="carousel-container">
+  <div class="carousel-track" id="carouselTrack">
+    <!-- Картинки будут добавлены через JavaScript -->
+  </div>
+</div>
+
+<script>
+  const track = document.getElementById('carouselTrack');
+
+// Добавляем 20 изображений
+for (let i = 1; i <= 20; i++) {
+  const item = document.createElement('div');
+  item.className = 'carousel-item';
+  const img = document.createElement('img');
+  img.src = `./assets/img/clients/${i}.jpg`;
+  img.alt = `Партнёр ${i}`;
+  item.appendChild(img);
+  track.appendChild(item);
+}
+
+// === Автопрокрутка ===
+let scrollPos = 0;
+let maxScrollLeft = track.scrollWidth - track.clientWidth; // максимальный скролл
+
+function scrollNext() {
+  scrollPos += 1; // Прокручиваем на 1 пиксель
+
+  // Если дошли до конца — сбрасываем в начало
+  if (scrollPos >= maxScrollLeft) {
+    scrollPos = 0; // Начинаем с начала
+    track.scrollLeft = 0;
+  } else {
+    track.scrollLeft = scrollPos;
+  }
+}
+
+let autoScroll = setInterval(scrollNext, 10); // Скорость прокрутки можно регулировать
+
+// === Свайп мышкой ===
+let isDown = false;
+let startX;
+let scrollLeft;
+
+track.addEventListener('mousedown', (e) => {
+  clearInterval(autoScroll);
+  isDown = true;
+  startX = e.pageX - track.offsetLeft;
+  scrollLeft = track.scrollLeft;
+  track.style.cursor = 'grabbing';
+});
+
+track.addEventListener('mouseleave', () => {
+  isDown = false;
+  track.style.cursor = 'grab';
+  autoScroll = setInterval(scrollNext, 10);
+});
+
+track.addEventListener('mouseup', () => {
+  isDown = false;
+  track.style.cursor = 'grab';
+  autoScroll = setInterval(scrollNext, 10);
+});
+
+track.addEventListener('mousemove', (e) => {
+  if (!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - track.offsetLeft;
+  const walk = (x - startX) * 1.5;
+  track.scrollLeft = scrollLeft - walk;
+});
+
+// === Свайп пальцем ===
+let touchStartX = 0;
+let touchScrollLeft = 0;
+
+track.addEventListener('touchstart', (e) => {
+  clearInterval(autoScroll);
+  touchStartX = e.touches[0].pageX;
+  touchScrollLeft = track.scrollLeft;
+});
+
+track.addEventListener('touchend', () => {
+  autoScroll = setInterval(scrollNext, 10);
+});
+
+track.addEventListener('touchmove', (e) => {
+  const x = e.touches[0].pageX;
+  const walk = (x - touchStartX) * 1.5;
+  track.scrollLeft = touchScrollLeft - walk;
+});
+
+</script>
+
 </body>
 </html>
