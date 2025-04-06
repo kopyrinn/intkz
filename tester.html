@@ -1,196 +1,56 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Карусель партнёров</title>
-  <style>
-h2{
-  text-align:center;
-  padding: 20px;
-}
-/* Slider */
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-.slick-slide {
-    margin: 0px 20px;
+<style type="text/css">
+    .owl-item > div {
+  cursor: pointer;
+  margin: 6% 8%;
+  transition: margin 0.4s ease;
 }
-
-.slick-slide img {
-    width: 100%;
+.owl-item.center > div {
+  cursor: auto;
+  margin: 0;
 }
-
-.slick-slider
-{
-    position: relative;
-    display: block;
-    box-sizing: border-box;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-            user-select: none;
-    -webkit-touch-callout: none;
-    -khtml-user-select: none;
-    -ms-touch-action: pan-y;
-        touch-action: pan-y;
-    -webkit-tap-highlight-color: transparent;
+.owl-item:not(.center) > div:hover {
+  opacity: .75;
 }
-
-.slick-list
-{
-    position: relative;
-    display: block;
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-}
-.slick-list:focus
-{
-    outline: none;
-}
-.slick-list.dragging
-{
-    cursor: pointer;
-    cursor: hand;
-}
-
-.slick-slider .slick-track,
-.slick-slider .slick-list
-{
-    -webkit-transform: translate3d(0, 0, 0);
-       -moz-transform: translate3d(0, 0, 0);
-        -ms-transform: translate3d(0, 0, 0);
-         -o-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
-}
-
-.slick-track
-{
-    position: relative;
-    top: 0;
-    left: 0;
-    display: block;
-}
-.slick-track:before,
-.slick-track:after
-{
-    display: table;
-    content: '';
-}
-.slick-track:after
-{
-    clear: both;
-}
-.slick-loading .slick-track
-{
-    visibility: hidden;
-}
-
-.slick-slide
-{
-    display: none;
-    float: left;
-    height: 100%;
-    min-height: 1px;
-}
-[dir='rtl'] .slick-slide
-{
-    float: right;
-}
-.slick-slide img
-{
-    display: block;
-}
-.slick-slide.slick-loading img
-{
-    display: none;
-}
-.slick-slide.dragging img
-{
-    pointer-events: none;
-}
-.slick-initialized .slick-slide
-{
-    display: block;
-}
-.slick-loading .slick-slide
-{
-    visibility: hidden;
-}
-.slick-vertical .slick-slide
-{
-    display: block;
-    height: auto;
-    border: 1px solid transparent;
-}
-.slick-arrow.slick-hidden {
-    display: none;
-}
+</style>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 
 
-  </style>
-</head>
-<body>
-    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
 
-    <div class="supply-countries__content">
-      <div class="supply-countries__map">
-        <img src="assets/img/map.png" alt="Карта стран поставок" class="supply-countries__map-image">
-      </div>
-      
-      <div class="supply-countries__list">
-        <div class="supply-countries__item">
-          <img src="https://static.tildacdn.com/tild3065-6636-4235-a136-323562333561/MapPin_1.svg" alt="Иконка геопозиции" class="supply-countries__pin">
-          <a href="#popup:infoblock2" class="supply-countries__link">Россия</a>
-        </div>
-        
-        <div class="supply-countries__item">
-          <img src="https://static.tildacdn.com/tild3065-6636-4235-a136-323562333561/MapPin_1.svg" alt="Иконка геопозиции" class="supply-countries__pin">
-          <a href="#popup:infoblock7" class="supply-countries__link">Армения</a>
-        </div>
-        
-        <div class="supply-countries__item">
-          <img src="https://static.tildacdn.com/tild3065-6636-4235-a136-323562333561/MapPin_1.svg" alt="Иконка геопозиции" class="supply-countries__pin">
-          <a href="#popup:infoblock9" class="supply-countries__link">Казахстан</a>
-        </div>
-        
-        <div class="supply-countries__item">
-          <img src="https://static.tildacdn.com/tild3065-6636-4235-a136-323562333561/MapPin_1.svg" alt="Иконка геопозиции" class="supply-countries__pin">
-          <a href="#popup:infoblock10" class="supply-countries__link">Узбекистан</a>
-        </div>
-        
-        <div class="supply-countries__item">
-          <img src="https://static.tildacdn.com/tild3065-6636-4235-a136-323562333561/MapPin_1.svg" alt="Иконка геопозиции" class="supply-countries__pin">
-          <a href="#popup:infoblock11" class="supply-countries__link">Кыргызстан</a>
-        </div>
-      </div>
-    </div>
+<div class="container">
+  <div class="owl-carousel">
+    <div><img src="https://place-hold.it/400x300/f06/fff/?text=1" alt=""></div>
+    <div><img src="https://place-hold.it/400x300/f63/fff/?text=2" alt=""></div>
+    <div><img src="https://place-hold.it/400x300/fc3/fff/?text=3" alt=""></div>
+    <div><img src="https://place-hold.it/400x300/693/fff/?text=4" alt=""></div>
+    <div><img src="https://place-hold.it/400x300/3cc/fff/?text=5" alt=""></div>
+    <div><img src="https://place-hold.it/400x300/369/fff/?text=6" alt=""></div>
+    <div><img src="https://place-hold.it/400x300/936/fff/?text=7" alt=""></div>
+  </div>
+</div>
 
+
+
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 <script type="text/javascript">
-    $(document).ready(function(){
-    $('.customer-logos').slick({
-        slidesToShow: 6,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 1500,
-        arrows: false,
-        dots: false,
-        pauseOnHover: false,
-        responsive: [{
-            breakpoint: 768,
-            settings: {
-                slidesToShow: 4
-            }
-        }, {
-            breakpoint: 520,
-            settings: {
-                slidesToShow: 3
-            }
-        }]
-    });
+    var $owl = $('.owl-carousel');
+
+$owl.children().each( function( index ) {
+  $(this).attr( 'data-position', index ); // NB: .attr() instead of .data()
+});
+
+$owl.owlCarousel({
+  center: true,
+  loop: true,
+  items: 5,
+});
+
+$(document).on('click', '.owl-item>div', function() {
+  // see https://owlcarousel2.github.io/OwlCarousel2/docs/api-events.html#to-owl-carousel
+  var $speed = 300;  // in ms
+  $owl.trigger('to.owl.carousel', [$(this).data( 'position' ), $speed] );
 });
 </script>
-</body>
-</html>
