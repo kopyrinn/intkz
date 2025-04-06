@@ -710,7 +710,7 @@ body {
     .geo-hero {
         min-height: auto;
         padding-bottom: 40px;
-        background-image: url(../img/mobile.png);
+        background: #E8E4D7;
         background-size: cover;
     }
     
@@ -782,7 +782,11 @@ body {
     .geo-hero__video-element {
         display: none;
     }
+    .geo-hero__buttons {
+        margin-bottom: 10px;
+    }
 }
+
 
 
 /* Стили попапа таблицы 1-2 popup table*/
@@ -1521,7 +1525,7 @@ body {
         }
         .bgmetric {
             background-image: url(../img/mobilemetric.png);
-            background-size: 100% 100%;
+            background-size: cover;
         }
         .metric-card__value {
             font-size: 17px;
@@ -1531,6 +1535,10 @@ body {
             text-align: left;
         }
     }
+
+     @media (max-width: 480px) {
+
+     }
 
 
     @media (max-width: 768px) {
