@@ -1,81 +1,257 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Отзывы</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Благодарственные письма</title>
+    <style>
+        .thanks-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ededed;
+            position: relative;
+            height: 100px;
+            overflow: hidden;
+        }
+        
+        .thanks-title {
+            position: absolute;
+            top: 80px;
+            left: 20px;
+            font-size: 42px;
+            font-weight: 600;
+            font-family: 'Inter', sans-serif;
+            color: #000;
+            width: 427px;
+            z-index: 5;
+        }
+        
+        .thanks-carousel {
+            display: flex;
+            transition: transform 0.5s ease;
+            height: 100%;
+        }
+        
+        .thanks-slide {
+            min-width: 100%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        
+        .letter-preview {
+            width: 200px;
+            height: 150px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        .letter-preview img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        
+        .letter-view-btn {
+            padding: 5px 15px;
+            background-color: #00b401;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        
+        .letter-checkboxes {
+            display: flex;
+            gap: 10px;
+            margin: 10px 0;
+        }
+        
+        .letter-title {
+            font-weight: bold;
+            margin: 5px 0;
+            text-align: center;
+        }
+        
+        .letter-divider {
+            width: 100%;
+            border-top: 1px solid #ddd;
+            margin: 10px 0;
+        }
+        
+        .letter-company {
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        .thanks-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 48px;
+            height: 48px;
+            cursor: pointer;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .thanks-prev {
+            left: 20px;
+        }
+        
+        .thanks-next {
+            right: 20px;
+        }
+        
+        @media (max-width: 1199px) {
+            .thanks-container {
+                height: 275px;
+            }
+        }
+        
+        @media (max-width: 639px) {
+            .thanks-container {
+                height: 177px;
+            }
+            
+            .thanks-title {
+                font-size: 25px;
+                width: 343px;
+                left: 10px;
+            }
+            
+            .letter-preview {
+                width: 150px;
+                height: 100px;
+            }
+            
+            .thanks-nav {
+                width: 38px;
+                height: 38px;
+            }
+        }
+    </style>
 </head>
 <body>
-
-    <!-- Clients Section -->
-    <section id="clients" class="clients section light-background">
-
-      <div class="container" data-aos="zoom-in">
-
-        <div class="swiper init-swiper">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 5000
-              },
-              "slidesPerView": "auto",
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              },
-              "breakpoints": {
-                "320": {
-                  "slidesPerView": 2,
-                  "spaceBetween": 40
-                },
-                "480": {
-                  "slidesPerView": 3,
-                  "spaceBetween": 60
-                },
-                "640": {
-                  "slidesPerView": 4,
-                  "spaceBetween": 80
-                },
-                "992": {
-                  "slidesPerView": 5,
-                  "spaceBetween": 120
-                },
-                "1200": {
-                  "slidesPerView": 6,
-                  "spaceBetween": 120
-                }
-              }
-            }
-
-
-          </script>
-          <div class="swiper-wrapper align-items-center">
-            <div class="swiper-slide"><img src="assets/img/clients/1.jpg" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/2.jpg" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/2.jpg" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/2.jpg" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/2.jpg" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/2.jpg" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/2.jpg" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/2.jpg" class="img-fluid" alt=""></div>
-          </div>
+    <div class="thanks-container">
+        <h1 class="thanks-title">Благодарственные письма</h1>
+        
+        <div class="thanks-carousel">
+            <!-- Слайд 1 -->
+            <div class="thanks-slide">
+                <div class="letter-preview">
+                    <img src="https://optim.tildacdn.com/tild6566-3165-4134-a162-613330653432/-/format/webp/Priemnaya_2407202414.jpg" alt="Превью письма">
+                </div>
+                <button class="letter-view-btn">Посмотреть полностью</button>
+                
+                <div class="letter-checkboxes">
+                    <input type="checkbox">
+                    <input type="checkbox">
+                </div>
+                <div class="letter-title">БЛАГОДАРСТВЕННОЕ ПИСЬМО</div>
+                <div class="letter-checkboxes">
+                    <input type="checkbox">
+                    <input type="checkbox">
+                </div>
+                <div class="letter-divider"></div>
+                <div class="letter-company">ТОО "ЮЖНПРОМСНАБ"</div>
+            </div>
+            
+            <!-- Слайд 2 -->
+            <div class="thanks-slide">
+                <div class="letter-preview">
+                    <img src="https://optim.tildacdn.com/tild6566-3165-4134-a162-613330653432/-/format/webp/Priemnaya_2407202414.jpg" alt="Превью письма">
+                </div>
+                <button class="letter-view-btn">Посмотреть полностью</button>
+                
+                <div class="letter-checkboxes">
+                    <input type="checkbox">
+                    <input type="checkbox">
+                </div>
+                <div class="letter-title">БЛАГОДАРСТВЕННОЕ ПИСЬМО</div>
+                <div class="letter-checkboxes">
+                    <input type="checkbox">
+                    <input type="checkbox">
+                </div>
+                <div class="letter-divider"></div>
+                <div class="letter-company">ТОО "GEODOR"</div>
+            </div>
+            
+            <!-- Слайд 3 -->
+            <div class="thanks-slide">
+                <div class="letter-preview">
+                    <img src="https://optim.tildacdn.com/tild6566-3165-4134-a162-613330653432/-/format/webp/Priemnaya_2407202414.jpg" alt="Превью письма">
+                </div>
+                <button class="letter-view-btn">Посмотреть полностью</button>
+                
+                <div class="letter-checkboxes">
+                    <input type="checkbox">
+                    <input type="checkbox">
+                </div>
+                <div class="letter-title">БЛАГОДАРСТВЕННОЕ ПИСЬМО</div>
+                <div class="letter-checkboxes">
+                    <input type="checkbox">
+                    <input type="checkbox">
+                </div>
+                <div class="letter-divider"></div>
+                <div class="letter-company">ТОО "O&Universal Sup"</div>
+            </div>
         </div>
+        
+        <div class="thanks-nav thanks-prev">
+            <img src="https://static.tildacdn.com/tild3830-6338-4032-b065-373336663762/button_35.svg" alt="Previous">
+        </div>
+        <div class="thanks-nav thanks-next">
+            <img src="https://static.tildacdn.com/tild3738-3835-4133-b634-386331383635/button_35.svg" alt="Next">
+        </div>
+    </div>
 
-      </div>
-
-    </section><!-- /Clients Section -->
-
-<!-- Bootstrap JS + Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const carousel = document.querySelector('.thanks-carousel');
+            const slides = document.querySelectorAll('.thanks-slide');
+            const prevBtn = document.querySelector('.thanks-prev');
+            const nextBtn = document.querySelector('.thanks-next');
+            const viewBtns = document.querySelectorAll('.letter-view-btn');
+            
+            let currentIndex = 0;
+            
+            function updateCarousel() {
+                carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+            }
+            
+            prevBtn.addEventListener('click', function() {
+                currentIndex = (currentIndex > 0) ? currentIndex - 1 : slides.length - 1;
+                updateCarousel();
+            });
+            
+            nextBtn.addEventListener('click', function() {
+                currentIndex = (currentIndex < slides.length - 1) ? currentIndex + 1 : 0;
+                updateCarousel();
+            });
+            
+            viewBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    alert('Открыть полную версию письма');
+                    // Здесь можно реализовать открытие модального окна с полной версией
+                });
+            });
+            
+            // Адаптация при изменении размера
+            window.addEventListener('resize', updateCarousel);
+        });
+    </script>
 </body>
 </html>
