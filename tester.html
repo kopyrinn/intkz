@@ -2,150 +2,195 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Карусель партнёров</title>
   <style>
-    * {
-      box-sizing: border-box;
-    }
+h2{
+  text-align:center;
+  padding: 20px;
+}
+/* Slider */
 
-    body {
-      margin: 0;
-      font-family: sans-serif;
-    }
+.slick-slide {
+    margin: 0px 20px;
+}
 
-    .carousel-container {
-      overflow: hidden;
-      padding: 20px;
-    }
+.slick-slide img {
+    width: 100%;
+}
 
-    .carousel-track {
-      display: flex;
-      gap: 20px;
-      overflow-x: auto;
-      scroll-behavior: smooth;
-      -webkit-overflow-scrolling: touch;
-    }
+.slick-slider
+{
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+            user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
 
-    .carousel-track::-webkit-scrollbar {
-      display: none;
-    }
+.slick-list
+{
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus
+{
+    outline: none;
+}
+.slick-list.dragging
+{
+    cursor: pointer;
+    cursor: hand;
+}
 
-    .carousel-item {
-      min-width: 150px;
-      flex-shrink: 0;
-    }
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
 
-    .carousel-item img {
-      width: 100px;
-      height: auto;
-      border-radius: 8px;
-      padding: 10px;
-      background: #f5f5f5;
-      object-fit: contain;
-    }
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+}
+.slick-track:before,
+.slick-track:after
+{
+    display: table;
+    content: '';
+}
+.slick-track:after
+{
+    clear: both;
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
 
-    @media (max-width: 768px) {
-      .carousel-item {
-        min-width: 120px;
-      }
-    }
+.slick-slide
+{
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+.slick-slide img
+{
+    display: block;
+}
+.slick-slide.slick-loading img
+{
+    display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+    height: auto;
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+
+
   </style>
 </head>
 <body>
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
 
-<div class="carousel-container">
-  <div class="carousel-track" id="carouselTrack">
-    <!-- Картинки будут добавлены через JavaScript -->
-  </div>
-</div>
+    <div class="supply-countries__content">
+      <div class="supply-countries__map">
+        <img src="assets/img/map.png" alt="Карта стран поставок" class="supply-countries__map-image">
+      </div>
+      
+      <div class="supply-countries__list">
+        <div class="supply-countries__item">
+          <img src="https://static.tildacdn.com/tild3065-6636-4235-a136-323562333561/MapPin_1.svg" alt="Иконка геопозиции" class="supply-countries__pin">
+          <a href="#popup:infoblock2" class="supply-countries__link">Россия</a>
+        </div>
+        
+        <div class="supply-countries__item">
+          <img src="https://static.tildacdn.com/tild3065-6636-4235-a136-323562333561/MapPin_1.svg" alt="Иконка геопозиции" class="supply-countries__pin">
+          <a href="#popup:infoblock7" class="supply-countries__link">Армения</a>
+        </div>
+        
+        <div class="supply-countries__item">
+          <img src="https://static.tildacdn.com/tild3065-6636-4235-a136-323562333561/MapPin_1.svg" alt="Иконка геопозиции" class="supply-countries__pin">
+          <a href="#popup:infoblock9" class="supply-countries__link">Казахстан</a>
+        </div>
+        
+        <div class="supply-countries__item">
+          <img src="https://static.tildacdn.com/tild3065-6636-4235-a136-323562333561/MapPin_1.svg" alt="Иконка геопозиции" class="supply-countries__pin">
+          <a href="#popup:infoblock10" class="supply-countries__link">Узбекистан</a>
+        </div>
+        
+        <div class="supply-countries__item">
+          <img src="https://static.tildacdn.com/tild3065-6636-4235-a136-323562333561/MapPin_1.svg" alt="Иконка геопозиции" class="supply-countries__pin">
+          <a href="#popup:infoblock11" class="supply-countries__link">Кыргызстан</a>
+        </div>
+      </div>
+    </div>
 
-<script>
-  const track = document.getElementById('carouselTrack');
-
-// Добавляем 20 изображений
-for (let i = 1; i <= 20; i++) {
-  const item = document.createElement('div');
-  item.className = 'carousel-item';
-  const img = document.createElement('img');
-  img.src = `./assets/img/clients/${i}.jpg`;
-  img.alt = `Партнёр ${i}`;
-  item.appendChild(img);
-  track.appendChild(item);
-}
-
-// === Автопрокрутка ===
-let scrollPos = 0;
-let maxScrollLeft = track.scrollWidth - track.clientWidth; // максимальный скролл
-
-function scrollNext() {
-  scrollPos += 1; // Прокручиваем на 1 пиксель
-
-  // Если дошли до конца — сбрасываем в начало
-  if (scrollPos >= maxScrollLeft) {
-    scrollPos = 0; // Начинаем с начала
-    track.scrollLeft = 0;
-  } else {
-    track.scrollLeft = scrollPos;
-  }
-}
-
-let autoScroll = setInterval(scrollNext, 10); // Скорость прокрутки можно регулировать
-
-// === Свайп мышкой ===
-let isDown = false;
-let startX;
-let scrollLeft;
-
-track.addEventListener('mousedown', (e) => {
-  clearInterval(autoScroll);
-  isDown = true;
-  startX = e.pageX - track.offsetLeft;
-  scrollLeft = track.scrollLeft;
-  track.style.cursor = 'grabbing';
+<script type="text/javascript">
+    $(document).ready(function(){
+    $('.customer-logos').slick({
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1500,
+        arrows: false,
+        dots: false,
+        pauseOnHover: false,
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 4
+            }
+        }, {
+            breakpoint: 520,
+            settings: {
+                slidesToShow: 3
+            }
+        }]
+    });
 });
-
-track.addEventListener('mouseleave', () => {
-  isDown = false;
-  track.style.cursor = 'grab';
-  autoScroll = setInterval(scrollNext, 10);
-});
-
-track.addEventListener('mouseup', () => {
-  isDown = false;
-  track.style.cursor = 'grab';
-  autoScroll = setInterval(scrollNext, 10);
-});
-
-track.addEventListener('mousemove', (e) => {
-  if (!isDown) return;
-  e.preventDefault();
-  const x = e.pageX - track.offsetLeft;
-  const walk = (x - startX) * 1.5;
-  track.scrollLeft = scrollLeft - walk;
-});
-
-// === Свайп пальцем ===
-let touchStartX = 0;
-let touchScrollLeft = 0;
-
-track.addEventListener('touchstart', (e) => {
-  clearInterval(autoScroll);
-  touchStartX = e.touches[0].pageX;
-  touchScrollLeft = track.scrollLeft;
-});
-
-track.addEventListener('touchend', () => {
-  autoScroll = setInterval(scrollNext, 10);
-});
-
-track.addEventListener('touchmove', (e) => {
-  const x = e.touches[0].pageX;
-  const walk = (x - touchStartX) * 1.5;
-  track.scrollLeft = touchScrollLeft - walk;
-});
-
 </script>
-
 </body>
 </html>
