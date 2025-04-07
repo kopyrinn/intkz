@@ -1,22 +1,22 @@
 
-// // Сохраняем позицию скролла перед обновлением страницы
-// window.addEventListener('beforeunload', () => {
-//   sessionStorage.setItem('scrollPosition', window.scrollY);
-// });
+// Сохраняем позицию скролла перед обновлением страницы
+window.addEventListener('beforeunload', () => {
+  sessionStorage.setItem('scrollPosition', window.scrollY);
+});
 
-// // Восстанавливаем позицию после загрузки страницы
-// window.addEventListener('load', () => {
-//   const scrollPosition = sessionStorage.getItem('scrollPosition');
-//   if (scrollPosition) {
-//     window.scrollTo(0, parseInt(scrollPosition));
-//     sessionStorage.removeItem('scrollPosition'); // Очищаем, если не нужно сохранять дальше
-//   }
-// });
+// Восстанавливаем позицию после загрузки страницы
+window.addEventListener('load', () => {
+  const scrollPosition = sessionStorage.getItem('scrollPosition');
+  if (scrollPosition) {
+    window.scrollTo(0, parseInt(scrollPosition));
+    sessionStorage.removeItem('scrollPosition'); // Очищаем, если не нужно сохранять дальше
+  }
+});
 
-// // Включить автоматическое восстановление скролла
-// if ('scrollRestoration' in history) {
-//   history.scrollRestoration = 'manual'; // или 'auto'
-// }
+// Включить автоматическое восстановление скролла
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual'; // или 'auto'
+}
 
 
 
@@ -424,7 +424,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Вставляем iframe с видео (замените YOUR_VIDEO_ID на реальный ID)
     videoContainer.innerHTML = `
       <iframe 
-        src="https://www.youtube.com/embed/pGuLvuKiVik?si=tSVveewtJHEdDmMQ" 
+        src="https://www.youtube.com/embed/qjdzHvMRkKk?si=tSVveewtJHEdDmMQ" 
         frameborder="0" 
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
         allowfullscreen>
@@ -522,8 +522,8 @@ document.addEventListener('DOMContentLoaded', function() {
   const reviewsData = [
     {
       image: 'assets/img/review/1.jpg',
-      company: 'ТОО "Астана-Дорстрой"',
-      text: 'ТОО «Астана-Дорстрой» выражает благодарность компании «Интаго Казахстан» за своевременную поставку геотекстиля «Интатекс 250» для нашего проекта — капитального ремонта автомобильной дороги «Подъезд к с. Тайсоган». В ходе работ материал показал себя с лучшей стороны: высокая прочность, устойчивость к механическим нагрузкам и отличные дренажные свойства позволили обеспечить надежность и долговечность дорожного покрытия. Продукция полностью соответствует заявленным характеристикам и требованиям строительных стандартов. Отдельно отметим профессиональный подход команды «Интаго Казахстан» — оперативная логистика, грамотные консультации и высокое качество продукции сделали сотрудничество удобным и эффективным. Рекомендуем геотекстиль «Интатекс» как надежный и проверенный материал для дорожного строительства!'
+      company: 'ТОО «ТОО Ассана-ДорСтрой»',
+      text: 'ТОО «Асcана-Дорстрой» выражает благодарность компании «Интаго Казахстан» за своевременную поставку геотекстиля «Интатекс 250» для нашего проекта — капитального ремонта автомобильной дороги «Подъезд к с. Тайсоган». В ходе работ материал показал себя с лучшей стороны: высокая прочность, устойчивость к механическим нагрузкам и отличные дренажные свойства позволили обеспечить надежность и долговечность дорожного покрытия. Продукция полностью соответствует заявленным характеристикам и требованиям строительных стандартов. Отдельно отметим профессиональный подход команды «Интаго Казахстан» — оперативная логистика, грамотные консультации и высокое качество продукции сделали сотрудничество удобным и эффективным. Рекомендуем геотекстиль «Интатекс» как надежный и проверенный материал для дорожного строительства!'
     },
     {
       image: 'assets/img/review/2.jpg',
