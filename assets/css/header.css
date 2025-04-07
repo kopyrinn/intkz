@@ -1938,6 +1938,9 @@ body {
   margin: 0;
   font-weight: normal;
 }
+    .dir2 {
+    display: none;
+  }
 
 /* Адаптация */
 @media (max-width: 1200px) {
@@ -1970,6 +1973,14 @@ body {
   .director-block {
 /*    flex-direction: column;*/
   }
+
+  .dir1 {
+    display: none;
+  }
+    .dir2 {
+    display: flex;
+    margin-top: 20px;
+  }
   
   .director-image {
     margin-bottom: 15px;
@@ -1978,8 +1989,24 @@ body {
 
   .description-block h3{
     font-size: 16px;
-    line-height: 25px;
+    line-height: 20px;
+    font-weight: bold;
   }
+  .top-section {
+    margin-bottom: 10px;
+  }
+  .info-block h3 {
+    font-size: 13px;
+  }
+  .bottom-section {
+    gap: 0px;
+  }
+  .director-info h3 {
+    font-weight: bold;
+    margin-bottom: 2px;
+  }
+
+
 }
 
 
